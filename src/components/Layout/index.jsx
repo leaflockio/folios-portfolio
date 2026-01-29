@@ -1,4 +1,6 @@
 import { appState } from '@/context/validate';
+import { useAppState } from '@/hooks/useAppState';
+import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { useDynamicFavicon } from '@/hooks/useDynamicFavicon';
 import log from '@/utils/logger';
 import PropTypes from 'prop-types';
@@ -57,6 +59,10 @@ export function Layout({ children }) {
 
   // Set dynamic favicon based on theme color
   useDynamicFavicon(primaryColor);
+
+  // Set dynamic document title based on profile
+  const { profile } = useAppState();
+  useDocumentTitle(profile);
 
   const mainClasses = [
     'min-h-screen',
