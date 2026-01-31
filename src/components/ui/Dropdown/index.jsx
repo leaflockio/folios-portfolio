@@ -81,12 +81,12 @@ export function Dropdown({
     }
   }
 
-  const positionClasses = {
-    'bottom-left': 'left-0',
-    'bottom-right': 'right-0',
-  };
+  const positionClasses = new Map([
+    ['bottom-left', 'left-0'],
+    ['bottom-right', 'right-0'],
+  ]);
 
-  const menuPositionClass = positionClasses[position] || positionClasses['bottom-right'];
+  const menuPositionClass = positionClasses.get(position) || positionClasses.get('bottom-right');
 
   return (
     <div className={`relative ${className}`} ref={containerRef}>
