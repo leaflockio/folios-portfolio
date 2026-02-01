@@ -65,23 +65,22 @@ export function Layout({ children }) {
   useDocumentTitle(profile);
 
   const mainClasses = [
-    'min-h-screen',
     'bg-[var(--color-bg)] text-[var(--color-text)]',
     'transition-colors duration-300',
   ].join(' ');
 
-  const copyrightClasses = [
-    'fixed left-1/2 -translate-x-1/2',
-    'text-xs text-[var(--color-text)] opacity-40',
-    isPreview ? 'bottom-6' : 'bottom-4',
-  ].join(' ');
-
   return (
-    <>
+    <div className={mainClasses}>
       <ThemeSelector />
-      <main className={mainClasses}>{children}</main>
-      <div className={copyrightClasses}>
-        © {currentYear} {copyright.name} · v{appVersion}
+      <main className="min-h-screen">{children}</main>
+      <div
+        className={`sticky z-20 bg-[var(--color-bg)] py-4 text-center text-xs transition-colors duration-300 ${isPreview ? 'bottom-6' : 'bottom-0'}`}
+      >
+        <span className="opacity-25">
+          © {currentYear} {copyright.prefix ? `${copyright.prefix} ` : ''}
+          {copyright.name}
+          {copyright.suffix ? ` ${copyright.suffix}` : ''} · v{appVersion}
+        </span>
       </div>
       {isPreview && (
         <div
@@ -94,7 +93,7 @@ export function Layout({ children }) {
           Test Environment - Data is simulated
         </div>
       )}
-    </>
+    </div>
   );
 }
 
