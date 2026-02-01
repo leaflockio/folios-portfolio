@@ -63,6 +63,7 @@ body {
   min-height: 100%; /* Ensure the layout spans the full viewport height */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  font-family: 'Noto Sans', sans-serif; /* Supports multilingual scripts */
   transition: background-color 0.3s ease; /* Smooth theme transition */
 }
 
