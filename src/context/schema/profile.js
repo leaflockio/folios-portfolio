@@ -23,7 +23,7 @@ const experienceItemSchema = z.object({
   description: z.string().optional(),
   endDate: z.string().nullable().optional(),
   location: locationSchema.nullable().optional(),
-  logo: z.string().url().optional(),
+  logo: z.string().url().nullable().optional(),
   role: z.string().min(1, 'Role is required'),
   startDate: z.string().min(1, 'Start date is required'),
   url: z.array(linkSchema).optional().default([]),
@@ -47,7 +47,7 @@ const educationItemSchema = z.object({
   grade: z.string().optional(),
   institution: z.string().min(1, 'Institution name is required'),
   location: locationSchema.nullable().optional(),
-  logo: z.string().url().optional(),
+  logo: z.string().url().nullable().optional(),
   startDate: z.string().optional(),
   visible: z.boolean().default(true),
 });
@@ -103,6 +103,15 @@ const basicsSchema = z.object({
   avatar: z.string().url().optional(),
   bio: z.string().optional(),
   firstName: z.string().min(1, 'First name is required'),
+  greetings: z
+    .array(
+      z.object({
+        language: z.string().min(1),
+        text: z.string().min(1),
+      }),
+    )
+    .optional()
+    .default([]),
   headline: z.array(z.string()).optional().default([]),
   lastName: z.string().min(1, 'Last name is required'),
   location: locationSchema.optional(),
@@ -126,5 +135,17 @@ export const profileSchema = z.object({
   education: sectionOf(educationItemSchema).optional(),
   experience: sectionOf(experienceItemSchema).optional(),
   projects: sectionOf(projectItemSchema).optional(),
+  sectionOrder: z
+    .array(z.string())
+    .optional()
+    .default([
+      'experience',
+      'projects',
+      'education',
+      'skills',
+      'certifications',
+      'customSections',
+      'contact',
+    ]),
   skills: sectionOf(skillItemSchema).optional(),
 });
