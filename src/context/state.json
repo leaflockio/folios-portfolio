@@ -1,5 +1,7 @@
 {
   "copyright": {
-    "name": "LeafLock"
+    "name": "LeafLock",
+    "prefix": "",
+    "suffix": ""
   }
 }
