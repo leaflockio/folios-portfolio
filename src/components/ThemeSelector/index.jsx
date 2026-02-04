@@ -18,7 +18,7 @@ export function ThemeSelector() {
   const { setTheme, theme } = useTheme();
 
   const buttonClasses = [
-    'flex size-10 items-center justify-center rounded-full',
+    'flex size-8 items-center justify-center rounded-full md:size-10',
     'bg-primary text-white shadow-lg',
     'transition-transform hover:scale-105',
     'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
@@ -35,13 +35,13 @@ export function ThemeSelector() {
   const triggerButton = (
     <Tooltip content="Change theme" position="left">
       <button aria-label="Select theme" className={buttonClasses} type="button">
-        <PaletteIcon className="size-5" />
+        <PaletteIcon className="size-4 md:size-5" />
       </button>
     </Tooltip>
   );
 
   return (
-    <div className="fixed right-4 top-4 z-50">
+    <div className="fixed right-2 top-2 z-50 md:right-4 md:top-4">
       <Dropdown
         ariaLabel="Available themes"
         menuClassName={menuClasses}
