@@ -64,7 +64,7 @@ body {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   font-family: 'Noto Sans', sans-serif; /* Supports multilingual scripts */
-  transition: background-color 0.3s ease; /* Smooth theme transition */
+  overflow-x: clip; /* Prevent horizontal overflow without breaking sticky */
 }
 
 /* Apply background and text colors from the active theme variables */
