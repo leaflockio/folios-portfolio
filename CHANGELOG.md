@@ -1,3 +1,9 @@
+## [1.0.0-beta.2](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2026-02-07)
+
+### Features
+
+* **ci:** add environment secrets for DDP config ([ff654eb](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/ff654eb4e0ff66b339176b797b7263b348ef7b98))
+
 ## 1.0.0-beta.1 (2026-02-07)
 
 ### Features
