@@ -85,6 +85,14 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          DDP_FIRST_NAME: ${{ secrets.DDP_FIRST_NAME }}
+          DDP_LAST_NAME: ${{ secrets.DDP_LAST_NAME }}
+          DDP_PROFILE_PATH: ${{ secrets.DDP_PROFILE_PATH }}
+          DDP_EMAIL: ${{ secrets.DDP_EMAIL }}
+          DDP_PHONE_COUNTRY_CODE: ${{ secrets.DDP_PHONE_COUNTRY_CODE }}
+          DDP_PHONE_NUMBER: ${{ secrets.DDP_PHONE_NUMBER }}
+          DDP_SHOW_CONTACT_ON_ERROR: ${{ secrets.DDP_SHOW_CONTACT_ON_ERROR }}
 
       - name: Deploy to Netlify (QA)
         uses: nwtgck/actions-netlify@v3
