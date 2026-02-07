@@ -11,6 +11,15 @@
 
 . "$(dirname "$0")/utils.sh"
 
+# Whitelist bots in CI environments (allows semantic-release to push)
+if [ "$CI" = "true" ]; then
+  ALLOWED_BOTS="github-actions[bot] dependabot[bot] semantic-release-bot"
+  if echo "$ALLOWED_BOTS" | grep -qw "$GITHUB_ACTOR"; then
+    log_success "Branch check skipped for bot: $GITHUB_ACTOR"
+    exit 0
+  fi
+fi
+
 PROTECTED_BRANCHES="main master pre-main"
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
