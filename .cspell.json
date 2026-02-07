@@ -50,7 +50,9 @@
     "keyid",
     "signingkey",
     "clearsign",
-    "gpgconf"
+    "gpgconf",
+    "conventionalcommits",
+    "yourdomain"
   ],
   "ignorePaths": ["node_modules", "coverage", "dist", ".git", ".husky/_", "package-lock.json"],
   "enableFiletypes": ["js", "jsx", "ts", "tsx", "json", "md", "css", "html"],
