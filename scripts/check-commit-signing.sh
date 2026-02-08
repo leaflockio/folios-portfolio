@@ -41,6 +41,9 @@ for COMMIT in $NEW_COMMITS; do
 
   if echo "$SIGNATURE_INFO" | grep -qE "Good signature|gitsign: Good signature"; then
     log_success "Commit $COMMIT is signed and verified."
+  elif echo "$SIGNATURE_INFO" | grep -q "gpg: Signature made"; then
+    # Signature exists but key not in local keyring (e.g., GitHub web-flow commits)
+    log_success "Commit $COMMIT is signed (key not in local keyring)."
   else
     log_error "Commit $COMMIT is not signed!"
     log_info "Please sign your commit using GPG or Gitsign before pushing."

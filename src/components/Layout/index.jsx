@@ -9,6 +9,7 @@ import { ThemeSelector } from '../ThemeSelector';
 const { copyright } = appState;
 const currentYear = new Date().getFullYear();
 const appVersion = __APP_VERSION__;
+const isPreview = import.meta.env.MODE !== 'production';
 
 /**
  * Main layout wrapper component.
@@ -64,8 +65,9 @@ export function Layout({ children }) {
   ].join(' ');
 
   const copyrightClasses = [
-    'fixed bottom-4 left-1/2 -translate-x-1/2',
+    'fixed left-1/2 -translate-x-1/2',
     'text-xs text-[var(--color-text)] opacity-40',
+    isPreview ? 'bottom-6' : 'bottom-4',
   ].join(' ');
 
   return (
@@ -75,6 +77,17 @@ export function Layout({ children }) {
       <div className={copyrightClasses}>
         © {currentYear} {copyright.name} · v{appVersion}
       </div>
+      {isPreview && (
+        <div
+          className="fixed inset-x-0 bottom-0 py-1 text-center text-xs"
+          style={{
+            backgroundColor: 'color-mix(in srgb, var(--color-primary) 20%, transparent)',
+            color: 'var(--color-primary)',
+          }}
+        >
+          Test Environment - Data is simulated
+        </div>
+      )}
     </>
   );
 }
