@@ -1,3 +1,14 @@
+## [1.0.0-beta.3](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2026-02-08)
+
+### Features
+
+* **section-nav:** add long-press tooltips and floating button tooltip for mobile ([8a09a44](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/8a09a449176eedd4c45dc3368ad354765fbc6912))
+* **socials:** add long-press tooltips and improve mobile touch targets ([31b702c](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/31b702cd21eb19e8268370f0d15e27520c3ccb5e))
+
+### Bug Fixes
+
+* **portfolio:** adjust mobile padding for floating sidebars ([1748de1](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/1748de13f86ac38fe07152b740cd04095228f661))
+
 ## [1.0.0-beta.2](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2026-02-08)
 
 ### Features
