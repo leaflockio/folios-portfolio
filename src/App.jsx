@@ -3,6 +3,7 @@ import { Layout } from './components/Layout';
 import { AppStateProvider } from './context/AppStateProvider';
 import { useAppState } from './hooks/useAppState';
 import { ErrorPage } from './pages/ErrorPage';
+import { PortfolioPage } from './pages/PortfolioPage';
 
 /**
  * Main application component.
@@ -20,21 +21,20 @@ function App() {
 
 /**
  * Inner app component that consumes the app state context.
- * Renders Portfolio or ErrorPage based on profile loading status.
+ * Renders PortfolioPage or ErrorPage based on profile loading status.
  *
  * @returns {JSX.Element|null} The rendered content
  */
 function AppContent() {
   const { envConfig, isLoading, profile } = useAppState();
 
-  // Show nothing while loading
   if (isLoading) {
     return null;
   }
 
   return (
     <Layout>
-      {profile ? <div>Portfolio loaded - {profile.name}</div> : <ErrorPage envConfig={envConfig} />}
+      {profile ? <PortfolioPage profile={profile} /> : <ErrorPage envConfig={envConfig} />}
     </Layout>
   );
 }
