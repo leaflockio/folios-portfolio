@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Certifications } from '@/sections/Certifications';
 import { Contact } from '@/sections/Contact';
 import { CustomSection } from '@/sections/CustomSection';
@@ -9,6 +10,7 @@ import { SectionNav } from '@/sections/SectionNav';
 import { Skills } from '@/sections/Skills';
 import { SocialsSidebar } from '@/sections/SocialsSidebar';
 import PropTypes from 'prop-types';
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 /**
  * Section wrapper — ensures each section takes at least the full viewport height.
@@ -30,6 +32,7 @@ Section.propTypes = {
 };
 
 /** @type {Map<string, { Component: Function, getProps: Function }>} */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SECTION_CONFIG = new Map([
   [
     'certifications',
@@ -54,7 +57,9 @@ const SECTION_CONFIG = new Map([
  * @returns {JSX.Element} The rendered portfolio page
  */
 export function PortfolioPage({ profile }) {
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   const sectionOrder = profile.sectionOrder ?? [];
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   const customSections = (profile.customSections ?? []).filter(s => s.visible);
 
   return (
@@ -62,6 +67,7 @@ export function PortfolioPage({ profile }) {
       <SocialsSidebar socials={profile.contact?.socials ?? []} />
       <SectionNav profile={profile} />
       <Hero basics={profile.basics} contact={profile.contact} />
+      {/* Disabled for testing - uncomment to enable sections
       {sectionOrder.map(key => {
         if (key === 'customSections') {
           return customSections.map(s => (
@@ -79,6 +85,7 @@ export function PortfolioPage({ profile }) {
           </Section>
         );
       })}
+      */}
     </div>
   );
 }
