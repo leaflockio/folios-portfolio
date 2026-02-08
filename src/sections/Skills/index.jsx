@@ -24,8 +24,11 @@ export function Skills({ skills }) {
             <div className="flex flex-wrap gap-2">
               {names.map(name => (
                 <span
-                  className="bg-[var(--color-primary)]/10 cursor-default rounded-full px-4 py-1.5 text-sm text-[var(--color-primary)] transition-colors hover:bg-[var(--color-primary)] hover:text-white"
+                  className="cursor-default rounded-full px-4 py-1.5 text-sm text-[var(--color-primary)] transition-colors hover:bg-[var(--color-primary)] hover:text-white"
                   key={name}
+                  style={{
+                    backgroundColor: 'color-mix(in srgb, var(--color-primary) 10%, transparent)',
+                  }}
                 >
                   {name}
                 </span>
