@@ -32,7 +32,12 @@ export function Education({ education }) {
                   src={edu.logo}
                 />
               ) : (
-                <div className="bg-[var(--color-text)]/5 flex size-12 shrink-0 items-center justify-center rounded-lg">
+                <div
+                  className="flex size-12 shrink-0 items-center justify-center rounded-lg"
+                  style={{
+                    backgroundColor: 'color-mix(in srgb, var(--color-text) 5%, transparent)',
+                  }}
+                >
                   <FallbackIcon className="size-6 opacity-30" />
                 </div>
               )}
@@ -62,8 +67,12 @@ export function Education({ education }) {
                     <div className="flex flex-wrap gap-1.5">
                       {edu.courses.map(c => (
                         <span
-                          className="bg-[var(--color-secondary)]/10 rounded px-2.5 py-0.5 text-xs text-[var(--color-secondary)]"
+                          className="rounded px-2.5 py-0.5 text-xs text-[var(--color-secondary)]"
                           key={c.course}
+                          style={{
+                            backgroundColor:
+                              'color-mix(in srgb, var(--color-secondary) 10%, transparent)',
+                          }}
                         >
                           {c.course}
                         </span>

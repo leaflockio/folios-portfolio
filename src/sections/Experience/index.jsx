@@ -19,7 +19,10 @@ export function Experience({ experience }) {
   return (
     <section id="experience">
       <SectionHeading text={displayText} />
-      <div className="border-[var(--color-primary)]/20 relative space-y-10 border-l-2 pl-8">
+      <div
+        className="relative space-y-10 border-l-2 pl-8"
+        style={{ borderColor: 'color-mix(in srgb, var(--color-primary) 20%, transparent)' }}
+      >
         {visible.map((exp, i) => {
           const isActive = exp.endDate === null;
           const FallbackIcon = getOrgFallback(i);
@@ -28,11 +31,12 @@ export function Experience({ experience }) {
             <div className="relative" key={`${exp.company}-${exp.startDate}`}>
               {/* Timeline dot */}
               <div
-                className={`absolute -left-[2.55rem] top-1 size-5 rounded-full border-4 border-[var(--color-bg)] ${
+                className={`absolute top-1 size-5 rounded-full border-4 border-[var(--color-bg)] ${
                   isActive
                     ? 'bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)]'
                     : 'bg-[var(--color-primary)]'
                 }`}
+                style={{ left: '-2.55rem' }}
               />
 
               <div className="flex items-start gap-4">
@@ -44,7 +48,12 @@ export function Experience({ experience }) {
                     src={exp.logo}
                   />
                 ) : (
-                  <div className="bg-[var(--color-text)]/5 flex size-11 shrink-0 items-center justify-center rounded-lg">
+                  <div
+                    className="flex size-11 shrink-0 items-center justify-center rounded-lg"
+                    style={{
+                      backgroundColor: 'color-mix(in srgb, var(--color-text) 5%, transparent)',
+                    }}
+                  >
                     <FallbackIcon className="size-6 opacity-30" />
                   </div>
                 )}

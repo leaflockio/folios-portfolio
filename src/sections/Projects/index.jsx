@@ -34,7 +34,12 @@ export function Projects({ projects }) {
                     src={project.image[0]}
                   />
                 ) : (
-                  <div className="bg-[var(--color-text)]/5 flex size-full items-center justify-center">
+                  <div
+                    className="flex size-full items-center justify-center"
+                    style={{
+                      backgroundColor: 'color-mix(in srgb, var(--color-text) 5%, transparent)',
+                    }}
+                  >
                     <FallbackIcon className="size-16 opacity-20" />
                   </div>
                 )}

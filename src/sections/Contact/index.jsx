@@ -6,14 +6,20 @@ import PropTypes from 'prop-types';
  *
  * @param {object} props - Component props
  * @param {object} props.contact - Contact data (displayText, email, resume)
+ * @param {object} [props.location] - Location data (city, region)
  * @returns {JSX.Element|null} The rendered contact section
  */
-export function Contact({ contact }) {
+export function Contact({ contact, location }) {
   if (!contact) return null;
+
+  const { city, region } = location ?? {};
 
   return (
     <section className="py-16 text-center" id="contact">
       <SectionHeading text={contact.displayText} />
+      {(city || region) && (
+        <p className="mb-4 text-sm opacity-40">{[city, region].filter(Boolean).join(', ')}</p>
+      )}
       {contact.email && (
         <a
           className="text-3xl font-black transition-colors hover:text-[var(--color-primary)] md:text-4xl"
@@ -40,4 +46,5 @@ export function Contact({ contact }) {
 
 Contact.propTypes = {
   contact: PropTypes.object.isRequired,
+  location: PropTypes.object,
 };

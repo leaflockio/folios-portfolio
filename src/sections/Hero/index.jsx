@@ -54,7 +54,7 @@ export function Hero({ basics, contact }) {
           </h1>
           {headlines.length > 0 && (
             <p className="mt-2 text-base font-medium text-[var(--color-primary)] opacity-70 sm:text-lg">
-              {headlines[headlineIndex]}
+              {headlines.at(headlineIndex)}
             </p>
           )}
         </div>
