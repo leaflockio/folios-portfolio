@@ -25,8 +25,11 @@ export function Certifications({ certifications }) {
 
           return (
             <div
-              className="border-[var(--color-text)]/10 hover:border-[var(--color-primary)]/30 flex gap-4 rounded-lg border p-4 transition-colors"
+              className="flex gap-4 rounded-lg border p-4 transition-colors hover:border-[var(--color-primary)]"
               key={cert.name}
+              style={{
+                borderColor: 'color-mix(in srgb, var(--color-text) 10%, transparent)',
+              }}
             >
               {/* Badge or fallback */}
               {cert.badge ? (
