@@ -1,1 +1,356 @@
-{}
+{
+  "basics": {
+    "firstName": "Alex",
+    "lastName": "Johnson",
+    "greetings": [
+      { "language": "Telugu", "text": "నమస్కారం, నేను" },
+      { "language": "English", "text": "Hello, I am" },
+      { "language": "Hindi", "text": "नमस्ते, मैं हूँ" },
+      { "language": "Spanish", "text": "Hola, soy" },
+      { "language": "French", "text": "Bonjour, je suis" },
+      { "language": "Italian", "text": "Ciao, sono" },
+      { "language": "German", "text": "Hallo, ich bin" },
+      { "language": "Portuguese", "text": "Olá, eu sou" },
+      { "language": "Japanese", "text": "こんにちは、私は" },
+      { "language": "Korean", "text": "안녕하세요, 저는" },
+      { "language": "Turkish", "text": "Merhaba, ben" },
+      { "language": "Persian", "text": "سلام، من هستم" },
+      { "language": "Thai", "text": "สวัสดี ฉันคือ" }
+    ],
+    "headline": ["Full Stack Developer", "AI Engineer", "Data Scientist"],
+    "bio": "Passionate developer with 5+ years of experience building web applications. I love turning complex problems into simple, beautiful solutions. My journey started with tinkering on small scripts and grew into architecting full-scale distributed systems. I thrive at the intersection of design and engineering, crafting interfaces that feel intuitive while being backed by robust, scalable infrastructure. When I am not coding, you will find me mentoring junior developers, contributing to open-source projects, or exploring the latest advances in machine learning and artificial intelligence.",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+    "location": {
+      "city": "Maplewood",
+      "region": "CA",
+      "country": "USA"
+    }
+  },
+  "contact": {
+    "displayText": "Say Hello",
+    "email": "alex.johnson@example.com",
+    "phone": {
+      "countryCode": "+1",
+      "number": "5551234567"
+    },
+    "resume": "https://example.com/resume.pdf",
+    "socials": [
+      { "label": "GitHub", "url": "https://github.com/example" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/example" },
+      { "label": "Twitter", "url": "https://twitter.com/example" },
+      { "label": "Dribbble", "url": "https://dribbble.com/example" },
+      { "label": "Medium", "url": "https://medium.com/@example" },
+      { "label": "YouTube", "url": "https://youtube.com/@example" },
+      { "label": "Instagram", "url": "https://instagram.com/example" },
+      { "label": "My Blog", "url": "https://blog.example.com" }
+    ]
+  },
+  "experience": {
+    "displayText": "Journey",
+    "items": [
+      {
+        "visible": true,
+        "company": "NovaTech Solutions",
+        "role": "Senior Software Engineer",
+        "startDate": "2023-01",
+        "endDate": null,
+        "workModel": "hybrid",
+        "location": {
+          "city": "Maplewood",
+          "region": "CA",
+          "country": "USA"
+        },
+        "description": "Leading development of microservices architecture. Mentoring junior developers and conducting code reviews.",
+        "logo": null,
+        "url": [{ "label": "NovaTech", "url": "https://example.com/novatech" }]
+      },
+      {
+        "visible": true,
+        "company": "Greenfield Labs",
+        "role": "Full Stack Developer",
+        "startDate": "2021-06",
+        "endDate": "2022-12",
+        "workModel": "remote",
+        "location": null,
+        "description": "Built and maintained React applications with Node.js backends. Implemented CI/CD pipelines.",
+        "logo": null,
+        "url": [{ "label": "Greenfield", "url": "https://example.com/greenfield" }]
+      },
+      {
+        "visible": true,
+        "company": "Pixel & Code Agency",
+        "role": "Frontend Developer",
+        "startDate": "2020-03",
+        "endDate": "2021-05",
+        "workModel": "onSite",
+        "location": {
+          "city": "Riverdale",
+          "region": "NY",
+          "country": "USA"
+        },
+        "description": "Developed responsive websites for clients. Collaborated with designers to implement pixel-perfect UIs.",
+        "logo": null,
+        "url": []
+      },
+      {
+        "visible": true,
+        "company": "Orion Data Systems",
+        "role": "Backend Developer",
+        "startDate": "2019-01",
+        "endDate": "2020-02",
+        "workModel": "onSite",
+        "location": {
+          "city": "Cedarville",
+          "region": "TX",
+          "country": "USA"
+        },
+        "description": "Designed and maintained RESTful APIs and database schemas for internal tooling.",
+        "logo": null,
+        "url": []
+      },
+      {
+        "visible": true,
+        "company": "Summit Interactive",
+        "role": "Junior Developer",
+        "startDate": "2018-06",
+        "endDate": "2018-12",
+        "workModel": "onSite",
+        "location": {
+          "city": "Brookhaven",
+          "region": "GA",
+          "country": "USA"
+        },
+        "description": "Assisted in building landing pages and marketing sites using HTML, CSS, and JavaScript.",
+        "logo": null,
+        "url": []
+      },
+      {
+        "visible": true,
+        "company": "Bluewave Consulting",
+        "role": "Software Engineering Intern",
+        "startDate": "2017-05",
+        "endDate": "2017-12",
+        "workModel": "onSite",
+        "location": {
+          "city": "Lakeport",
+          "region": "WA",
+          "country": "USA"
+        },
+        "description": "Contributed to internal dashboards and automated reporting pipelines.",
+        "logo": null,
+        "url": []
+      }
+    ]
+  },
+  "education": {
+    "displayText": "Foundation",
+    "items": [
+      {
+        "visible": true,
+        "institution": "Westfield State University",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "startDate": "2014",
+        "endDate": "2018",
+        "grade": "3.8 GPA",
+        "location": {
+          "city": "Westfield",
+          "region": "CA",
+          "country": "USA"
+        },
+        "logo": null,
+        "courses": [
+          {
+            "course": "Data Structures and Algorithms",
+            "description": "Advanced algorithms and data structures for efficient problem solving.",
+            "grade": "A",
+            "year": "2016",
+            "link": null
+          },
+          {
+            "course": "Operating Systems",
+            "description": "Process management, memory allocation, and file systems.",
+            "grade": "A-",
+            "year": "2017",
+            "link": null
+          }
+        ]
+      },
+      {
+        "visible": true,
+        "institution": "Ridgemont Community College",
+        "degree": "Associate of Science",
+        "field": "Information Technology",
+        "startDate": "2012",
+        "endDate": "2014",
+        "grade": "3.6 GPA",
+        "location": {
+          "city": "Ridgemont",
+          "region": "CA",
+          "country": "USA"
+        },
+        "logo": null,
+        "courses": []
+      }
+    ]
+  },
+  "skills": {
+    "displayText": "What I Work With",
+    "items": [
+      { "visible": true, "name": "JavaScript", "category": "Languages" },
+      { "visible": true, "name": "TypeScript", "category": "Languages" },
+      { "visible": true, "name": "Python", "category": "Languages" },
+      { "visible": true, "name": "Go", "category": "Languages" },
+      { "visible": true, "name": "React", "category": "Frontend" },
+      { "visible": true, "name": "Vue.js", "category": "Frontend" },
+      { "visible": true, "name": "Tailwind CSS", "category": "Frontend" },
+      { "visible": true, "name": "Next.js", "category": "Frontend" },
+      { "visible": true, "name": "Node.js", "category": "Backend" },
+      { "visible": true, "name": "Express", "category": "Backend" },
+      { "visible": true, "name": "PostgreSQL", "category": "Database" },
+      { "visible": true, "name": "MongoDB", "category": "Database" },
+      { "visible": true, "name": "Redis", "category": "Database" },
+      { "visible": true, "name": "AWS", "category": "DevOps" },
+      { "visible": true, "name": "Docker", "category": "DevOps" },
+      { "visible": true, "name": "Kubernetes", "category": "DevOps" },
+      { "visible": true, "name": "Git", "category": "Tools" },
+      { "visible": true, "name": "Figma", "category": "Tools" }
+    ]
+  },
+  "projects": {
+    "displayText": "Selected Work",
+    "items": [
+      {
+        "visible": true,
+        "title": "ShopFlow",
+        "description": "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
+        "image": [],
+        "tags": ["React", "Node.js", "PostgreSQL", "Stripe"],
+        "links": [
+          { "label": "Live Demo", "url": "https://example.com/shopflow" },
+          { "label": "GitHub", "url": "https://github.com/example/shopflow" }
+        ]
+      },
+      {
+        "visible": true,
+        "title": "TaskHive",
+        "description": "A collaborative task management application with real-time updates, team workspaces, and integrations.",
+        "image": [],
+        "tags": ["Vue.js", "Firebase", "Tailwind"],
+        "links": [{ "label": "GitHub", "url": "https://github.com/example/taskhive" }]
+      },
+      {
+        "visible": true,
+        "title": "WeatherLens",
+        "description": "A beautiful weather dashboard with 7-day forecasts, location search, and customizable widgets.",
+        "image": [],
+        "tags": ["React", "OpenWeather API", "Chart.js"],
+        "links": [{ "label": "Live Demo", "url": "https://example.com/weatherlens" }]
+      },
+      {
+        "visible": true,
+        "title": "DevNotes",
+        "description": "A markdown-based note taking app for developers with syntax highlighting and GitHub sync.",
+        "image": [],
+        "tags": ["Next.js", "MDX", "Tailwind"],
+        "links": [{ "label": "GitHub", "url": "https://github.com/example/devnotes" }]
+      },
+      {
+        "visible": true,
+        "title": "FitTrack",
+        "description": "Fitness tracking dashboard with workout logging, progress charts, and goal setting.",
+        "image": [],
+        "tags": ["React", "D3.js", "Node.js"],
+        "links": [
+          { "label": "Live Demo", "url": "https://example.com/fittrack" },
+          { "label": "GitHub", "url": "https://github.com/example/fittrack" }
+        ]
+      },
+      {
+        "visible": true,
+        "title": "ChatBridge",
+        "description": "A real-time chat application with end-to-end encryption, file sharing, and group channels.",
+        "image": [],
+        "tags": ["React", "Socket.io", "MongoDB"],
+        "links": [{ "label": "GitHub", "url": "https://github.com/example/chatbridge" }]
+      },
+      {
+        "visible": true,
+        "title": "PixelBoard",
+        "description": "A collaborative whiteboard app for remote teams with drawing tools and sticky notes.",
+        "image": [],
+        "tags": ["Canvas API", "WebSockets", "Express"],
+        "links": [{ "label": "Live Demo", "url": "https://example.com/pixelboard" }]
+      }
+    ]
+  },
+  "certifications": {
+    "displayText": "Credentials",
+    "items": [
+      {
+        "visible": true,
+        "name": "Cloud Solutions Architect",
+        "issuer": "CloudPlatform Inc.",
+        "date": "2023-06",
+        "link": "https://example.com/cert/cloud-architect",
+        "badge": null
+      },
+      {
+        "visible": true,
+        "name": "Professional Scrum Master",
+        "issuer": "AgileBoard Foundation",
+        "date": "2022-11",
+        "link": "https://example.com/cert/scrum-master",
+        "badge": null
+      },
+      {
+        "visible": true,
+        "name": "Full Stack Web Development",
+        "issuer": "CodeAcademy Pro",
+        "date": "2022-03",
+        "link": "https://example.com/cert/fullstack",
+        "badge": null
+      },
+      {
+        "visible": true,
+        "name": "Data Engineering Fundamentals",
+        "issuer": "DataStream Institute",
+        "date": "2021-09",
+        "link": "https://example.com/cert/data-engineering",
+        "badge": null
+      },
+      {
+        "visible": true,
+        "name": "Cybersecurity Essentials",
+        "issuer": "SecureNet Academy",
+        "date": "2021-01",
+        "link": "https://example.com/cert/cybersecurity",
+        "badge": null
+      },
+      {
+        "visible": true,
+        "name": "Machine Learning Specialization",
+        "issuer": "DeepLearn Institute",
+        "date": "2020-06",
+        "link": "https://example.com/cert/ml-specialization",
+        "badge": null
+      }
+    ]
+  },
+  "customSections": [
+    {
+      "visible": true,
+      "title": "Interests",
+      "content": "When I'm not coding, you can find me hiking local trails, experimenting with new recipes, or contributing to open-source projects."
+    }
+  ],
+  "sectionOrder": [
+    "projects",
+    "experience",
+    "education",
+    "skills",
+    "certifications",
+    "customSections",
+    "contact"
+  ]
+}
