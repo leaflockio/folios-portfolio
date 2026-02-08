@@ -63,7 +63,7 @@ export function PortfolioPage({ profile }) {
   const customSections = (profile.customSections ?? []).filter(s => s.visible);
 
   return (
-    <div className="mx-auto max-w-4xl pl-[7.5%] pr-[9.2%] sm:px-12 md:px-20">
+    <div className="mx-auto max-w-4xl pl-[52px] pr-4 sm:px-12 md:px-20">
       <SocialsSidebar socials={profile.contact?.socials ?? []} />
       <SectionNav profile={profile} />
       <Hero basics={profile.basics} contact={profile.contact} />

@@ -1,9 +1,11 @@
 import { ChevronDownIcon, ChevronUpIcon } from '@/components/ui/icons';
 import { getSectionIcon } from '@/components/ui/icons/sectionIcons';
+import { Tooltip } from '@/components/ui/Tooltip';
 import PropTypes from 'prop-types';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 const PER_PAGE = 5;
+const LONG_PRESS_DURATION = 500;
 
 /**
  * Right sidebar — section navigation with icons.
@@ -18,6 +20,9 @@ export function SectionNav({ profile }) {
   const [offset, setOffset] = useState(0);
   const [activeId, setActiveId] = useState('hero');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeTooltip, setActiveTooltip] = useState(null);
+  const longPressTimer = useRef(null);
+  const isLongPress = useRef(false);
 
   const SECTION_LABELS = useMemo(
     () =>
@@ -107,6 +112,7 @@ export function SectionNav({ profile }) {
     function handleClickOutside(e) {
       if (!e.target.closest('[data-section-nav]')) {
         setMobileMenuOpen(false);
+        setActiveTooltip(null);
       }
     }
 
@@ -114,9 +120,19 @@ export function SectionNav({ profile }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [mobileMenuOpen]);
 
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (longPressTimer.current) {
+        clearTimeout(longPressTimer.current);
+      }
+    };
+  }, []);
+
   if (sections.length === 0) return null;
 
   const activeIdx = sections.findIndex(s => s.id === activeId);
+  const activeSection = sections.find(s => s.id === activeId);
   const hasPrev = activeIdx > 0;
   const hasNext = activeIdx < sections.length - 1;
   const visible = sections.slice(offset, offset + PER_PAGE);
@@ -128,34 +144,69 @@ export function SectionNav({ profile }) {
    * @param {string} id - The section element id
    */
   function scrollTo(id) {
+    if (isLongPress.current) {
+      isLongPress.current = false;
+      return;
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
+    setActiveTooltip(null);
+  }
+
+  /**
+   * Starts long press timer for showing tooltip.
+   *
+   * @param {string} id - The section id
+   */
+  function handleTouchStart(id) {
+    isLongPress.current = false;
+    longPressTimer.current = setTimeout(() => {
+      isLongPress.current = true;
+      setActiveTooltip(id);
+    }, LONG_PRESS_DURATION);
+  }
+
+  /**
+   * Clears long press timer.
+   */
+  function handleTouchEnd() {
+    if (longPressTimer.current) {
+      clearTimeout(longPressTimer.current);
+    }
   }
 
   return (
     <>
       {/* Mobile: Single button with dropdown */}
       <div className="fixed right-2 top-14 z-30 md:hidden" data-section-nav>
-        <button
-          aria-label="Navigate sections"
-          className="flex size-8 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-lg transition-transform hover:scale-105"
-          onClick={() => setMobileMenuOpen(o => !o)}
-        >
-          <ActiveIcon className="size-4" />
-        </button>
+        <Tooltip content={activeSection?.label || 'Navigate'} position="left">
+          <button
+            aria-label="Navigate sections"
+            className="flex size-8 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-lg transition-transform hover:scale-105"
+            onClick={() => setMobileMenuOpen(o => !o)}
+          >
+            <ActiveIcon className="size-4" />
+          </button>
+        </Tooltip>
 
         {mobileMenuOpen && (
-          <div className="absolute right-0 mt-2 flex flex-col gap-1.5 rounded-xl bg-[var(--color-bg)] p-2 shadow-xl">
+          <div
+            className="absolute -right-1.5 mt-2 flex flex-col items-center gap-2 rounded-xl px-1.5 py-2"
+            style={{ backgroundColor: 'color-mix(in srgb, var(--color-text) 5%, transparent)' }}
+          >
             {sections.map(section => {
               const Icon = getSectionIcon(section.id);
               const isActive = section.id === activeId;
+              const isTooltipVisible = activeTooltip === section.id;
               return (
                 <button
-                  className={`flex size-8 items-center justify-center rounded-lg transition-all ${
+                  className={`relative flex size-8 items-center justify-center rounded-lg transition-all ${
                     isActive ? 'text-[var(--color-primary)]' : 'opacity-50 hover:opacity-100'
                   }`}
                   key={section.id}
                   onClick={() => scrollTo(section.id)}
+                  onTouchEnd={handleTouchEnd}
+                  onTouchStart={() => handleTouchStart(section.id)}
                   style={
                     isActive
                       ? {
@@ -166,6 +217,11 @@ export function SectionNav({ profile }) {
                   }
                 >
                   <Icon className="size-4" />
+                  <span
+                    className={`pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-[var(--color-text)] px-2.5 py-1 text-xs text-[var(--color-bg)] transition-opacity ${isTooltipVisible ? 'opacity-100' : 'opacity-0'}`}
+                  >
+                    {section.label}
+                  </span>
                 </button>
               );
             })}
