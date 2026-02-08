@@ -29,14 +29,20 @@ Section.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-/** @type {Map<string, { Component: Function, propKey: string }>} */
+/** @type {Map<string, { Component: Function, getProps: Function }>} */
 const SECTION_CONFIG = new Map([
-  ['certifications', { Component: Certifications, propKey: 'certifications' }],
-  ['contact', { Component: Contact, propKey: 'contact' }],
-  ['education', { Component: Education, propKey: 'education' }],
-  ['experience', { Component: Experience, propKey: 'experience' }],
-  ['projects', { Component: Projects, propKey: 'projects' }],
-  ['skills', { Component: Skills, propKey: 'skills' }],
+  [
+    'certifications',
+    { Component: Certifications, getProps: p => ({ certifications: p.certifications }) },
+  ],
+  [
+    'contact',
+    { Component: Contact, getProps: p => ({ contact: p.contact, location: p.basics?.location }) },
+  ],
+  ['education', { Component: Education, getProps: p => ({ education: p.education }) }],
+  ['experience', { Component: Experience, getProps: p => ({ experience: p.experience }) }],
+  ['projects', { Component: Projects, getProps: p => ({ projects: p.projects }) }],
+  ['skills', { Component: Skills, getProps: p => ({ skills: p.skills }) }],
 ]);
 
 /**
@@ -52,14 +58,10 @@ export function PortfolioPage({ profile }) {
   const customSections = (profile.customSections ?? []).filter(s => s.visible);
 
   return (
-    <div className="mx-auto max-w-4xl px-16 md:px-20">
+    <div className="mx-auto max-w-4xl pl-[7.5%] pr-[9.2%] sm:px-12 md:px-20">
       <SocialsSidebar socials={profile.contact?.socials ?? []} />
       <SectionNav profile={profile} />
-      <div className="flex min-h-screen items-center">
-        <div className="w-full py-12">
-          <Hero basics={profile.basics} contact={profile.contact} />
-        </div>
-      </div>
+      <Hero basics={profile.basics} contact={profile.contact} />
       {sectionOrder.map(key => {
         if (key === 'customSections') {
           return customSections.map(s => (
@@ -70,10 +72,10 @@ export function PortfolioPage({ profile }) {
         }
         const config = SECTION_CONFIG.get(key);
         if (!config) return null;
-        const { Component, propKey } = config;
+        const { Component, getProps } = config;
         return (
           <Section key={key}>
-            <Component {...{ [propKey]: profile[propKey] }} />
+            <Component {...getProps(profile)} />
           </Section>
         );
       })}
