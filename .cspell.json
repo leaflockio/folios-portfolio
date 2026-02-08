@@ -73,7 +73,15 @@
     "สวัสดี",
     "ฉันคือ"
   ],
-  "ignorePaths": ["node_modules", "coverage", "dist", ".git", ".husky/_", "package-lock.json"],
+  "ignorePaths": [
+    "node_modules",
+    "coverage",
+    "dist",
+    ".git",
+    ".husky/_",
+    "package-lock.json",
+    "CHANGELOG.md"
+  ],
   "enableFiletypes": ["js", "jsx", "ts", "tsx", "json", "md", "css", "html"],
   "allowCompoundWords": false,
   "reporters": ["default"],
