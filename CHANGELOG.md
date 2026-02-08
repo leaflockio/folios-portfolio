@@ -1,3 +1,39 @@
+## [1.0.0-beta.2](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2026-02-08)
+
+### Features
+
+* add dynamic document title from profile data ([e3d77e2](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/e3d77e2f01bc4215a33e9c7875e8b1edfda30259))
+* **app:** wire PortfolioPage into main app routing ([7185d04](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/7185d0480a3594f91446e29d1cfae8edb3c574f6))
+* **hero:** add rotating headlines, expandable bio, and mobile responsive sizing ([6ae6dfb](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/6ae6dfb3f6dc655b7ad12df610f61fcd1b367658))
+* **icons:** add icon system with section, social, and fallback mappings ([bbaa07a](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/bbaa07a7c82a8877c4b691944300933aaf5d1715))
+* **icons:** add project fallback icon pool and getter ([8655c99](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/8655c990024f5c6e597166fd7a7c5f4ba0dc6460))
+* **pages:** add PortfolioPage with section ordering and prop wiring ([804d9c7](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/804d9c7e08d62508228a3a369e5f4ac9526f2934))
+* **schema:** add full profile validation with sections, displayText, and reusable linkSchema ([be3e319](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/be3e319c9abf5d009519080086336bd8699f2d1d))
+* **schema:** add prefix and suffix fields to copyright config ([7484703](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/7484703987d4824a27aebc6224d701f418eeff2b))
+* **schema:** allow nullable logos, add greetings and sectionOrder to profile ([4b8c474](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/4b8c4746e68fdf9e56c0d53fee7d4b1890d8ca8a))
+* **sections:** add all portfolio section components ([d9be04d](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/d9be04d99bcc1bbd30b882034abbb30a258641ac))
+* **sections:** add all portfolio section components ([c3f4ab3](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/c3f4ab37be5305afc54568960be770eca2a97e65))
+* **ui:** add mobile responsive dropdown to section navigation ([7ce9c61](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/7ce9c61d183dfa1a8fdc5130b58fa120c487d476))
+* **ui:** add SectionHeading component ([24d6995](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/24d69957600b908bab6e388c6086af62262cda32))
+* **utils:** add formatDate helper for human-readable date strings ([094e2e3](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/094e2e31c60531b6572687134c8103ae7025fac1))
+
+### Bug Fixes
+
+* **certifications:** use inline style for border with CSS variable opacity ([a146668](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/a146668cd5b37f3ed55636d7e8a7a7eeac84b167))
+* **layout:** make footer sticky with solid background, support copyright prefix/suffix ([31f6fdb](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/31f6fdbbcdc4db6b87b54ac445b5711819df1287))
+* **layout:** make preview banner sticky with solid background ([a1850f9](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/a1850f92fba8dcee7a0bf4857e23f33921322650))
+* **layout:** use flexbox to prevent page scroll with minimal content ([a1b9d81](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/a1b9d8124eead41409e61508db37a1f8cafdc0b4))
+* replace object bracket lookups with Map to resolve object-injection warnings ([0e33273](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/0e33273eb90c115dafc5b5bcc980e76c28a49727))
+* **schema:** allow empty string for optional avatar field ([1faf95c](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/1faf95c325daa0c2a4b2443841cb43e5d3683289))
+* **sections:** use inline styles for CSS variable opacity and add missing JSDoc ([7a5a270](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/7a5a270708162916d0669828b66c40b46a90587a))
+* **skills:** use inline style for background with CSS variable opacity ([4b59667](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/4b59667104c0afaf5eb2f9773b048048a6346a51))
+* **styles:** use overflow-x clip to prevent horizontal scroll without breaking sticky ([b05c298](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/b05c298ef2eaf4b68773bcb1970c755c1e6eedcb))
+* **ThemeSelector:** make button responsive for mobile ([481595b](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/481595bda8edbe910819c765fc5138d3c260983e))
+
+### Refactoring
+
+* **portfolio:** use explicit getProps to avoid dynamic property access ([76e5d6d](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/76e5d6d0eac4c83f8bb405243a96f445dadddbad))
+
 ## 1.0.0-beta.1 (2026-02-08)
 
 ### Features
