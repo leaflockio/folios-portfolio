@@ -64,10 +64,7 @@ export function Layout({ children }) {
   const { profile } = useAppState();
   useDocumentTitle(profile);
 
-  const mainClasses = [
-    'bg-[var(--color-bg)] text-[var(--color-text)]',
-    'transition-colors duration-300',
-  ].join(' ');
+  const mainClasses = 'bg-[var(--color-bg)] text-[var(--color-text)]';
 
   return (
     <div className={mainClasses}>
@@ -84,10 +81,10 @@ export function Layout({ children }) {
       </div>
       {isPreview && (
         <div
-          className="fixed inset-x-0 bottom-0 py-1 text-center text-xs"
+          className="sticky bottom-0 z-20 bg-[var(--color-bg)] py-2 text-center text-xs transition-colors duration-300"
           style={{
-            backgroundColor: 'color-mix(in srgb, var(--color-primary) 20%, transparent)',
-            color: 'var(--color-primary)',
+            backgroundColor: 'var(--color-primary)',
+            color: 'var(--color-bg)',
           }}
         >
           Test Environment - Data is simulated
