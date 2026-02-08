@@ -100,7 +100,7 @@ function sectionOf(itemSchema) {
 // ── Top-level schemas ──
 
 const basicsSchema = z.object({
-  avatar: z.string().url().optional(),
+  avatar: z.string().url().optional().or(z.literal('')),
   bio: z.string().optional(),
   firstName: z.string().min(1, 'First name is required'),
   greetings: z
