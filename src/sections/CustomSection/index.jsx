@@ -1,5 +1,6 @@
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import PropTypes from 'prop-types';
+
+import { SectionHeading } from '@/components/ui/SectionHeading';
 
 /**
  * CustomSection — renders a single custom section with title and content.

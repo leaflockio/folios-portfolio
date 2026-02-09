@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
+
 import { getCertFallback } from '@/components/ui/icons/fallbackIcons';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { formatDate } from '@/utils/time';
-import PropTypes from 'prop-types';
 
 /**
  * Certifications section — 2-column card grid with badge images

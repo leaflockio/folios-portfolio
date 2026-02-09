@@ -117,9 +117,17 @@ const basicsSchema = z.object({
   location: locationSchema.optional(),
 });
 
+const availabilityBadgeSchema = z.object({
+  color: z.enum(['green', 'amber', 'teal', 'blue', 'purple', 'red', 'gray']),
+  pulse: z.boolean().optional().default(false),
+  text: z.string().min(1),
+});
+
 const contactSchema = z.object({
+  availability: z.array(availabilityBadgeSchema).optional().default([]),
   displayText: z.string().optional(),
   email: z.string().email().optional(),
+  headline: z.string().optional(),
   phone: phoneSchema.optional(),
   resume: z.string().url().optional(),
   socials: z.array(linkSchema).optional().default([]),

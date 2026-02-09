@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
 import { ChevronDownIcon, ChevronUpIcon } from '@/components/ui/icons';
 import { getSectionIcon } from '@/components/ui/icons/sectionIcons';
 import { Tooltip } from '@/components/ui/Tooltip';
-import PropTypes from 'prop-types';
-import { useEffect, useMemo, useRef, useState } from 'react';
 
 const PER_PAGE = 5;
 const LONG_PRESS_DURATION = 500;
@@ -182,18 +183,15 @@ export function SectionNav({ profile }) {
         <Tooltip content={activeSection?.label || 'Navigate'} position="left">
           <button
             aria-label="Navigate sections"
-            className="flex size-8 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-lg transition-transform hover:scale-105"
+            className="flex size-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-lg transition-transform hover:scale-105"
             onClick={() => setMobileMenuOpen(o => !o)}
           >
-            <ActiveIcon className="size-4" />
+            <ActiveIcon className="size-5" />
           </button>
         </Tooltip>
 
         {mobileMenuOpen && (
-          <div
-            className="absolute -right-1.5 mt-2 flex flex-col items-center gap-2 rounded-xl px-1.5 py-2"
-            style={{ backgroundColor: 'color-mix(in srgb, var(--color-text) 5%, transparent)' }}
-          >
+          <div className="absolute -right-1 mt-2 flex flex-col items-center gap-2 rounded-lg border-2 border-[var(--color-primary)] bg-[var(--color-bg)] p-2 shadow-2xl">
             {sections.map(section => {
               const Icon = getSectionIcon(section.id);
               const isActive = section.id === activeId;

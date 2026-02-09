@@ -1,6 +1,7 @@
+import log from 'loglevel';
+
 import { config } from '@/config/validate';
 import { getCurrentTimestamp } from '@/utils/time';
-import log from 'loglevel';
 
 const { level, tag } = config.logger;
 const isProd = import.meta.env.MODE === 'production';

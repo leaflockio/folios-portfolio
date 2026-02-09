@@ -1,5 +1,6 @@
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import PropTypes from 'prop-types';
+
+import { SectionHeading } from '@/components/ui/SectionHeading';
 
 /**
  * Skills section — skills grouped by category with pill tags.

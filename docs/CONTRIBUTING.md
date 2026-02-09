@@ -15,25 +15,21 @@ Currently, the project is maintained by:
 To maintain a structured workflow, we follow a branch-based development approach. Below are the key guidelines:
 
 - **Main Branch (`main`)**
-
   - This branch contains stable and production-ready code.
   - Direct commits to this branch are **not** allowed.
   - **Only merges from `pre-main`** are permitted.
 
 - **Pre-Main Branch (`pre-main`)**
-
   - This is the most stable branch before `main`.
   - All changes must be tested thoroughly before merging into `main`.
   - No direct commits; all changes come from `dev`.
 
 - **Development Branch (`dev`)**
-
   - This is the active development branch.
   - **All feature and fix branches should be created from here**.
   - Once stable, `dev` is merged into `pre-main`.
 
 - **Feature Branches (`feature/<feature-name>`)**
-
   - Use this branch to develop new features.
   - Example: `feature/user-authentication`
   - Once completed, create a pull request (PR) to merge it into `dev`.
@@ -46,7 +42,6 @@ To maintain a structured workflow, we follow a branch-based development approach
 ### Example Scenarios:
 
 1. **Developing a new feature**
-
    - Create branch `feature/add-dark-mode` from `dev`.
    - Work on changes, commit regularly.
    - Open PR to merge `feature/add-dark-mode` → `dev`.

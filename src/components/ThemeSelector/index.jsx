@@ -18,7 +18,7 @@ export function ThemeSelector() {
   const { setTheme, theme } = useTheme();
 
   const buttonClasses = [
-    'flex size-8 items-center justify-center rounded-full md:size-10',
+    'flex size-10 items-center justify-center rounded-full',
     'bg-primary text-white shadow-lg',
     'transition-transform hover:scale-105',
     'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
@@ -35,7 +35,7 @@ export function ThemeSelector() {
   const triggerButton = (
     <Tooltip content="Change theme" position="left">
       <button aria-label="Select theme" className={buttonClasses} type="button">
-        <PaletteIcon className="size-4 md:size-5" />
+        <PaletteIcon className="size-5" />
       </button>
     </Tooltip>
   );

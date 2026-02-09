@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
+
 import { getOrgFallback } from '@/components/ui/icons/fallbackIcons';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { formatDate } from '@/utils/time';
-import PropTypes from 'prop-types';
 
 /**
  * Experience section — vertical timeline with colored dots,

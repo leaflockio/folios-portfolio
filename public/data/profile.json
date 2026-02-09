@@ -28,12 +28,20 @@
   },
   "contact": {
     "displayText": "Say Hello",
+    "headline": "Got something to tell me?",
     "email": "alex.johnson@example.com",
     "phone": {
       "countryCode": "+1",
       "number": "5551234567"
     },
     "resume": "https://example.com/resume.pdf",
+    "availability": [
+      { "text": "Open to opportunities", "color": "green", "pulse": true },
+      { "text": "Currently employed", "color": "amber" },
+      { "text": "Hybrid preferred", "color": "teal" },
+      { "text": "Preferred: Email", "color": "gray" },
+      { "text": "Responds within 24 hours", "color": "gray" }
+    ],
     "socials": [
       { "label": "GitHub", "url": "https://github.com/example" },
       { "label": "LinkedIn", "url": "https://linkedin.com/in/example" },

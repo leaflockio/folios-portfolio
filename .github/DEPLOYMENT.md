@@ -25,7 +25,6 @@ Versions are automatically bumped based on commit messages:
 
 1. Go to [Netlify Dashboard](https://app.netlify.com)
 2. Create **Site 1 (Production)**:
-
    - Click "Add new site" → "Deploy manually" (or import from Git)
    - Name: `your-site-prod` (or similar)
    - Note the **Site ID** from Site Settings → General → Site details
