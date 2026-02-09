@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
+
 import { getProjectFallback } from '@/components/ui/icons/fallbackIcons';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import PropTypes from 'prop-types';
 
 /**
  * Projects section — project cards with image or fallback icon,
