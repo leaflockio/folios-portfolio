@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
  * Icon configuration with path data and styling options.
  */
 const ICONS = {
+  arrowLeft: {
+    path: 'M20 12H4M11 17l-5-5 5-5',
+  },
   arrowUp: {
     path: 'M12 19V5M5 12l7-7 7 7',
   },
@@ -120,6 +123,10 @@ const ICONS = {
     fill: true,
     path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
   },
+  mapPin: {
+    fill: true,
+    path: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z',
+  },
   medal: {
     path: 'M12 4l1.76 3.57 3.94.57-2.85 2.78.67 3.93L12 13l-3.52 1.85.67-3.93L6.3 8.14l3.94-.57L12 4zM8 21l4-2 4 2',
   },
@@ -234,6 +241,7 @@ function createIcon(config) {
 }
 
 // ── UI controls ──
+export const ArrowLeftIcon = createIcon(ICONS.arrowLeft);
 export const ArrowUpIcon = createIcon(ICONS.arrowUp);
 export const ChatBotIcon = createIcon(ICONS.chatBot);
 export const ChevronDownIcon = createIcon(ICONS.chevronDown);
@@ -244,6 +252,7 @@ export const CheckIcon = createIcon(ICONS.check);
 export const CloudOffIcon = createIcon(ICONS.cloudOff);
 export const EnvelopeIcon = createIcon(ICONS.envelope);
 export const FaviconIcon = createIcon(ICONS.favicon);
+export const MapPinIcon = createIcon(ICONS.mapPin);
 export const PaletteIcon = createIcon(ICONS.palette);
 export const PhoneIcon = createIcon(ICONS.phone);
 export const RefreshIcon = createIcon(ICONS.refresh);
