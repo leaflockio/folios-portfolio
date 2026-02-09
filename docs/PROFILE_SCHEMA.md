@@ -103,13 +103,36 @@ Your identity. The only required section in the entire profile.
 
 How people can reach you. Rendered in the hero and contact sections.
 
-| Field         | Type   | Required | Description                                |
-| ------------- | ------ | -------- | ------------------------------------------ |
-| `displayText` | string | no       | Custom section heading, e.g. `"Say Hello"` |
-| `email`       | string | no       | Contact email (must be valid email format) |
-| `phone`       | Phone  | no       | Phone number with country code             |
-| `resume`      | string | no       | URL to your resume/CV PDF                  |
-| `socials`     | Link[] | no       | Social media links                         |
+| Field          | Type                | Required | Description                                |
+| -------------- | ------------------- | -------- | ------------------------------------------ |
+| `displayText`  | string              | no       | Custom section heading, e.g. `"Say Hello"` |
+| `email`        | string              | no       | Contact email (must be valid email format) |
+| `phone`        | Phone               | no       | Phone number with country code             |
+| `resume`       | string              | no       | URL to your resume/CV PDF                  |
+| `socials`      | Link[]              | no       | Social media links                         |
+| `availability` | AvailabilityBadge[] | no       | Status badges (see below)                  |
+
+**Availability Badge:**
+
+Status badges displayed in the contact section to indicate your current availability and preferences.
+
+| Field   | Type    | Required | Description                                                       |
+| ------- | ------- | -------- | ----------------------------------------------------------------- |
+| `text`  | string  | yes      | Badge label, e.g. `"Open to opportunities"`                       |
+| `color` | string  | yes      | One of: `green`, `amber`, `teal`, `blue`, `purple`, `red`, `gray` |
+| `pulse` | boolean | no       | Animate the dot with a pulse effect (default: `false`)            |
+
+**Color Guide:**
+
+| Color    | Best for                                                                 |
+| -------- | ------------------------------------------------------------------------ |
+| `green`  | Active/positive status: "Open to opportunities", "Available immediately" |
+| `amber`  | Neutral/cautious status: "Currently employed", "2 weeks notice"          |
+| `teal`   | Preferences: "Hybrid preferred", "Remote friendly"                       |
+| `blue`   | Work type: "Freelance welcome", "Contract work"                          |
+| `purple` | Special interests: "Open to mentoring", "Speaking engagements"           |
+| `red`    | Unavailable: "Not looking", "Booked until Q3"                            |
+| `gray`   | Informational: "Based in EST", "Part-time only"                          |
 
 ```json
 {
@@ -121,6 +144,11 @@ How people can reach you. Rendered in the hero and contact sections.
       "number": "5551234567"
     },
     "resume": "https://example.com/resume.pdf",
+    "availability": [
+      { "text": "Open to opportunities", "color": "green", "pulse": true },
+      { "text": "Currently employed", "color": "amber" },
+      { "text": "Hybrid preferred", "color": "teal" }
+    ],
     "socials": [
       { "label": "GitHub", "url": "https://github.com/alexjohnson" },
       { "label": "LinkedIn", "url": "https://linkedin.com/in/alexjohnson" }
