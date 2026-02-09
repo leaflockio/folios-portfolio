@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
 import { ChevronDownIcon, ChevronUpIcon } from '@/components/ui/icons';
 import { getSectionIcon } from '@/components/ui/icons/sectionIcons';
 import { Tooltip } from '@/components/ui/Tooltip';
-import PropTypes from 'prop-types';
-import { useEffect, useMemo, useRef, useState } from 'react';
 
 const PER_PAGE = 5;
 const LONG_PRESS_DURATION = 500;
@@ -182,10 +183,10 @@ export function SectionNav({ profile }) {
         <Tooltip content={activeSection?.label || 'Navigate'} position="left">
           <button
             aria-label="Navigate sections"
-            className="flex size-8 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-lg transition-transform hover:scale-105"
+            className="flex size-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-lg transition-transform hover:scale-105"
             onClick={() => setMobileMenuOpen(o => !o)}
           >
-            <ActiveIcon className="size-4" />
+            <ActiveIcon className="size-5" />
           </button>
         </Tooltip>
 
