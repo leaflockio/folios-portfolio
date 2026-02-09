@@ -71,24 +71,26 @@ export function Layout({ children }) {
     <div className={mainClasses}>
       <ThemeSelector />
       <main className="flex-1">{children}</main>
-      <div className="z-20 bg-[var(--color-bg)] py-4 text-center text-xs transition-colors duration-300">
-        <span className="opacity-25">
-          © {currentYear} {copyright.prefix ? `${copyright.prefix} ` : ''}
-          {copyright.name}
-          {copyright.suffix ? ` ${copyright.suffix}` : ''} · v{appVersion}
-        </span>
-      </div>
-      {isPreview && (
-        <div
-          className="z-20 bg-[var(--color-bg)] py-2 text-center text-xs transition-colors duration-300"
-          style={{
-            backgroundColor: 'var(--color-primary)',
-            color: 'var(--color-bg)',
-          }}
-        >
-          Test Environment - Data is simulated
+      <footer className="fixed inset-x-0 bottom-0 z-20">
+        <div className="bg-[var(--color-bg)] py-4 text-center text-xs transition-colors duration-300">
+          <span className="opacity-25">
+            © {currentYear} {copyright.prefix ? `${copyright.prefix} ` : ''}
+            {copyright.name}
+            {copyright.suffix ? ` ${copyright.suffix}` : ''} · v{appVersion}
+          </span>
         </div>
-      )}
+        {isPreview && (
+          <div
+            className="py-2 text-center text-xs"
+            style={{
+              backgroundColor: 'var(--color-primary)',
+              color: 'var(--color-bg)',
+            }}
+          >
+            Test Environment - Data is simulated
+          </div>
+        )}
+      </footer>
     </div>
   );
 }
