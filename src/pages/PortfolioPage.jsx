@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import PropTypes from 'prop-types';
+
 import { Certifications } from '@/sections/Certifications';
 import { Contact } from '@/sections/Contact';
 import { CustomSection } from '@/sections/CustomSection';
@@ -9,7 +11,6 @@ import { Projects } from '@/sections/Projects';
 import { SectionNav } from '@/sections/SectionNav';
 import { Skills } from '@/sections/Skills';
 import { SocialsSidebar } from '@/sections/SocialsSidebar';
-import PropTypes from 'prop-types';
 /* eslint-enable @typescript-eslint/no-unused-vars */
 
 /**
@@ -67,6 +68,9 @@ export function PortfolioPage({ profile }) {
       <SocialsSidebar socials={profile.contact?.socials ?? []} />
       <SectionNav profile={profile} />
       <Hero basics={profile.basics} contact={profile.contact} />
+      <Section>
+        <Contact contact={profile.contact} location={profile.basics?.location} />
+      </Section>
       {/* Disabled for testing - uncomment to enable sections
       {sectionOrder.map(key => {
         if (key === 'customSections') {
