@@ -1,3 +1,24 @@
+## [1.0.0-beta.4](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2026-02-09)
+
+### Features
+
+* **contact:** refactor with conversational layout and status badges ([061c45a](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/061c45a28ab3fde82e34b89ff10a78b87b4e1b47))
+* **icons:** add ArrowLeftIcon and MapPinIcon ([345ced4](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/345ced4ff818b55c1213d02186d7798cbfd365fa))
+* **portfolio:** add Contact section to page layout ([6721205](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/6721205a3a83e3ba1d0038862bb102fe8a59840d))
+* **profile:** add availability badges and contact headline ([49b5d48](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/49b5d4821c2b980aa162691a7d332d8a30c6481b))
+* **profile:** add availability badges config ([89d0904](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/89d0904981e9a12ed4cf2b3f0951309beb86ddeb))
+* **schema:** add availability badge validation ([a58f919](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/a58f919ab35ab479249e309159edb967743e377e))
+* **schema:** add availability badges and contact headline ([6f3a5c5](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/6f3a5c575527afb7e993e15bccc3d452adc1508c))
+* **ui:** add reusable StatusBadge component ([fc685d0](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/fc685d0aa240c553f45da9b9dff2351915f686ae))
+
+### Bug Fixes
+
+* **config:** ignore SARIF files in Prettier checks ([b55d43e](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/b55d43e8c3346c3cff37da6c5add1a6fabfc9723))
+* **layout:** make footer sticky at bottom of viewport ([350015d](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/350015df39ad5002647e0aa22b2bc1dde7d403a7))
+* **section-nav:** improve mobile dropdown styling and alignment ([460e03a](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/460e03a29571e1c0a6ccfa39630881320029506b))
+* **section-nav:** increase mobile button touch target ([00c97f1](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/00c97f178b829b8594ff02ae44e54a8cfbe2ecad))
+* **theme:** use consistent button size across breakpoints ([5037323](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/503732340e4cdac38bcd4e54d31ea66ea34409a9))
+
 ## [1.0.0-beta.3](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2026-02-08)
 
 ### Features
