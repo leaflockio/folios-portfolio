@@ -1,7 +1,8 @@
-import { CloudOffIcon, EnvelopeIcon, PhoneIcon } from '@/components/ui/icons';
-import log from '@/utils/logger';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
+
+import { CloudOffIcon, EnvelopeIcon, PhoneIcon } from '@/components/ui/icons';
+import log from '@/utils/logger';
 
 /**
  * Error page displayed when profile data fails to load.

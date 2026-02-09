@@ -1,6 +1,7 @@
+import { useContext } from 'react';
+
 import { AppStateContext } from '@/context/AppStateContext';
 import log from '@/utils/logger';
-import { useContext } from 'react';
 
 /**
  * Hook to access the app state context.

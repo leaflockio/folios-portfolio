@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+
 import { appState } from '@/context/validate';
 import { useAppState } from '@/hooks/useAppState';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { useDynamicFavicon } from '@/hooks/useDynamicFavicon';
 import log from '@/utils/logger';
-import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
 
 import { ThemeSelector } from '../ThemeSelector';
 
