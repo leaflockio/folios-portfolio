@@ -7,22 +7,18 @@ We believe that a healthy developer is a productive and happy developer. This gu
 ## 💡 Tips for Maintaining Well-being
 
 1. **Take Regular Breaks**
-
    - Follow the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) to work in focused intervals.
    - Step away from your screen every 20 minutes to rest your eyes.
 
 2. **Stay Active**
-
    - Incorporate physical activity into your day, even if it's just a short walk.
    - Stretch regularly to avoid stiffness from prolonged sitting.
 
 3. **Maintain a Healthy Workspace**
-
    - Ensure proper lighting and ergonomic seating.
    - Keep your workspace clean and organized.
 
 4. **Stay Hydrated and Eat Well**
-
    - Drink plenty of water throughout the day.
    - Avoid excessive caffeine and opt for nutritious snacks.
 
