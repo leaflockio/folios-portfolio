@@ -127,6 +127,7 @@ const contactSchema = z.object({
   availability: z.array(availabilityBadgeSchema).optional().default([]),
   displayText: z.string().optional(),
   email: z.string().email().optional(),
+  headline: z.string().optional(),
   phone: phoneSchema.optional(),
   resume: z.string().url().optional(),
   socials: z.array(linkSchema).optional().default([]),
