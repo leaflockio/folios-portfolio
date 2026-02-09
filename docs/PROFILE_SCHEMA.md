@@ -103,14 +103,15 @@ Your identity. The only required section in the entire profile.
 
 How people can reach you. Rendered in the hero and contact sections.
 
-| Field          | Type                | Required | Description                                |
-| -------------- | ------------------- | -------- | ------------------------------------------ |
-| `displayText`  | string              | no       | Custom section heading, e.g. `"Say Hello"` |
-| `email`        | string              | no       | Contact email (must be valid email format) |
-| `phone`        | Phone               | no       | Phone number with country code             |
-| `resume`       | string              | no       | URL to your resume/CV PDF                  |
-| `socials`      | Link[]              | no       | Social media links                         |
-| `availability` | AvailabilityBadge[] | no       | Status badges (see below)                  |
+| Field          | Type                | Required | Description                                                 |
+| -------------- | ------------------- | -------- | ----------------------------------------------------------- |
+| `displayText`  | string              | no       | Section label, e.g. `"Say Hello"`                           |
+| `headline`     | string              | no       | Conversational headline, e.g. `"Got something to tell me?"` |
+| `email`        | string              | no       | Contact email (must be valid email format)                  |
+| `phone`        | Phone               | no       | Phone number with country code                              |
+| `resume`       | string              | no       | URL to your resume/CV PDF                                   |
+| `socials`      | Link[]              | no       | Social media links                                          |
+| `availability` | AvailabilityBadge[] | no       | Status badges (see below)                                   |
 
 **Availability Badge:**
 
@@ -138,6 +139,7 @@ Status badges displayed in the contact section to indicate your current availabi
 {
   "contact": {
     "displayText": "Say Hello",
+    "headline": "Got something to tell me?",
     "email": "alex@example.com",
     "phone": {
       "countryCode": "+1",
