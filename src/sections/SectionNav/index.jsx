@@ -191,10 +191,7 @@ export function SectionNav({ profile }) {
         </Tooltip>
 
         {mobileMenuOpen && (
-          <div
-            className="absolute -right-1.5 mt-2 flex flex-col items-center gap-2 rounded-xl px-1.5 py-2"
-            style={{ backgroundColor: 'color-mix(in srgb, var(--color-text) 5%, transparent)' }}
-          >
+          <div className="absolute -right-1 mt-2 flex flex-col items-center gap-2 rounded-lg border-2 border-[var(--color-primary)] bg-[var(--color-bg)] p-2 shadow-2xl">
             {sections.map(section => {
               const Icon = getSectionIcon(section.id);
               const isActive = section.id === activeId;
