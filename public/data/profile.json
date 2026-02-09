@@ -27,7 +27,8 @@
     }
   },
   "contact": {
-    "displayText": "Got something to tell me?",
+    "displayText": "Say Hello",
+    "headline": "Got something to tell me?",
     "email": "alex.johnson@example.com",
     "phone": {
       "countryCode": "+1",
