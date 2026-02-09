@@ -1,7 +1,8 @@
-import { ChevronDownIcon, ChevronUpIcon } from '@/components/ui/icons';
-import { getSocialIcon } from '@/components/ui/icons/socialIcons';
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
+
+import { ChevronDownIcon, ChevronUpIcon } from '@/components/ui/icons';
+import { getSocialIcon } from '@/components/ui/icons/socialIcons';
 
 const PER_PAGE = 5;
 const LONG_PRESS_DURATION = 500;

@@ -1,7 +1,8 @@
-import { config } from '@/config/validate';
-import log from '@/utils/logger';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+
+import { config } from '@/config/validate';
+import log from '@/utils/logger';
 
 import { getSystemTheme } from './helper';
 import { ThemeContext } from './ThemeContext';

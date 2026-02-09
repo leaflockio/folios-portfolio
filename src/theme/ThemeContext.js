@@ -1,5 +1,6 @@
-import { config } from '@/config/validate';
 import { createContext } from 'react';
+
+import { config } from '@/config/validate';
 
 /**
  * Theme context provides `theme` and `setTheme` for global access.
