@@ -6,6 +6,7 @@ import { ExpandToggle } from '@/components/ui/ExpandToggle';
 import { ExpandToggleVariant } from '@/components/ui/ExpandToggle/variants';
 import { getOrgFallback } from '@/components/ui/icons/fallbackIcons';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { Timeline, TimelineItem } from '@/components/ui/Timeline';
 import { formatDate } from '@/utils/time';
 
 const EXPERIENCE_LIMIT = 4;
@@ -56,26 +57,13 @@ export function Experience({ experience }) {
   return (
     <section id="experience">
       <SectionHeading text={displayText} />
-      <div
-        className="relative space-y-8 border-l-2 pl-6 sm:space-y-10 sm:pl-8"
-        style={{ borderColor: 'color-mix(in srgb, var(--color-primary) 20%, transparent)' }}
-      >
+      <Timeline>
         {displayedExperiences.map((exp, i) => {
           const isActive = exp.endDate === null;
           const FallbackIcon = getOrgFallback(i);
 
           return (
-            <div className="relative" key={`${exp.company}-${exp.startDate}`}>
-              {/* Timeline dot - centered on border line using transform */}
-              <div
-                className={`absolute -left-6 top-3 size-4 rounded-full border-[3px] border-[var(--color-bg)] sm:-left-8 sm:top-[0.85rem] sm:size-5 sm:border-4 ${
-                  isActive
-                    ? 'animate-pulse bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)]'
-                    : 'bg-[var(--color-primary)]'
-                }`}
-                style={{ transform: `translateX(${isActive ? '-55%' : '-52.5%'})` }}
-              />
-
+            <TimelineItem active={isActive} key={`${exp.company}-${exp.startDate}`}>
               <div className="flex items-start gap-3 sm:gap-4">
                 {/* Company logo or fallback */}
                 {exp.logo ? (
@@ -126,10 +114,10 @@ export function Experience({ experience }) {
                   )}
                 </div>
               </div>
-            </div>
+            </TimelineItem>
           );
         })}
-      </div>
+      </Timeline>
 
       {/* Show more button */}
       {hasMore && (
