@@ -193,7 +193,17 @@ export function SectionNav({ profile }) {
 
         {mobileMenuOpen && (
           <div className="absolute -right-1 mt-2 flex flex-col items-center gap-2 rounded-lg border-2 border-[var(--color-primary)] bg-[var(--color-bg)] p-2 shadow-2xl">
-            {sections.map(section => {
+            {/* Up arrow for pagination */}
+            {sections.length > PER_PAGE && (
+              <button
+                className={`text-[var(--color-primary)] transition-all ${offset > 0 ? 'opacity-60' : 'pointer-events-none opacity-0'}`}
+                onClick={() => setOffset(o => Math.max(0, o - 1))}
+              >
+                <ChevronUpIcon className="size-4" />
+              </button>
+            )}
+
+            {visible.map(section => {
               const Icon = getSectionIcon(section.id, section.icon);
               const isActive = section.id === activeId;
               const isTooltipVisible = activeTooltip === section.id;
@@ -224,6 +234,16 @@ export function SectionNav({ profile }) {
                 </button>
               );
             })}
+
+            {/* Down arrow for pagination */}
+            {sections.length > PER_PAGE && (
+              <button
+                className={`text-[var(--color-primary)] transition-all ${offset < sections.length - PER_PAGE ? 'opacity-60' : 'pointer-events-none opacity-0'}`}
+                onClick={() => setOffset(o => Math.min(sections.length - PER_PAGE, o + 1))}
+              >
+                <ChevronDownIcon className="size-4" />
+              </button>
+            )}
           </div>
         )}
       </div>
