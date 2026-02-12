@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { ExpandToggle } from '@/components/ui/ExpandToggle';
+import { ExpandToggleVariant } from '@/components/ui/ExpandToggle/variants';
 import { getOrgFallback } from '@/components/ui/icons/fallbackIcons';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { formatDate } from '@/utils/time';
@@ -137,7 +138,7 @@ export function Experience({ experience }) {
             collapsedLabel={`+${remainingCount} more experiences`}
             expanded={isExpanded}
             onToggle={() => setIsExpanded(!isExpanded)}
-            variant="pill"
+            variant={ExpandToggleVariant.CHIP}
           />
         </div>
       )}

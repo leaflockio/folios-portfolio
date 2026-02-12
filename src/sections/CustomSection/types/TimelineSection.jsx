@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
 import { ExpandToggle } from '@/components/ui/ExpandToggle';
+import { ExpandToggleVariant } from '@/components/ui/ExpandToggle/variants';
 import { Pagination } from '@/components/ui/Pagination';
 
 import { MarkdownContent } from '../MarkdownContent';
@@ -89,7 +90,7 @@ export function TimelineSection({ section }) {
             collapsedLabel={`Show ${items.length - limit} more`}
             expanded={isExpanded}
             onToggle={() => setIsExpanded(!isExpanded)}
-            variant="pill"
+            variant={ExpandToggleVariant.CHIP}
           />
         </div>
       )}
