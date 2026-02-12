@@ -323,19 +323,122 @@ Professional certifications and credentials.
 
 ### `customSections` (optional)
 
-Freeform sections for anything that does not fit the standard categories. Each entry renders as its own section with its `title` as the heading.
+Flexible custom sections for content that doesn't fit standard categories. Supports five content types with markdown, icons, and configurable layouts.
 
-| Field     | Type    | Required | Description                              |
-| --------- | ------- | -------- | ---------------------------------------- |
-| `visible` | boolean | no       | Show/hide this section (default: `true`) |
-| `title`   | string  | yes      | Section heading                          |
-| `content` | string  | yes      | Section body text                        |
+| Field     | Type    | Required | Description                                                                     |
+| --------- | ------- | -------- | ------------------------------------------------------------------------------- |
+| `visible` | boolean | no       | Show/hide this section (default: `true`)                                        |
+| `title`   | string  | yes      | Section heading                                                                 |
+| `type`    | string  | no       | `"text"`, `"list"`, `"cards"`, `"gallery"`, or `"timeline"` (default: `"text"`) |
+| `icon`    | string  | no       | Custom icon name (see Icon Options below)                                       |
+| `content` | string  | no       | Markdown content (required for `"text"` type)                                   |
+| `items`   | array   | no       | Structured items (required for other types)                                     |
+| `columns` | number  | no       | Grid columns for `cards`/`gallery` (1-4, default: 2/3)                          |
+
+**Item schema (for list, cards, gallery, timeline):**
+
+| Field         | Type   | Required | Description                          |
+| ------------- | ------ | -------- | ------------------------------------ |
+| `title`       | string | no       | Item title                           |
+| `description` | string | no       | Item description (supports markdown) |
+| `image`       | string | no       | Image URL (required for gallery)     |
+| `date`        | string | no       | Date string (useful for timeline)    |
+| `link`        | object | no       | Link with `url` and `label`          |
+| `tags`        | array  | no       | String array of tags                 |
+
+**Icon options:**
+
+| Icon Name   | Description        |
+| ----------- | ------------------ |
+| `star`      | Star icon          |
+| `lightbulb` | Ideas/innovations  |
+| `code`      | Code/development   |
+| `globe`     | Global/web         |
+| `trophy`    | Achievements       |
+| `medal`     | Awards             |
+| `shield`    | Security           |
+| `award`     | Certifications     |
+| `book`      | Learning/education |
+| `briefcase` | Work/career        |
+| `folder`    | Projects           |
+| `layers`    | Default (fallback) |
+
+**Example - Text section (markdown):**
 
 ```json
 {
   "customSections": [
     {
       "visible": true,
+      "title": "About Me",
+      "type": "text",
+      "icon": "star",
+      "content": "## My Story\n\nI'm a **software engineer** passionate about building great products.\n\n- 5+ years experience\n- Open source contributor\n- Coffee enthusiast"
+    }
+  ]
+}
+```
+
+**Example - Cards section:**
+
+```json
+{
+  "customSections": [
+    {
+      "visible": true,
+      "title": "Achievements",
+      "type": "cards",
+      "icon": "trophy",
+      "columns": 3,
+      "items": [
+        {
+          "title": "Best Developer Award",
+          "description": "Recognized for outstanding contributions in 2023",
+          "image": "https://example.com/award.jpg",
+          "tags": ["Leadership", "Innovation"],
+          "link": { "url": "https://example.com/award", "label": "View Certificate" }
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Example - Timeline section:**
+
+```json
+{
+  "customSections": [
+    {
+      "visible": true,
+      "title": "Career Milestones",
+      "type": "timeline",
+      "icon": "briefcase",
+      "items": [
+        {
+          "title": "Promoted to Tech Lead",
+          "description": "Leading a team of 8 engineers",
+          "date": "2024",
+          "tags": ["Leadership"]
+        },
+        {
+          "title": "First Open Source Contribution",
+          "description": "Contributed to React core",
+          "date": "2021",
+          "link": { "url": "https://github.com/...", "label": "View PR" }
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Backward compatibility:** Existing simple custom sections continue to work:
+
+```json
+{
+  "customSections": [
+    {
       "title": "Interests",
       "content": "Hiking, open-source contributions, and experimenting with new recipes."
     }
