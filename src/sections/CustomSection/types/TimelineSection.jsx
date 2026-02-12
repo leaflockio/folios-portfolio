@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { ExpandToggle } from '@/components/ui/ExpandToggle';
 import { ExpandToggleVariant } from '@/components/ui/ExpandToggle/variants';
 import { Pagination } from '@/components/ui/Pagination';
+import { Timeline, TimelineItem } from '@/components/ui/Timeline';
 
 import { MarkdownContent } from '../MarkdownContent';
 
@@ -46,18 +47,9 @@ export function TimelineSection({ section }) {
 
   return (
     <div>
-      <div
-        className="relative space-y-6 border-l-2 pl-5 sm:space-y-8 sm:pl-8"
-        style={{ borderColor: 'color-mix(in srgb, var(--color-primary) 20%, transparent)' }}
-      >
+      <Timeline spacing="space-y-6 sm:space-y-8">
         {displayedItems.map((item, i) => (
-          <div className="relative" key={item.title || i}>
-            {/* Timeline dot */}
-            <div
-              className="absolute top-1 size-3 rounded-full bg-[var(--color-primary)] sm:size-4"
-              style={{ left: '-1.45rem' }}
-            />
-
+          <TimelineItem active={item.active} key={item.title || i}>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
               {/* Date on top for mobile */}
               {item.date && (
@@ -79,9 +71,9 @@ export function TimelineSection({ section }) {
                 )}
               </div>
             </div>
-          </div>
+          </TimelineItem>
         ))}
-      </div>
+      </Timeline>
 
       {/* Expand/Collapse button */}
       {pagination === 'expand' && hasMore && (
@@ -107,6 +99,7 @@ TimelineSection.propTypes = {
   section: PropTypes.shape({
     items: PropTypes.arrayOf(
       PropTypes.shape({
+        active: PropTypes.bool,
         date: PropTypes.string,
         description: PropTypes.string,
         tags: PropTypes.arrayOf(PropTypes.string),
