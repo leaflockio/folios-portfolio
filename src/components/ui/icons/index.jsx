@@ -13,6 +13,10 @@ const ICONS = {
   award: {
     path: 'M8.21 13.89L7 23l5-3 5 3-1.21-9.12M12 2a5 5 0 100 10 5 5 0 000-10z',
   },
+  bitbucket: {
+    fill: true,
+    path: 'M.778 1.213a.768.768 0 0 0-.768.892l3.263 19.81c.084.5.515.868 1.022.873H19.95a.772.772 0 0 0 .77-.646l3.27-20.03a.768.768 0 0 0-.768-.891H.778zm14.52 14.193H8.95l-1.562-8.31h9.024l-1.114 8.31z',
+  },
   bookOpen: {
     path: 'M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z',
   },
@@ -41,6 +45,12 @@ const ICONS = {
   chevronDown: {
     path: 'M6 9l6 6 6-6',
   },
+  chevronLeft: {
+    path: 'M15 18l-6-6 6-6',
+  },
+  chevronRight: {
+    path: 'M9 18l6-6-6-6',
+  },
   chevronUp: {
     path: 'M18 15l-6-6-6 6',
   },
@@ -52,6 +62,14 @@ const ICONS = {
   },
   code: {
     path: 'M18 16l4-4-4-4M6 8l-4 4 4 4M14 5l-4 14',
+  },
+  codepen: {
+    fill: true,
+    path: 'M24 8.182l-.018-.087-.017-.05c-.01-.024-.018-.05-.03-.075-.003-.018-.015-.034-.02-.05l-.035-.067-.03-.05-.044-.06-.046-.045-.06-.06-.046-.04-.06-.045L12.58.254a.617.617 0 0 0-.58 0L.846 7.57l-.06.045-.048.04-.06.06-.045.046-.044.06-.03.05-.035.067-.02.05c-.012.025-.02.05-.03.075l-.017.05-.018.087v7.636l.018.087.017.05c.01.024.018.05.03.075.003.018.015.034.02.05l.035.067.03.05.044.06.046.045.06.06.046.04.06.045 11.154 7.316a.617.617 0 0 0 .58 0l11.154-7.316.06-.045.048-.04.06-.06.045-.046.044-.06.03-.05.035-.067.02-.05c.012-.025.02-.05.03-.075l.017-.05.018-.087V8.182zm-11.4 6.415L8.862 12 12.6 9.403l3.738 2.597-3.738 2.597zM12 7.89V2.89l5.628 3.69L12 9.891V7.89zm-1.2 0v2l-5.628 2.69L12 6.58v1.31zm-6.4 4.11L7.14 12l-2.74 1.9v-1.9zm6.4 4.11v5l-5.628-3.69L12 14.11v2zm1.2 0l5.628 2.69-5.628 3.69v-5l5.628-3.69zm6.4-2.21L17.86 12l2.74-1.9v3.8z',
+  },
+  codesandbox: {
+    fill: true,
+    path: 'M2 6l10-5 10 5v12l-10 5-10-5V6zm2 1.61v9.78l8 4V11.39l-8-4zM12 2.39L4.47 6 12 9.61 19.53 6 12 2.39zM14 21.39l8-4V7.61l-8 4v9.78z',
   },
   compass: {
     path: 'M12 2a10 10 0 100 20 10 10 0 000-20zM16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z',
@@ -68,6 +86,9 @@ const ICONS = {
       M3 8l7.89 5.26a2 2 0 002.22 0L21 8
       M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z
     `.trim(),
+  },
+  externalLink: {
+    path: 'M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3',
   },
   factory: {
     path: 'M2 21h20M4 21V12l5-4h6l5 4v9M17 12V5h3v7M8 15h2M8 18h2M13 15h2M13 18h2',
@@ -96,6 +117,10 @@ const ICONS = {
   github: {
     fill: true,
     path: 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12',
+  },
+  gitlab: {
+    fill: true,
+    path: 'm23.6 9.593-.033-.086L20.3.98a.851.851 0 0 0-.336-.405.87.87 0 0 0-1.002.07.86.86 0 0 0-.285.386l-2.2 6.73H7.525l-2.2-6.73a.85.85 0 0 0-.285-.386.87.87 0 0 0-1.002-.07.85.85 0 0 0-.336.406L.434 9.507l-.032.086a6.05 6.05 0 0 0 2.006 6.99l.012.009.03.022 4.962 3.717 2.454 1.858 1.494 1.13a1.01 1.01 0 0 0 1.22 0l1.494-1.13 2.454-1.858 4.992-3.74.014-.01a6.05 6.05 0 0 0 2.006-6.988Z',
   },
   globe: {
     path: 'M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3c2.21 0 4 4.03 4 9s-1.79 9-4 9-4-4.03-4-9 1.79-9 4-9z',
@@ -245,12 +270,15 @@ export const ArrowLeftIcon = createIcon(ICONS.arrowLeft);
 export const ArrowUpIcon = createIcon(ICONS.arrowUp);
 export const ChatBotIcon = createIcon(ICONS.chatBot);
 export const ChevronDownIcon = createIcon(ICONS.chevronDown);
+export const ChevronLeftIcon = createIcon(ICONS.chevronLeft);
+export const ChevronRightIcon = createIcon(ICONS.chevronRight);
 export const ChevronUpIcon = createIcon(ICONS.chevronUp);
 
 // ── Utility ──
 export const CheckIcon = createIcon(ICONS.check);
 export const CloudOffIcon = createIcon(ICONS.cloudOff);
 export const EnvelopeIcon = createIcon(ICONS.envelope);
+export const ExternalLinkIcon = createIcon(ICONS.externalLink);
 export const FaviconIcon = createIcon(ICONS.favicon);
 export const MapPinIcon = createIcon(ICONS.mapPin);
 export const PaletteIcon = createIcon(ICONS.palette);
@@ -266,6 +294,12 @@ export const LinkedInIcon = createIcon(ICONS.linkedin);
 export const MediumIcon = createIcon(ICONS.medium);
 export const TwitterIcon = createIcon(ICONS.twitter);
 export const YouTubeIcon = createIcon(ICONS.youtube);
+
+// ── Code platforms ──
+export const BitbucketIcon = createIcon(ICONS.bitbucket);
+export const CodePenIcon = createIcon(ICONS.codepen);
+export const CodeSandboxIcon = createIcon(ICONS.codesandbox);
+export const GitLabIcon = createIcon(ICONS.gitlab);
 
 // ── Section navigation ──
 export const AwardIcon = createIcon(ICONS.award);

@@ -109,6 +109,146 @@ To hide an entire section, simply remove it from your JSON or leave its `items` 
 
 ---
 
+## Step 5: Create Custom Sections
+
+Custom sections let you add content that doesn't fit the standard categories (Experience, Education, etc.). Choose from five content types:
+
+### Text Section (Default)
+
+Use markdown for rich text content:
+
+```json
+{
+  "customSections": [
+    {
+      "title": "Philosophy",
+      "type": "text",
+      "icon": "lightbulb",
+      "content": "## My Approach\n\nI believe in **clean code** and *user-first* design.\n\n- Write tests first\n- Document everything\n- Ship fast, iterate faster"
+    }
+  ]
+}
+```
+
+### Cards Section
+
+Create a grid of cards for showcasing items:
+
+```json
+{
+  "customSections": [
+    {
+      "title": "Services",
+      "type": "cards",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Web Development",
+          "description": "Full-stack applications built with modern frameworks.",
+          "tags": ["React", "Node.js"]
+        },
+        {
+          "title": "Consulting",
+          "description": "Technical architecture and code review.",
+          "link": { "url": "/contact", "label": "Get in touch" }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Timeline Section
+
+Display events chronologically:
+
+```json
+{
+  "customSections": [
+    {
+      "title": "Speaking",
+      "type": "timeline",
+      "icon": "medal",
+      "items": [
+        {
+          "title": "ReactConf 2024",
+          "date": "2024-05",
+          "description": "Keynote on React Server Components"
+        },
+        {
+          "title": "JSWorld 2023",
+          "date": "2023-02",
+          "description": "Workshop on Testing Strategies"
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Gallery Section
+
+Showcase images in a grid:
+
+```json
+{
+  "customSections": [
+    {
+      "title": "Photography",
+      "type": "gallery",
+      "columns": 3,
+      "items": [
+        { "image": "https://example.com/photo1.jpg", "title": "Sunset" },
+        { "image": "https://example.com/photo2.jpg", "title": "Mountains" }
+      ]
+    }
+  ]
+}
+```
+
+### List Section
+
+Structured bullet lists with links:
+
+```json
+{
+  "customSections": [
+    {
+      "title": "Publications",
+      "type": "list",
+      "icon": "book",
+      "items": [
+        {
+          "title": "Clean Code in JavaScript",
+          "description": "A comprehensive guide to writing maintainable JS.",
+          "link": { "url": "https://example.com/book", "label": "Read now" }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Custom Section Icons
+
+Set the `icon` field to customize the navigation icon:
+
+| Icon        | Use for                |
+| ----------- | ---------------------- |
+| `star`      | Highlights, favorites  |
+| `lightbulb` | Ideas, philosophy      |
+| `code`      | Technical content      |
+| `globe`     | Global, international  |
+| `trophy`    | Achievements           |
+| `medal`     | Awards, honors         |
+| `shield`    | Security, trust        |
+| `book`      | Publications, learning |
+| `briefcase` | Work, services         |
+
+If no icon is specified, a default layers icon is used.
+
+---
+
 ## Tips
 
 - Validate your JSON with [JSONLint](https://jsonlint.com/) before deploying.
