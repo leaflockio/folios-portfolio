@@ -71,7 +71,18 @@
     "سلام",
     "هستم",
     "สวัสดี",
-    "ฉันคือ"
+    "ฉันคือ",
+    "مرحبا",
+    "Convolutional",
+    "Pulumi",
+    "scikit",
+    "codesandbox",
+    "codepen",
+    "CKAD",
+    "Kleppmann",
+    "Hackathon",
+    "Bootcamp",
+    "bootcamps"
   ],
   "ignorePaths": [
     "node_modules",
