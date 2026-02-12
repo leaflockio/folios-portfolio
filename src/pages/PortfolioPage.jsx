@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import PropTypes from 'prop-types';
 
 import { Certifications } from '@/sections/Certifications';
@@ -11,7 +10,6 @@ import { Projects } from '@/sections/Projects';
 import { SectionNav } from '@/sections/SectionNav';
 import { Skills } from '@/sections/Skills';
 import { SocialsSidebar } from '@/sections/SocialsSidebar';
-/* eslint-enable @typescript-eslint/no-unused-vars */
 
 /**
  * Section wrapper — ensures each section takes at least the full viewport height.
@@ -33,7 +31,6 @@ Section.propTypes = {
 };
 
 /** @type {Map<string, { Component: Function, getProps: Function }>} */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SECTION_CONFIG = new Map([
   [
     'certifications',
@@ -58,9 +55,7 @@ const SECTION_CONFIG = new Map([
  * @returns {JSX.Element} The rendered portfolio page
  */
 export function PortfolioPage({ profile }) {
-  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   const sectionOrder = profile.sectionOrder ?? [];
-  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   const customSections = (profile.customSections ?? []).filter(s => s.visible);
 
   return (
@@ -68,15 +63,11 @@ export function PortfolioPage({ profile }) {
       <SocialsSidebar socials={profile.contact?.socials ?? []} />
       <SectionNav profile={profile} />
       <Hero basics={profile.basics} contact={profile.contact} />
-      <Section>
-        <Contact contact={profile.contact} location={profile.basics?.location} />
-      </Section>
-      {/* Disabled for testing - uncomment to enable sections
       {sectionOrder.map(key => {
         if (key === 'customSections') {
           return customSections.map(s => (
-            <Section key={s.title}>
-              <CustomSection content={s.content} title={s.title} />
+            <Section key={`custom-${s.title}`}>
+              <CustomSection section={s} />
             </Section>
           ));
         }
@@ -89,7 +80,6 @@ export function PortfolioPage({ profile }) {
           </Section>
         );
       })}
-      */}
     </div>
   );
 }
