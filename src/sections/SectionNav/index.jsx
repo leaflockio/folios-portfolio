@@ -47,7 +47,8 @@ export function SectionNav({ profile }) {
       ...sectionOrder.flatMap(key => {
         if (key === 'customSections') {
           return customSections.map(s => ({
-            id: `custom-${s.title.toLowerCase()}`,
+            icon: s.icon,
+            id: `custom-${s.title.toLowerCase().replace(/\s+/g, '-')}`,
             label: s.title,
           }));
         }
@@ -137,7 +138,7 @@ export function SectionNav({ profile }) {
   const hasPrev = activeIdx > 0;
   const hasNext = activeIdx < sections.length - 1;
   const visible = sections.slice(offset, offset + PER_PAGE);
-  const ActiveIcon = getSectionIcon(activeId);
+  const ActiveIcon = getSectionIcon(activeId, activeSection?.icon);
 
   /**
    * Scrolls to the section with the given id.
@@ -193,7 +194,7 @@ export function SectionNav({ profile }) {
         {mobileMenuOpen && (
           <div className="absolute -right-1 mt-2 flex flex-col items-center gap-2 rounded-lg border-2 border-[var(--color-primary)] bg-[var(--color-bg)] p-2 shadow-2xl">
             {sections.map(section => {
-              const Icon = getSectionIcon(section.id);
+              const Icon = getSectionIcon(section.id, section.icon);
               const isActive = section.id === activeId;
               const isTooltipVisible = activeTooltip === section.id;
               return (
@@ -245,7 +246,7 @@ export function SectionNav({ profile }) {
 
         <div className="flex flex-col gap-3">
           {visible.map(section => {
-            const Icon = getSectionIcon(section.id);
+            const Icon = getSectionIcon(section.id, section.icon);
             const isActive = section.id === activeId;
             return (
               <button

@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
+import { ExpandableText } from '@/components/ui/ExpandableText';
+
 const ROTATE_INTERVAL_MS = 3000;
 
 /**
@@ -15,7 +17,6 @@ const ROTATE_INTERVAL_MS = 3000;
 export function Hero({ basics, contact }) {
   const [greetingIndex, setGreetingIndex] = useState(0);
   const [headlineIndex, setHeadlineIndex] = useState(0);
-  const [bioExpanded, setBioExpanded] = useState(false);
 
   const greetings = basics.greetings ?? [];
   const headlines = basics.headline ?? [];
@@ -30,12 +31,12 @@ export function Hero({ basics, contact }) {
     return () => clearInterval(id);
   }, [greetings.length, headlines.length]);
 
-  const fullName = `${basics.firstName} ${basics.lastName}`;
+  const fullName = basics.displayName || `${basics.firstName} ${basics.lastName}`;
 
   return (
     <section className="min-h-[80vh] space-y-4 pt-[22vh] sm:space-y-6" id="hero">
       {/* Avatar + Greeting / Name / Headline */}
-      <div className="flex items-start gap-4 sm:gap-6">
+      <div className="flex items-center gap-4 sm:gap-6">
         {basics.avatar && (
           <img
             alt={fullName}
@@ -49,7 +50,7 @@ export function Hero({ basics, contact }) {
               {greetings.at(greetingIndex).text}
             </p>
           )}
-          <h1 className="text-3xl font-black leading-[0.9] tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="text-lg font-black leading-[0.9] tracking-tight md:text-[47px]">
             {fullName}
           </h1>
           {headlines.length > 0 && (
@@ -62,20 +63,14 @@ export function Hero({ basics, contact }) {
 
       {/* Bio */}
       {basics.bio && (
-        <div className="max-w-xl overflow-hidden">
-          <p
-            className={`text-base leading-relaxed opacity-60 sm:text-xl ${!bioExpanded ? 'line-clamp-3' : 'line-clamp-none'}`}
+        <div className="max-w-3xl">
+          <ExpandableText
+            className="text-base leading-relaxed opacity-60 sm:text-xl"
+            lineClamp={3}
+            threshold={150}
           >
             {basics.bio}
-          </p>
-          {basics.bio.length > 150 && (
-            <button
-              className="mt-1 text-sm text-[var(--color-primary)] opacity-70 transition-opacity hover:opacity-100"
-              onClick={() => setBioExpanded(e => !e)}
-            >
-              {bioExpanded ? 'Show less' : 'Read more'}
-            </button>
-          )}
+          </ExpandableText>
         </div>
       )}
 
