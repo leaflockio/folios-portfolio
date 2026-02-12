@@ -1,3 +1,31 @@
+## [1.0.0-beta.5](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2026-02-12)
+
+### Features
+
+* **custom-sections:** add gallery, list, text, and timeline types ([97d661c](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/97d661c036823025ea4805eb0499e7677581712c))
+* **icons:** add code platform and navigation icons ([00a3eb2](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/00a3eb28b28a307f0f107b215e19bbd40344b56e))
+* **icons:** add custom section icon support ([5617b64](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/5617b64c199a52133520387ca2d55336b22b973b))
+* **schema:** add SSRF protection and safe URL validation ([63dc4b3](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/63dc4b3d2a56bf4207f8fab46f71c5943302101d))
+* **sections:** add pagination and custom section types ([083cb43](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/083cb43a23a0bf9823116737ea9e068b81c7341a))
+* **security:** add CSP and referrer-policy meta tags ([e353fab](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/e353fabc29c0a32bbe2e52d890d46645a921b338))
+* **ui:** add expandable components (toggle, list, text) ([f3fad2e](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/f3fad2efc8805e23d4e023482184faf2d7e7bd03))
+* **ui:** add Pagination and SkillPill components ([9828491](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/9828491fd3a534c65ed5f8f7bb681590f0b849c5))
+* **ui:** add Timeline component with dot and item primitives ([2c96234](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/2c962340178ddf5b63d5ed0528da4a3e61c91de4))
+
+### Bug Fixes
+
+* **portfolio:** enable dynamic section rendering ([00a5c46](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/00a5c465242aefec0cbf15d156d000f5d32fb412))
+* **SectionNav:** add pagination to mobile dropdown for overflow handling ([3e555f5](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/3e555f596f7f286cef4f5a28f2b7f3ad30401808))
+
+### Refactoring
+
+* **ExpandableList:** remove toggleVariant prop, hardcode chip variant ([179862a](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/179862ac108941903ccda93be9c1ee36b587b4f8))
+* **ExpandToggle:** rename variants to text/chip, extract enum, fix collapse scroll centering ([80ccf5b](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/80ccf5ba9e0d94700a5ed5db5946a4a71952d8cd))
+* **Experience:** use shared Timeline component ([46c8919](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/46c8919886357763559b6515c8b2255ef04dac26))
+* **sections:** improve responsiveness and add expandable content ([31f5bf1](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/31f5bf10263e068d7b31cab3adf56d8a9f66f6f2))
+* **sections:** replace variant magic strings with ExpandToggleVariant constant ([57ec5eb](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/57ec5eb04ead1234c511889bd6328cd6615c0be7))
+* **TimelineSection:** use shared Timeline component ([f2cce53](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commit/f2cce537590f84296711b1560e4eb4415de70855))
+
 ## [1.0.0-beta.4](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2026-02-09)
 
 ### Features
