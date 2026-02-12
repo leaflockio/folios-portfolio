@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import { ExpandToggle } from '@/components/ui/ExpandToggle';
+import { ExpandToggleVariant } from '@/components/ui/ExpandToggle/variants';
 
 /**
  * Expandable list component that shows limited items with "Show more" toggle.
@@ -14,7 +15,6 @@ import { ExpandToggle } from '@/components/ui/ExpandToggle';
  * @param {number} props.limit - Number of items to show when collapsed
  * @param {Function} props.renderItem - Function to render each item: (item, index) => JSX
  * @param {string} props.toggleClassName - Additional CSS classes for the toggle button
- * @param {string} props.toggleVariant - Visual style for toggle: "link" or "pill" (default: "pill")
  * @returns {JSX.Element|null} The rendered expandable list
  */
 export function ExpandableList({
@@ -25,7 +25,6 @@ export function ExpandableList({
   limit,
   renderItem,
   toggleClassName = '',
-  toggleVariant = 'pill',
 }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -46,7 +45,7 @@ export function ExpandableList({
           expanded={expanded}
           expandedLabel={expandedLabel}
           onToggle={() => setExpanded(e => !e)}
-          variant={toggleVariant}
+          variant={ExpandToggleVariant.CHIP}
         />
       )}
     </div>
@@ -61,5 +60,4 @@ ExpandableList.propTypes = {
   limit: PropTypes.number.isRequired,
   renderItem: PropTypes.func.isRequired,
   toggleClassName: PropTypes.string,
-  toggleVariant: PropTypes.oneOf(['link', 'pill']),
 };
