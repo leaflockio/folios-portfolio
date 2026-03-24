@@ -1,6 +1,6 @@
 # 🛠️ Development Guide
 
-Welcome to the developer guide for **datadriven-portfolio**. This document explains how to set up the project locally using Docker, run it in development mode, and understand the code structure.
+Welcome to the developer guide for **folios-portfolio**. This document explains how to set up the project locally using Docker, run it in development mode, and understand the code structure.
 
 ---
 
@@ -9,8 +9,8 @@ Welcome to the developer guide for **datadriven-portfolio**. This document expla
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/LeafLock-Security-Solutions/datadriven-portfolio.git
-cd datadriven-portfolio
+git clone https://github.com/leaflockio/folios-portfolio.git
+cd folios-portfolio
 ```
 
 ### 2. Build and Start the Dev Container
@@ -90,7 +90,7 @@ npm run preview      # Starts the preview server at http://localhost:4173
 ## 🧹 Project Structure
 
 ```bash
-datadriven-portfolio/
+folios-portfolio/
 ├── .devcontainer/           # Dev container setup
 ├── docs/                    # Project documentation files
 ├── public/                  # Static assets
@@ -140,4 +140,4 @@ If you're interested in contributing, please read the [CONTRIBUTING.md](./CONTRI
 ## ❓ Questions?
 
 For support, open an issue at:  
-[https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues)
+[https://github.com/leaflockio/folios-portfolio/issues](https://github.com/leaflockio/folios-portfolio/issues)

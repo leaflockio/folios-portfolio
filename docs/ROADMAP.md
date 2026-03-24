@@ -1,6 +1,6 @@
 # 🗺️ Project Roadmap
 
-This document outlines the planned development milestones and feature goals for the **datadriven-portfolio** project.
+This document outlines the planned development milestones and feature goals for the **folios-portfolio** project.
 
 We want this portfolio to be simple to adopt, zero-code, and eventually fully customizable through a backend or CMS interface.
 
@@ -38,4 +38,4 @@ We want this portfolio to be simple to adopt, zero-code, and eventually fully cu
 
 ## 💡 Suggestions?
 
-If you have ideas for features, improvements, or integrations, feel free to [open an issue](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues)!
+If you have ideas for features, improvements, or integrations, feel free to [open an issue](https://github.com/leaflockio/folios-portfolio/issues)!
