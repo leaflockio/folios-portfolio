@@ -14,22 +14,22 @@ import { useState } from 'react';
 export function Tooltip({ children, className = '', content, position = 'top' }) {
   const [isVisible, setIsVisible] = useState(false);
 
-  const positionClasses = {
-    bottom: 'top-full left-1/2 -translate-x-1/2 mt-2',
-    left: 'right-full top-1/2 -translate-y-1/2 mr-2',
-    right: 'left-full top-1/2 -translate-y-1/2 ml-2',
-    top: 'bottom-full left-1/2 -translate-x-1/2 mb-2',
-  };
+  const positionClasses = new Map([
+    ['bottom', 'top-full left-1/2 -translate-x-1/2 mt-2'],
+    ['left', 'right-full top-1/2 -translate-y-1/2 mr-2'],
+    ['right', 'left-full top-1/2 -translate-y-1/2 ml-2'],
+    ['top', 'bottom-full left-1/2 -translate-x-1/2 mb-2'],
+  ]);
 
-  const arrowClasses = {
-    bottom: 'bottom-full left-1/2 -translate-x-1/2 border-b-current border-t-transparent',
-    left: 'left-full top-1/2 -translate-y-1/2 border-l-current border-r-transparent',
-    right: 'right-full top-1/2 -translate-y-1/2 border-r-current border-l-transparent',
-    top: 'top-full left-1/2 -translate-x-1/2 border-t-current border-b-transparent',
-  };
+  const arrowClasses = new Map([
+    ['bottom', 'bottom-full left-1/2 -translate-x-1/2 border-b-current border-t-transparent'],
+    ['left', 'left-full top-1/2 -translate-y-1/2 border-l-current border-r-transparent'],
+    ['right', 'right-full top-1/2 -translate-y-1/2 border-r-current border-l-transparent'],
+    ['top', 'top-full left-1/2 -translate-x-1/2 border-t-current border-b-transparent'],
+  ]);
 
-  const tooltipPosition = positionClasses[position] || positionClasses.top;
-  const arrowPosition = arrowClasses[position] || arrowClasses.top;
+  const tooltipPosition = positionClasses.get(position) || positionClasses.get('top');
+  const arrowPosition = arrowClasses.get(position) || arrowClasses.get('top');
 
   return (
     <div

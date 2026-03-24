@@ -1,0 +1,315 @@
+import PropTypes from 'prop-types';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
+import { ChevronDownIcon, ChevronUpIcon } from '@/components/ui/icons';
+import { getSectionIcon } from '@/components/ui/icons/sectionIcons';
+import { Tooltip } from '@/components/ui/Tooltip';
+
+const PER_PAGE = 5;
+const LONG_PRESS_DURATION = 500;
+
+/**
+ * Right sidebar — section navigation with icons.
+ * On mobile: single button with dropdown showing all sections.
+ * On desktop: paginated icon list with arrows.
+ *
+ * @param {object} props - Component props
+ * @param {object} props.profile - Full profile data (needs cross-section info)
+ * @returns {JSX.Element|null} The rendered section nav
+ */
+export function SectionNav({ profile }) {
+  const [offset, setOffset] = useState(0);
+  const [activeId, setActiveId] = useState('hero');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeTooltip, setActiveTooltip] = useState(null);
+  const longPressTimer = useRef(null);
+  const isLongPress = useRef(false);
+
+  const SECTION_LABELS = useMemo(
+    () =>
+      new Map([
+        ['certifications', profile.certifications?.displayText || 'Certifications'],
+        ['contact', profile.contact?.displayText || 'Contact'],
+        ['education', profile.education?.displayText || 'Education'],
+        ['experience', profile.experience?.displayText || 'Experience'],
+        ['projects', profile.projects?.displayText || 'Projects'],
+        ['skills', profile.skills?.displayText || 'Skills'],
+      ]),
+    [profile],
+  );
+
+  const sections = useMemo(() => {
+    const sectionOrder = profile.sectionOrder ?? [];
+    const customSections = (profile.customSections ?? []).filter(s => s.visible);
+
+    return [
+      { id: 'hero', label: 'Home' },
+      ...sectionOrder.flatMap(key => {
+        if (key === 'customSections') {
+          return customSections.map(s => ({
+            icon: s.icon,
+            id: `custom-${s.title.toLowerCase().replace(/\s+/g, '-')}`,
+            label: s.title,
+          }));
+        }
+        return [{ id: key, label: SECTION_LABELS.get(key) || key }];
+      }),
+    ];
+  }, [profile, SECTION_LABELS]);
+
+  // Track active section via Intersection Observer
+  useEffect(() => {
+    if (sections.length === 0) return;
+
+    const ids = sections.map(s => s.id);
+    const elements = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+    if (elements.length === 0) return;
+
+    const visibleSet = new Map();
+
+    const observer = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            visibleSet.set(entry.target.id, entry.intersectionRatio);
+          } else {
+            visibleSet.delete(entry.target.id);
+          }
+        }
+
+        // Pick the first visible section in document order
+        for (const id of ids) {
+          if (visibleSet.has(id)) {
+            setActiveId(id);
+            break;
+          }
+        }
+      },
+      { threshold: [0, 0.1, 0.25, 0.5] },
+    );
+
+    for (const el of elements) observer.observe(el);
+    return () => observer.disconnect();
+  }, [sections]);
+
+  // Auto-center the active item in the visible window (desktop only)
+  useEffect(() => {
+    const idx = sections.findIndex(s => s.id === activeId);
+    if (idx === -1) return;
+    const maxOffset = Math.max(0, sections.length - PER_PAGE);
+    const centered = Math.max(0, Math.min(idx - Math.floor(PER_PAGE / 2), maxOffset));
+    setOffset(centered);
+  }, [activeId, sections]);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    /**
+     * Closes the mobile menu when clicking outside.
+     *
+     * @param {MouseEvent} e - The mouse event
+     */
+    function handleClickOutside(e) {
+      if (!e.target.closest('[data-section-nav]')) {
+        setMobileMenuOpen(false);
+        setActiveTooltip(null);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [mobileMenuOpen]);
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (longPressTimer.current) {
+        clearTimeout(longPressTimer.current);
+      }
+    };
+  }, []);
+
+  if (sections.length === 0) return null;
+
+  const activeIdx = sections.findIndex(s => s.id === activeId);
+  const activeSection = sections.find(s => s.id === activeId);
+  const hasPrev = activeIdx > 0;
+  const hasNext = activeIdx < sections.length - 1;
+  const visible = sections.slice(offset, offset + PER_PAGE);
+  const ActiveIcon = getSectionIcon(activeId, activeSection?.icon);
+
+  /**
+   * Scrolls to the section with the given id.
+   *
+   * @param {string} id - The section element id
+   */
+  function scrollTo(id) {
+    if (isLongPress.current) {
+      isLongPress.current = false;
+      return;
+    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
+    setActiveTooltip(null);
+  }
+
+  /**
+   * Starts long press timer for showing tooltip.
+   *
+   * @param {string} id - The section id
+   */
+  function handleTouchStart(id) {
+    isLongPress.current = false;
+    longPressTimer.current = setTimeout(() => {
+      isLongPress.current = true;
+      setActiveTooltip(id);
+    }, LONG_PRESS_DURATION);
+  }
+
+  /**
+   * Clears long press timer.
+   */
+  function handleTouchEnd() {
+    if (longPressTimer.current) {
+      clearTimeout(longPressTimer.current);
+    }
+  }
+
+  return (
+    <>
+      {/* Mobile: Single button with dropdown */}
+      <div className="fixed right-2 top-14 z-30 md:hidden" data-section-nav>
+        <Tooltip content={activeSection?.label || 'Navigate'} position="left">
+          <button
+            aria-label="Navigate sections"
+            className="flex size-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-lg transition-transform hover:scale-105"
+            onClick={() => setMobileMenuOpen(o => !o)}
+          >
+            <ActiveIcon className="size-5" />
+          </button>
+        </Tooltip>
+
+        {mobileMenuOpen && (
+          <div className="absolute -right-1 mt-2 flex flex-col items-center gap-2 rounded-lg border-2 border-[var(--color-primary)] bg-[var(--color-bg)] p-2 shadow-2xl">
+            {/* Up arrow for pagination */}
+            {sections.length > PER_PAGE && (
+              <button
+                className={`text-[var(--color-primary)] transition-all ${offset > 0 ? 'opacity-60' : 'pointer-events-none opacity-0'}`}
+                onClick={() => setOffset(o => Math.max(0, o - 1))}
+              >
+                <ChevronUpIcon className="size-4" />
+              </button>
+            )}
+
+            {visible.map(section => {
+              const Icon = getSectionIcon(section.id, section.icon);
+              const isActive = section.id === activeId;
+              const isTooltipVisible = activeTooltip === section.id;
+              return (
+                <button
+                  className={`relative flex size-8 items-center justify-center rounded-lg transition-all ${
+                    isActive ? 'text-[var(--color-primary)]' : 'opacity-50 hover:opacity-100'
+                  }`}
+                  key={section.id}
+                  onClick={() => scrollTo(section.id)}
+                  onTouchEnd={handleTouchEnd}
+                  onTouchStart={() => handleTouchStart(section.id)}
+                  style={
+                    isActive
+                      ? {
+                          backgroundColor:
+                            'color-mix(in srgb, var(--color-primary) 15%, transparent)',
+                        }
+                      : undefined
+                  }
+                >
+                  <Icon className="size-4" />
+                  <span
+                    className={`pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-[var(--color-text)] px-2.5 py-1 text-xs text-[var(--color-bg)] transition-opacity ${isTooltipVisible ? 'opacity-100' : 'opacity-0'}`}
+                  >
+                    {section.label}
+                  </span>
+                </button>
+              );
+            })}
+
+            {/* Down arrow for pagination */}
+            {sections.length > PER_PAGE && (
+              <button
+                className={`text-[var(--color-primary)] transition-all ${offset < sections.length - PER_PAGE ? 'opacity-60' : 'pointer-events-none opacity-0'}`}
+                onClick={() => setOffset(o => Math.min(sections.length - PER_PAGE, o + 1))}
+              >
+                <ChevronDownIcon className="size-4" />
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Desktop: Full sidebar with pagination */}
+      <div
+        className="fixed right-5 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-3 rounded-2xl px-2.5 py-3 backdrop-blur-sm md:flex"
+        style={{ backgroundColor: 'color-mix(in srgb, var(--color-text) 5%, transparent)' }}
+      >
+        <button
+          className={`group relative text-[var(--color-primary)] transition-all ${hasPrev ? 'opacity-60 hover:opacity-100' : 'pointer-events-none opacity-0'}`}
+          onClick={() => hasPrev && scrollTo(sections[activeIdx - 1].id)}
+          tabIndex={hasPrev ? 0 : -1}
+        >
+          <ChevronUpIcon className="size-4" />
+          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-[var(--color-text)] px-2.5 py-1 text-xs text-[var(--color-bg)] opacity-0 transition-opacity group-hover:opacity-100">
+            Previous
+          </span>
+        </button>
+
+        <div className="flex flex-col gap-3">
+          {visible.map(section => {
+            const Icon = getSectionIcon(section.id, section.icon);
+            const isActive = section.id === activeId;
+            return (
+              <button
+                className={`group relative flex size-10 items-center justify-center rounded-xl transition-all ${
+                  isActive
+                    ? 'text-[var(--color-primary)] opacity-100'
+                    : 'opacity-60 hover:text-[var(--color-primary)] hover:opacity-100'
+                }`}
+                key={section.id}
+                onClick={() => scrollTo(section.id)}
+                style={
+                  isActive
+                    ? {
+                        backgroundColor:
+                          'color-mix(in srgb, var(--color-primary) 15%, transparent)',
+                      }
+                    : undefined
+                }
+              >
+                <Icon className="size-5" />
+                <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-[var(--color-text)] px-2.5 py-1 text-xs text-[var(--color-bg)] opacity-0 transition-opacity group-hover:opacity-100">
+                  {section.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        <button
+          className={`group relative text-[var(--color-primary)] transition-all ${hasNext ? 'opacity-60 hover:opacity-100' : 'pointer-events-none opacity-0'}`}
+          onClick={() => hasNext && scrollTo(sections[activeIdx + 1].id)}
+          tabIndex={hasNext ? 0 : -1}
+        >
+          <ChevronDownIcon className="size-4" />
+          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-[var(--color-text)] px-2.5 py-1 text-xs text-[var(--color-bg)] opacity-0 transition-opacity group-hover:opacity-100">
+            Next
+          </span>
+        </button>
+      </div>
+    </>
+  );
+}
+
+SectionNav.propTypes = {
+  profile: PropTypes.object.isRequired,
+};

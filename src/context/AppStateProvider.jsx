@@ -1,6 +1,7 @@
-import log from '@/utils/logger';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+
+import log from '@/utils/logger';
 
 import { AppStateContext } from './AppStateContext';
 import { appStateContextSchema } from './schema';

@@ -1,0 +1,104 @@
+name: Release & Deploy Production
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      new_release_published: ${{ steps.semantic.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic.outputs.new_release_version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.RELEASE_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      - name: Run Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          semantic_version: 24
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            conventional-changelog-conventionalcommits
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          HUSKY: 0
+
+      - name: Release Info
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          echo "## Release Published" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** ${{ steps.semantic.outputs.new_release_version }}" >> $GITHUB_STEP_SUMMARY
+
+  deploy:
+    needs: release
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Pull latest changes
+        run: git pull origin main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          DDP_FIRST_NAME: ${{ secrets.DDP_FIRST_NAME }}
+          DDP_LAST_NAME: ${{ secrets.DDP_LAST_NAME }}
+          DDP_PROFILE_PATH: ${{ secrets.DDP_PROFILE_PATH }}
+          DDP_EMAIL: ${{ secrets.DDP_EMAIL }}
+          DDP_PHONE_COUNTRY_CODE: ${{ secrets.DDP_PHONE_COUNTRY_CODE }}
+          DDP_PHONE_NUMBER: ${{ secrets.DDP_PHONE_NUMBER }}
+          DDP_SHOW_CONTACT_ON_ERROR: ${{ secrets.DDP_SHOW_CONTACT_ON_ERROR }}
+
+      - name: Deploy to Netlify (Production)
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: './dist'
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_PROD_SITE_ID }}
+
+      - name: Deployment Summary
+        run: |
+          echo "## Production Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** ${{ needs.release.outputs.new_release_version || 'No new release' }}" >> $GITHUB_STEP_SUMMARY

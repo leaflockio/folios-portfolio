@@ -14,15 +14,42 @@
 echo ""
 log_info "Verifying commit signature..."
 
-LAST_COMMIT=$(git rev-parse HEAD)
-SIGNATURE_INFO=$(git log --show-signature -1 "$LAST_COMMIT" 2>/dev/null)
+# Get the remote tracking branch
+REMOTE_BRANCH=$(git rev-parse --abbrev-ref --symbolic-full-name @{upstream} 2>/dev/null)
 
-if echo "$SIGNATURE_INFO" | grep -qE "Good signature|gitsign: Good signature"; then
-  log_success "Commit $LAST_COMMIT is signed and verified."
-  exit 0
+if [ -z "$REMOTE_BRANCH" ]; then
+  # New branch - check if commits exist on origin/main
+  if git rev-parse --verify origin/main >/dev/null 2>&1; then
+    NEW_COMMITS=$(git rev-list origin/main..HEAD 2>/dev/null)
+  else
+    NEW_COMMITS=$(git rev-list HEAD 2>/dev/null)
+  fi
 else
-  log_error "Commit $LAST_COMMIT is not signed!"
-  log_info "Please sign your commit using GPG or Gitsign before pushing."
-  echo "🔗 Refer to: https://docs.github.com/en/authentication/managing-commit-signature-verification"
-  exit 1
+  # Existing branch - get commits not on remote
+  NEW_COMMITS=$(git rev-list "$REMOTE_BRANCH"..HEAD 2>/dev/null)
 fi
+
+# If no new commits, nothing to check
+if [ -z "$NEW_COMMITS" ]; then
+  log_success "No new commits to verify."
+  exit 0
+fi
+
+# Check each new commit
+for COMMIT in $NEW_COMMITS; do
+  SIGNATURE_INFO=$(git log --show-signature -1 "$COMMIT" 2>/dev/null)
+
+  if echo "$SIGNATURE_INFO" | grep -qE "Good signature|gitsign: Good signature"; then
+    log_success "Commit $COMMIT is signed and verified."
+  elif echo "$SIGNATURE_INFO" | grep -q "gpg: Signature made"; then
+    # Signature exists but key not in local keyring (e.g., GitHub web-flow commits)
+    log_success "Commit $COMMIT is signed (key not in local keyring)."
+  else
+    log_error "Commit $COMMIT is not signed!"
+    log_info "Please sign your commit using GPG or Gitsign before pushing."
+    echo "🔗 Refer to: https://docs.github.com/en/authentication/managing-commit-signature-verification"
+    exit 1
+  fi
+done
+
+exit 0

@@ -11,7 +11,7 @@
 
 . "$(dirname "$0")/utils.sh"
 
-PROTECTED_BRANCHES="main master"
+PROTECTED_BRANCHES="main master pre-main"
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if echo "$PROTECTED_BRANCHES" | grep -wq "$CURRENT_BRANCH"; then

@@ -1,7 +1,7 @@
 {
   "name": "datadriven-portfolio",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0-beta.5",
   "type": "module",
   "scripts": {
     "build": "vite build",
@@ -33,18 +33,22 @@
     "loglevel": "^1.9.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.24.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^8.29.1",
     "@typescript-eslint/parser": "^8.29.1",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "cspell": "^8.18.1",
     "eslint": "^9.24.0",
     "eslint-config-prettier": "^10.1.2",
@@ -65,6 +69,7 @@
     "markdown-link-check": "^3.13.7",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
+    "semantic-release": "^21.1.2",
     "tailwindcss": "^3.4.17",
     "vite": "^6.2.6"
   }

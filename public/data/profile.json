@@ -1,1 +1,1174 @@
-{}
+{
+  "basics": {
+    "firstName": "Alexandra",
+    "lastName": "Johnson",
+    "displayName": "Alex Johnson",
+    "greetings": [
+      { "language": "English", "text": "Hello, I am" },
+      { "language": "Spanish", "text": "Hola, soy" },
+      { "language": "French", "text": "Bonjour, je suis" },
+      { "language": "German", "text": "Hallo, ich bin" },
+      { "language": "Japanese", "text": "こんにちは、私は" },
+      { "language": "Korean", "text": "안녕하세요, 저는" },
+      { "language": "Hindi", "text": "नमस्ते, मैं हूँ" },
+      { "language": "Telugu", "text": "నమస్కారం, నేను" },
+      { "language": "Mandarin", "text": "你好，我是" },
+      { "language": "Arabic", "text": "مرحبا، أنا" }
+    ],
+    "headline": [
+      "Full Stack Developer",
+      "AI & Machine Learning Engineer",
+      "Open Source Contributor",
+      "Technical Architect",
+      "DevOps Specialist"
+    ],
+    "bio": "I am a passionate and experienced software engineer with over a decade of experience building enterprise-scale applications and distributed systems that serve millions of users worldwide. My journey in technology began when I was just twelve years old, tinkering with my first computer and writing simple programs in BASIC. Since then, I have dedicated my life to mastering the craft of software development, continuously learning new technologies, methodologies, and best practices that help me deliver exceptional solutions to complex problems.\n\nThroughout my career, I have had the privilege of working with some of the most innovative companies in the tech industry, from early-stage startups where I wore multiple hats and built products from the ground up, to Fortune 500 enterprises where I led teams of engineers and architected systems that process billions of transactions daily. This diverse experience has given me a unique perspective on software development, allowing me to understand both the scrappy, move-fast mentality of startups and the rigorous, process-driven approach of large organizations.\n\nMy technical expertise spans the entire software development lifecycle. On the frontend, I am proficient in modern JavaScript frameworks like React, Vue.js, and Angular, with a deep understanding of state management patterns, performance optimization techniques, and accessibility best practices. I believe that great user interfaces are not just visually appealing but also intuitive, responsive, and inclusive. On the backend, I have extensive experience with Node.js, Python, Go, and Java, building RESTful APIs, GraphQL services, and event-driven microservices architectures. I am particularly passionate about designing systems that are scalable, resilient, and maintainable.\n\nBeyond coding, I am deeply committed to the broader software engineering community. I regularly contribute to open-source projects, having made significant contributions to popular frameworks and libraries used by thousands of developers worldwide. I also enjoy sharing my knowledge through technical writing, conference talks, and mentoring junior developers. I believe that the best engineers are not just technically proficient but also effective communicators and collaborators who can bridge the gap between technical and non-technical stakeholders.\n\nWhen I am not coding, you can find me exploring the latest developments in artificial intelligence and machine learning, hiking in the beautiful trails of the Pacific Northwest, brewing specialty coffee, reading science fiction novels, or spending quality time with my family. I am also an avid chess player and enjoy the strategic thinking and pattern recognition that the game requires, skills that I find directly applicable to software architecture and problem-solving.",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+    "location": {
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States of America"
+    }
+  },
+
+  "contact": {
+    "displayText": "Get In Touch",
+    "headline": "Let's collaborate on building something amazing together - I'm always excited to discuss new opportunities and innovative projects",
+    "email": "alexandra.johnson.smithfield@example-company.com",
+    "phone": {
+      "countryCode": "+1",
+      "number": "5551234567"
+    },
+    "resume": "https://example.com/resume.pdf",
+    "availability": [
+      { "text": "Open to opportunities", "color": "green", "pulse": true },
+      { "text": "Full-time preferred", "color": "blue", "pulse": false },
+      { "text": "Remote friendly", "color": "teal" },
+      { "text": "Hybrid OK", "color": "amber" },
+      { "text": "Freelance available", "color": "purple" },
+      { "text": "Responds within 24h", "color": "gray" },
+      { "text": "Consulting", "color": "red" }
+    ],
+    "socials": [
+      { "label": "GitHub", "url": "https://github.com/alexjohnson" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/alexjohnson" },
+      { "label": "Twitter", "url": "https://twitter.com/alexjohnson" },
+      { "label": "Dribbble", "url": "https://dribbble.com/alexjohnson" },
+      { "label": "Medium", "url": "https://medium.com/@alexjohnson" },
+      { "label": "YouTube", "url": "https://youtube.com/@alexjohnson" },
+      { "label": "Instagram", "url": "https://instagram.com/alexjohnson" },
+      { "label": "Personal Blog", "url": "https://alexjohnson.dev" },
+      { "label": "Dev.to", "url": "https://dev.to/alexjohnson" },
+      { "label": "Stack Overflow", "url": "https://stackoverflow.com/users/123456/alexjohnson" }
+    ]
+  },
+
+  "experience": {
+    "displayText": "Professional Experience",
+    "items": [
+      {
+        "visible": true,
+        "company": "TechCorp Global Industries International",
+        "role": "Principal Software Engineer & Technical Architect",
+        "startDate": "2023-01",
+        "endDate": null,
+        "workModel": "hybrid",
+        "location": {
+          "city": "San Francisco",
+          "region": "CA",
+          "country": "USA"
+        },
+        "description": {
+          "content": "As Principal Engineer, I lead the architecture and development of our next-generation **cloud-native platform** serving over 50 million active users globally. This role encompasses both technical leadership and strategic planning, working closely with product managers, designers, and executive leadership to define the technical roadmap.\n\n**Key Achievements & Responsibilities:**\n\n- **System Architecture**: Designed and implemented a distributed microservices architecture using Kubernetes, handling 100,000+ requests per second with 99.99% uptime SLA\n- **Team Leadership**: Mentoring and leading a team of 15 senior engineers across 3 time zones, establishing coding standards, review processes, and best practices\n- **Performance Optimization**: Reduced API latency by 65% through implementing intelligent caching strategies, query optimization, and CDN integration\n- **Cost Reduction**: Achieved $2.5M annual infrastructure cost savings through right-sizing, spot instance utilization, and architectural improvements\n- **Security**: Led SOC 2 Type II compliance initiative, implementing comprehensive security controls and audit logging\n- **Innovation**: Pioneered adoption of AI/ML capabilities, integrating GPT-4 for intelligent code review and automated documentation\n- **DevOps**: Established GitOps practices with ArgoCD, reducing deployment time from hours to minutes with zero-downtime deployments\n- **Database**: Migrated from monolithic PostgreSQL to distributed CockroachDB, enabling global data replication and disaster recovery\n\n**Technologies**: Kubernetes, AWS (EKS, Lambda, DynamoDB, S3), Kafka, Redis, GraphQL, React, TypeScript, Go, Python, Terraform, ArgoCD, Datadog, PagerDuty\n\n**Impact**: The platform improvements directly contributed to a 40% increase in user engagement and enabled the company to expand into 15 new international markets.",
+          "format": "markdown"
+        },
+        "logo": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=100&h=100&fit=crop",
+        "url": [
+          { "label": "Company Website", "url": "https://techcorp.example.com" },
+          { "label": "Engineering Blog", "url": "https://engineering.techcorp.example.com" }
+        ]
+      },
+      {
+        "visible": true,
+        "company": "StartupXYZ",
+        "role": "Senior Full Stack Developer",
+        "startDate": "2021-03",
+        "endDate": "2022-12",
+        "workModel": "remote",
+        "location": null,
+        "description": {
+          "content": "Built and scaled a B2B SaaS platform from initial prototype to serving 50,000+ active business users. As the third engineering hire, I wore multiple hats including frontend development, backend architecture, DevOps, and technical hiring.\n\n**Accomplishments:**\n- Architected real-time collaboration features using WebSockets and CRDTs\n- Implemented multi-tenant architecture with data isolation and custom branding\n- Built CI/CD pipeline reducing deployment time by 80%\n- Scaled database from single instance to read replicas handling 10x traffic\n- Integrated payment processing with Stripe, handling $5M+ in monthly transactions\n- Hired and onboarded 8 engineers, establishing engineering culture and processes",
+          "format": "markdown"
+        },
+        "logo": null,
+        "url": [{ "label": "Product", "url": "https://startupxyz.example.com" }]
+      },
+      {
+        "visible": true,
+        "company": "Digital Agency Pro",
+        "role": "Frontend Developer",
+        "startDate": "2019-06",
+        "endDate": "2021-02",
+        "workModel": "onSite",
+        "location": {
+          "city": "New York"
+        },
+        "description": {
+          "content": "Developed responsive web applications for Fortune 500 clients including financial institutions, healthcare providers, and e-commerce platforms.",
+          "format": "text"
+        },
+        "logo": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=100&h=100&fit=crop",
+        "url": []
+      },
+      {
+        "visible": true,
+        "company": "CodeLabs Inc",
+        "role": "Software Developer",
+        "startDate": "2018-01",
+        "endDate": "2019-05",
+        "workModel": "onSite",
+        "location": {
+          "city": "Austin",
+          "region": "TX",
+          "country": "USA"
+        },
+        "logo": null,
+        "url": []
+      },
+      {
+        "visible": true,
+        "company": "TechStart Innovations",
+        "role": "Junior Software Engineer",
+        "startDate": "2016-06",
+        "endDate": "2017-12",
+        "workModel": "hybrid",
+        "location": {
+          "city": "Seattle",
+          "region": "WA",
+          "country": "USA"
+        },
+        "description": {
+          "content": "Entry-level position focused on backend development with Python and Django. Built REST APIs, automated testing pipelines, and contributed to internal tooling.",
+          "format": "text"
+        },
+        "logo": "https://images.unsplash.com/photo-1549924231-f129b911e442?w=100&h=100&fit=crop",
+        "url": [{ "label": "TechStart", "url": "https://techstart.example.com" }]
+      },
+      {
+        "visible": true,
+        "company": "University Research Lab",
+        "role": "Research Assistant",
+        "startDate": "2014-09",
+        "endDate": "2016-05",
+        "location": {
+          "city": "Stanford",
+          "region": "CA"
+        },
+        "description": {
+          "content": "Conducted research on distributed systems and machine learning applications. Published 3 papers in peer-reviewed journals.",
+          "format": "text"
+        },
+        "logo": null,
+        "url": []
+      },
+      {
+        "visible": true,
+        "company": "Freelance",
+        "role": "Web Developer",
+        "startDate": "2012-01",
+        "endDate": "2014-08",
+        "workModel": "remote",
+        "description": {
+          "content": "Built websites and web applications for small businesses and startups while completing undergraduate studies.",
+          "format": "text"
+        },
+        "url": []
+      }
+    ]
+  },
+
+  "education": {
+    "displayText": "Education",
+    "items": [
+      {
+        "visible": true,
+        "institution": "Stanford University",
+        "degree": "Master of Science",
+        "field": "Computer Science - Artificial Intelligence Specialization",
+        "startDate": "2014",
+        "endDate": "2016",
+        "grade": "3.95 GPA - Summa Cum Laude",
+        "location": {
+          "city": "Stanford",
+          "region": "CA",
+          "country": "USA"
+        },
+        "link": "https://stanford.edu",
+        "logo": "https://images.unsplash.com/photo-1562774053-701939374585?w=100&h=100&fit=crop",
+        "courses": [
+          {
+            "course": "CS229 - Machine Learning",
+            "description": "Deep learning, neural networks, supervised and unsupervised learning, reinforcement learning, and ML systems design",
+            "grade": "A+",
+            "year": "2015"
+          },
+          {
+            "course": "CS231n - Convolutional Neural Networks",
+            "description": "Image classification, object detection, image segmentation, and visual recognition",
+            "grade": "A+",
+            "year": "2015"
+          },
+          {
+            "course": "CS224n - Natural Language Processing with Deep Learning",
+            "description": "Word vectors, neural networks for NLP, machine translation, question answering, and transformers",
+            "grade": "A",
+            "year": "2016"
+          },
+          {
+            "course": "CS244b - Distributed Systems",
+            "description": "Consensus algorithms, fault tolerance, scalability, distributed storage, and coordination services",
+            "grade": "A",
+            "year": "2015"
+          },
+          {
+            "course": "CS245 - Database Systems Principles",
+            "description": "Query optimization, transaction processing, storage engines, and distributed databases",
+            "grade": "A",
+            "year": "2014"
+          },
+          {
+            "course": "CS155 - Computer and Network Security",
+            "description": "Cryptography, network security, web security, and secure system design",
+            "grade": "A-",
+            "year": "2015"
+          },
+          {
+            "course": "CS161 - Design and Analysis of Algorithms",
+            "description": "Graph algorithms, dynamic programming, approximation algorithms, and randomized algorithms",
+            "grade": "A",
+            "year": "2014"
+          },
+          {
+            "course": "CS221 - Artificial Intelligence: Principles and Techniques",
+            "description": "Search, game playing, constraint satisfaction, probabilistic reasoning, and machine learning",
+            "grade": "A",
+            "year": "2014"
+          },
+          {
+            "course": "CS238 - Decision Making Under Uncertainty",
+            "description": "Markov decision processes, reinforcement learning, and partially observable MDPs",
+            "grade": "A",
+            "year": "2015"
+          },
+          {
+            "course": "CS246 - Mining Massive Data Sets",
+            "description": "MapReduce, recommendation systems, clustering, and dimensionality reduction",
+            "grade": "A",
+            "year": "2016"
+          },
+          {
+            "course": "CS276 - Information Retrieval and Web Search",
+            "description": "Text indexing, query processing, link analysis, and machine learning for IR",
+            "grade": "A-",
+            "year": "2016"
+          },
+          {
+            "course": "CS348b - Image Synthesis Techniques",
+            "description": "Ray tracing, global illumination, and physically-based rendering",
+            "grade": "A",
+            "year": "2016"
+          }
+        ]
+      },
+      {
+        "visible": true,
+        "institution": "University of California, Berkeley",
+        "degree": "Bachelor of Science",
+        "field": "Electrical Engineering and Computer Science",
+        "startDate": "2010",
+        "endDate": "2014",
+        "grade": "3.85 GPA - Dean's List",
+        "location": {
+          "city": "Berkeley",
+          "region": "CA",
+          "country": "USA"
+        },
+        "link": "https://berkeley.edu",
+        "logo": null,
+        "courses": [
+          {
+            "course": "CS61A - Structure and Interpretation of Computer Programs",
+            "grade": "A",
+            "year": "2010"
+          },
+          { "course": "CS61B - Data Structures", "grade": "A", "year": "2011" },
+          { "course": "CS61C - Machine Structures", "grade": "A-", "year": "2011" },
+          {
+            "course": "CS162 - Operating Systems and Systems Programming",
+            "grade": "A",
+            "year": "2012"
+          },
+          {
+            "course": "CS170 - Efficient Algorithms and Intractable Problems",
+            "grade": "A",
+            "year": "2012"
+          },
+          { "course": "CS186 - Introduction to Database Systems", "grade": "A", "year": "2013" },
+          {
+            "course": "CS188 - Introduction to Artificial Intelligence",
+            "grade": "A+",
+            "year": "2013"
+          },
+          { "course": "EE120 - Signals and Systems", "grade": "A-", "year": "2012" }
+        ]
+      },
+      {
+        "visible": true,
+        "institution": "Massachusetts Institute of Technology",
+        "degree": "Professional Certificate",
+        "field": "Machine Learning and Artificial Intelligence",
+        "startDate": "2022",
+        "endDate": "2022",
+        "link": "https://mit.edu",
+        "logo": null,
+        "courses": []
+      },
+      {
+        "visible": true,
+        "institution": "Coursera - DeepLearning.AI",
+        "degree": "Specialization Certificate",
+        "startDate": "2020",
+        "endDate": "2020"
+      },
+      {
+        "visible": true,
+        "institution": "Lincoln High School",
+        "degree": "High School Diploma",
+        "field": "Science and Technology Track",
+        "startDate": "2006",
+        "endDate": "2010",
+        "grade": "Valedictorian",
+        "location": {
+          "city": "Portland",
+          "region": "OR"
+        }
+      }
+    ]
+  },
+
+  "skills": {
+    "displayText": "Technical Skills & Expertise",
+    "categoryOrder": [
+      "Languages",
+      "Frontend",
+      "Backend",
+      "Database",
+      "DevOps & Cloud",
+      "AI/ML",
+      "Tools"
+    ],
+    "items": [
+      { "visible": true, "name": "JavaScript", "category": "Languages" },
+      { "visible": true, "name": "TypeScript", "category": "Languages" },
+      { "visible": true, "name": "Python", "category": "Languages" },
+      { "visible": true, "name": "Go", "category": "Languages" },
+      { "visible": true, "name": "Rust", "category": "Languages" },
+      { "visible": true, "name": "Java", "category": "Languages" },
+      { "visible": true, "name": "C++", "category": "Languages" },
+      { "visible": true, "name": "C#", "category": "Languages" },
+      { "visible": true, "name": "Ruby", "category": "Languages" },
+      { "visible": true, "name": "PHP", "category": "Languages" },
+      { "visible": true, "name": "Kotlin", "category": "Languages" },
+      { "visible": true, "name": "Swift", "category": "Languages" },
+      { "visible": true, "name": "Scala", "category": "Languages" },
+      { "visible": true, "name": "SQL", "category": "Languages" },
+      { "visible": true, "name": "GraphQL", "category": "Languages" },
+      { "visible": true, "name": "Bash/Shell", "category": "Languages" },
+
+      { "visible": true, "name": "React", "category": "Frontend" },
+      { "visible": true, "name": "Next.js", "category": "Frontend" },
+      { "visible": true, "name": "Vue.js", "category": "Frontend" },
+      { "visible": true, "name": "Nuxt.js", "category": "Frontend" },
+      { "visible": true, "name": "Angular", "category": "Frontend" },
+      { "visible": true, "name": "Svelte", "category": "Frontend" },
+      { "visible": true, "name": "SvelteKit", "category": "Frontend" },
+      { "visible": true, "name": "Solid.js", "category": "Frontend" },
+      { "visible": true, "name": "Astro", "category": "Frontend" },
+      { "visible": true, "name": "Tailwind CSS", "category": "Frontend" },
+      { "visible": true, "name": "SCSS/Sass", "category": "Frontend" },
+      { "visible": true, "name": "Styled Components", "category": "Frontend" },
+      { "visible": true, "name": "Framer Motion", "category": "Frontend" },
+      { "visible": true, "name": "Redux", "category": "Frontend" },
+      { "visible": true, "name": "Zustand", "category": "Frontend" },
+      { "visible": true, "name": "React Query", "category": "Frontend" },
+      { "visible": true, "name": "Apollo Client", "category": "Frontend" },
+      { "visible": true, "name": "Storybook", "category": "Frontend" },
+      { "visible": true, "name": "Webpack", "category": "Frontend" },
+      { "visible": true, "name": "Vite", "category": "Frontend" },
+      { "visible": true, "name": "esbuild", "category": "Frontend" },
+
+      { "visible": true, "name": "Node.js", "category": "Backend" },
+      { "visible": true, "name": "Express.js", "category": "Backend" },
+      { "visible": true, "name": "Fastify", "category": "Backend" },
+      { "visible": true, "name": "NestJS", "category": "Backend" },
+      { "visible": true, "name": "Django", "category": "Backend" },
+      { "visible": true, "name": "FastAPI", "category": "Backend" },
+      { "visible": true, "name": "Flask", "category": "Backend" },
+      { "visible": true, "name": "Spring Boot", "category": "Backend" },
+      { "visible": true, "name": "Ruby on Rails", "category": "Backend" },
+      { "visible": true, "name": "ASP.NET Core", "category": "Backend" },
+      { "visible": true, "name": "gRPC", "category": "Backend" },
+      { "visible": true, "name": "tRPC", "category": "Backend" },
+      { "visible": true, "name": "WebSockets", "category": "Backend" },
+      { "visible": true, "name": "REST APIs", "category": "Backend" },
+
+      { "visible": true, "name": "PostgreSQL", "category": "Database" },
+      { "visible": true, "name": "MySQL", "category": "Database" },
+      { "visible": true, "name": "MongoDB", "category": "Database" },
+      { "visible": true, "name": "Redis", "category": "Database" },
+      { "visible": true, "name": "Elasticsearch", "category": "Database" },
+      { "visible": true, "name": "DynamoDB", "category": "Database" },
+      { "visible": true, "name": "CockroachDB", "category": "Database" },
+      { "visible": true, "name": "Cassandra", "category": "Database" },
+      { "visible": true, "name": "Neo4j", "category": "Database" },
+      { "visible": true, "name": "InfluxDB", "category": "Database" },
+      { "visible": true, "name": "Prisma", "category": "Database" },
+      { "visible": true, "name": "Drizzle", "category": "Database" },
+      { "visible": true, "name": "TypeORM", "category": "Database" },
+
+      { "visible": true, "name": "AWS", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Google Cloud Platform", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Microsoft Azure", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Docker", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Kubernetes", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Terraform", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Pulumi", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Ansible", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "GitHub Actions", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "GitLab CI/CD", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Jenkins", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "ArgoCD", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Helm", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Nginx", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Apache Kafka", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "RabbitMQ", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Datadog", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Prometheus", "category": "DevOps & Cloud" },
+      { "visible": true, "name": "Grafana", "category": "DevOps & Cloud" },
+
+      { "visible": true, "name": "TensorFlow", "category": "AI/ML" },
+      { "visible": true, "name": "PyTorch", "category": "AI/ML" },
+      { "visible": true, "name": "scikit-learn", "category": "AI/ML" },
+      { "visible": true, "name": "Hugging Face Transformers", "category": "AI/ML" },
+      { "visible": true, "name": "LangChain", "category": "AI/ML" },
+      { "visible": true, "name": "OpenAI API", "category": "AI/ML" },
+      { "visible": true, "name": "Anthropic Claude API", "category": "AI/ML" },
+      { "visible": true, "name": "Pinecone", "category": "AI/ML" },
+      { "visible": true, "name": "MLflow", "category": "AI/ML" },
+      { "visible": true, "name": "Weights & Biases", "category": "AI/ML" },
+      { "visible": true, "name": "Jupyter", "category": "AI/ML" },
+      { "visible": true, "name": "NumPy", "category": "AI/ML" },
+      { "visible": true, "name": "Pandas", "category": "AI/ML" },
+
+      { "visible": true, "name": "Git", "category": "Tools" },
+      { "visible": true, "name": "GitHub", "category": "Tools" },
+      { "visible": true, "name": "GitLab", "category": "Tools" },
+      { "visible": true, "name": "VS Code", "category": "Tools" },
+      { "visible": true, "name": "JetBrains IDEs", "category": "Tools" },
+      { "visible": true, "name": "Vim/Neovim", "category": "Tools" },
+      { "visible": true, "name": "Figma", "category": "Tools" },
+      { "visible": true, "name": "Postman", "category": "Tools" },
+      { "visible": true, "name": "Insomnia", "category": "Tools" },
+      { "visible": true, "name": "Jira", "category": "Tools" },
+      { "visible": true, "name": "Linear", "category": "Tools" },
+      { "visible": true, "name": "Notion", "category": "Tools" },
+      { "visible": true, "name": "Slack", "category": "Tools" },
+
+      { "visible": true, "name": "Agile/Scrum" },
+      { "visible": true, "name": "Test-Driven Development" },
+      { "visible": true, "name": "Domain-Driven Design" },
+      { "visible": true, "name": "Microservices Architecture" },
+      { "visible": true, "name": "Event-Driven Architecture" },
+      { "visible": true, "name": "System Design" },
+      { "visible": true, "name": "Technical Writing" },
+      { "visible": true, "name": "Code Review" },
+      { "visible": true, "name": "Mentoring" }
+    ]
+  },
+
+  "projects": {
+    "displayText": "Featured Projects & Open Source",
+    "items": [
+      {
+        "visible": true,
+        "title": "CloudDeploy Pro - Enterprise Cloud Infrastructure Platform",
+        "description": "A comprehensive enterprise-grade cloud deployment and infrastructure management platform that revolutionizes how organizations manage their cloud resources. The platform provides one-click deployments, intelligent auto-scaling based on machine learning predictions, real-time monitoring with custom alerting, cost optimization recommendations, and multi-cloud support across AWS, GCP, and Azure. Built with a microservices architecture handling over 100,000 deployments monthly for Fortune 500 clients. The platform includes features such as infrastructure-as-code templates, GitOps workflows, environment management, secrets handling, and comprehensive audit logging for compliance requirements. The intuitive dashboard provides visibility into resource utilization, deployment history, and cost analytics with actionable insights for optimization.",
+        "image": [
+          "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=400&fit=crop"
+        ],
+        "tags": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Kubernetes",
+          "AWS",
+          "GCP",
+          "Azure",
+          "Terraform",
+          "GraphQL",
+          "Redis",
+          "PostgreSQL",
+          "Docker",
+          "Prometheus",
+          "Grafana"
+        ],
+        "links": [
+          { "label": "Live Demo", "url": "https://clouddeploy.example.com", "type": "demo" },
+          {
+            "label": "GitHub Repository",
+            "url": "https://github.com/alexjohnson/clouddeploy",
+            "type": "github"
+          },
+          { "label": "Documentation", "url": "https://docs.clouddeploy.example.com" },
+          { "label": "API Reference", "url": "https://api.clouddeploy.example.com/docs" }
+        ],
+        "order": 1
+      },
+      {
+        "visible": true,
+        "title": "AI Code Assistant",
+        "description": "An intelligent AI-powered coding assistant leveraging GPT-4 and Claude for code completion, bug detection, refactoring suggestions, automated documentation generation, and code review. Integrates with VS Code, JetBrains IDEs, and Neovim.",
+        "image": [
+          "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+        ],
+        "tags": ["Python", "FastAPI", "OpenAI", "Anthropic", "TypeScript"],
+        "links": [
+          {
+            "label": "VS Code Extension",
+            "url": "https://marketplace.visualstudio.com/items?itemName=alexjohnson.ai-assistant",
+            "type": "demo"
+          },
+          {
+            "label": "Source Code",
+            "url": "https://github.com/alexjohnson/ai-code-assistant",
+            "type": "github"
+          }
+        ],
+        "order": 2
+      },
+      {
+        "visible": true,
+        "title": "DevMetrics Dashboard",
+        "description": "Real-time engineering analytics dashboard tracking DORA metrics.",
+        "tags": ["Vue.js", "D3.js"],
+        "links": [
+          { "label": "Demo", "url": "https://devmetrics.example.com" },
+          {
+            "label": "GitLab",
+            "url": "https://gitlab.com/alexjohnson/devmetrics",
+            "type": "gitlab"
+          }
+        ],
+        "order": 3
+      },
+      {
+        "visible": true,
+        "title": "TaskFlow - Collaborative Project Management",
+        "description": "A collaborative project management tool featuring real-time updates, Kanban boards, sprint planning, time tracking, and team workspaces with granular permissions.",
+        "image": [],
+        "tags": ["React"],
+        "links": [],
+        "order": 4
+      },
+      {
+        "visible": true,
+        "title": "Open Source Starter Templates Collection",
+        "description": "Production-ready starter templates for modern web development with TypeScript, testing, and CI/CD pre-configured.",
+        "tags": [],
+        "links": [
+          {
+            "label": "CodeSandbox",
+            "url": "https://codesandbox.io/u/alexjohnson",
+            "type": "codesandbox"
+          },
+          { "label": "GitHub", "url": "https://github.com/alexjohnson/templates", "type": "github" }
+        ],
+        "order": 5
+      },
+      {
+        "visible": true,
+        "title": "High-Performance API Gateway",
+        "description": "Enterprise API gateway built with Go featuring rate limiting, JWT authentication, request transformation, circuit breakers, and comprehensive observability. Handles 50,000+ requests per second with sub-millisecond latency.",
+        "image": ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"],
+        "tags": ["Go", "Redis", "Docker", "Prometheus", "Grafana", "OpenTelemetry"],
+        "links": [
+          { "label": "Documentation", "url": "https://gateway-docs.example.com" },
+          {
+            "label": "Bitbucket",
+            "url": "https://bitbucket.org/alexjohnson/api-gateway",
+            "type": "bitbucket"
+          }
+        ],
+        "order": 6
+      },
+      {
+        "visible": true,
+        "title": "CSS Animation Library",
+        "description": "Lightweight CSS animation library with 50+ ready-to-use animations. Zero dependencies.",
+        "tags": ["CSS", "JavaScript", "npm"],
+        "links": [
+          {
+            "label": "CodePen",
+            "url": "https://codepen.io/collection/animations",
+            "type": "codepen"
+          }
+        ],
+        "order": 7
+      },
+      {
+        "visible": true,
+        "title": "ML Pipeline Framework",
+        "image": ["https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop"],
+        "tags": ["Python", "PyTorch", "Kubernetes", "MLflow", "Airflow", "Ray"],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/alexjohnson/ml-pipeline",
+            "type": "github"
+          }
+        ],
+        "order": 8
+      },
+      {
+        "visible": true,
+        "title": "Real-time Chat Platform",
+        "description": "Scalable real-time messaging platform supporting millions of concurrent connections with end-to-end encryption, file sharing, and video calls.",
+        "image": [
+          "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&h=400&fit=crop"
+        ],
+        "tags": ["React", "Node.js", "WebSocket", "Redis", "PostgreSQL", "WebRTC", "AWS"],
+        "links": [
+          { "label": "Try it", "url": "https://chat.example.com" },
+          {
+            "label": "GitHub",
+            "url": "https://github.com/alexjohnson/realtime-chat",
+            "type": "github"
+          }
+        ],
+        "order": 9
+      },
+      {
+        "visible": true,
+        "title": "Kubernetes Operator for Database Management",
+        "description": "Custom Kubernetes operator for automated database provisioning, backup, scaling, and failover management.",
+        "image": [],
+        "tags": ["Go", "Kubernetes", "PostgreSQL", "MySQL", "MongoDB"],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/alexjohnson/db-operator",
+            "type": "github"
+          },
+          {
+            "label": "Helm Chart",
+            "url": "https://artifacthub.io/packages/helm/alexjohnson/db-operator"
+          }
+        ],
+        "order": 10
+      }
+    ]
+  },
+
+  "certifications": {
+    "displayText": "Professional Certifications",
+    "items": [
+      {
+        "visible": true,
+        "name": "AWS Solutions Architect Professional",
+        "issuer": "Amazon Web Services",
+        "date": "2023-08",
+        "link": "https://aws.amazon.com/certification/",
+        "badge": "https://images.credly.com/size/340x340/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png",
+        "order": 1
+      },
+      {
+        "visible": true,
+        "name": "Google Cloud Professional Cloud Architect",
+        "issuer": "Google Cloud",
+        "date": "2023-05",
+        "link": "https://cloud.google.com/certification/",
+        "badge": "https://images.credly.com/size/340x340/images/71c579e0-51fd-4247-b493-d2fa8167157a/image.png",
+        "order": 2
+      },
+      {
+        "visible": true,
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "Cloud Native Computing Foundation",
+        "date": "2022-11",
+        "link": "https://www.cncf.io/certification/cka/",
+        "badge": null,
+        "order": 3
+      },
+      {
+        "visible": true,
+        "name": "Certified Kubernetes Application Developer (CKAD)",
+        "issuer": "Cloud Native Computing Foundation",
+        "date": "2022-09",
+        "link": "https://www.cncf.io/certification/ckad/",
+        "badge": null,
+        "order": 4
+      },
+      {
+        "visible": true,
+        "name": "Professional Scrum Master I (PSM I)",
+        "issuer": "Scrum.org",
+        "date": "2022-03",
+        "badge": null,
+        "order": 5
+      },
+      {
+        "visible": true,
+        "name": "MongoDB Certified Developer Associate",
+        "issuer": "MongoDB University",
+        "badge": null,
+        "order": 6
+      },
+      {
+        "visible": true,
+        "name": "TensorFlow Developer Certificate",
+        "issuer": "Google",
+        "date": "2021-06",
+        "link": "https://www.tensorflow.org/certificate",
+        "badge": null,
+        "order": 7
+      },
+      {
+        "visible": true,
+        "name": "HashiCorp Certified: Terraform Associate",
+        "issuer": "HashiCorp",
+        "date": "2021-03",
+        "link": "https://www.hashicorp.com/certification/terraform-associate",
+        "badge": null,
+        "order": 8
+      },
+      {
+        "visible": true,
+        "name": "GitHub Actions Certification",
+        "issuer": "GitHub",
+        "date": "2020-12",
+        "badge": null,
+        "order": 9
+      },
+      {
+        "visible": true,
+        "name": "Azure Solutions Architect Expert",
+        "issuer": "Microsoft",
+        "date": "2023-01",
+        "link": "https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/",
+        "badge": null,
+        "order": 10
+      }
+    ]
+  },
+
+  "customSections": [
+    {
+      "visible": true,
+      "title": "About My Journey - A Comprehensive Overview",
+      "type": "text",
+      "contentFormat": "markdown",
+      "content": "## My Philosophy on Software Engineering\n\nI believe that great software is built at the intersection of **technical excellence**, **user empathy**, and **sustainable practices**. Throughout my career, I've learned that the most successful projects are those where engineers deeply understand the problems they're solving, not just the technologies they're using.\n\n### Open Source Contributions\n\nI'm passionate about giving back to the community through open source. Here are some of my notable contributions:\n\n- **React** — Contributed performance optimizations to the reconciler, improving rendering performance for large component trees by 15%\n- **VS Code** — Built and maintain several extensions with a combined 100K+ downloads, including a popular Git integration tool\n- **Kubernetes** — Documentation improvements, bug fixes, and contributed to the scheduler component\n- **TailwindCSS** — Plugin development and active community support, answering hundreds of questions on Discord\n- **Node.js** — Performance improvements to the streams API and documentation contributions\n\nTotal: **500+ contributions** across various projects, with **2,000+ GitHub stars** on my personal repositories.\n\n### My Approach to Problem Solving\n\nWhen faced with complex technical challenges, I follow a systematic approach:\n\n1. **Understand the problem deeply** — Before writing any code, I ensure I understand the business context, user needs, and constraints\n2. **Research existing solutions** — I survey the landscape of existing tools, libraries, and patterns that might help\n3. **Design with simplicity** — I prefer simple, maintainable solutions over clever, complex ones\n4. **Iterate based on feedback** — I believe in shipping early and iterating based on real-world usage\n5. **Document thoroughly** — Good documentation is as important as good code\n\n### What Drives Me\n\nI'm motivated by the impact that well-crafted software can have on people's lives. Whether it's a developer tool that saves hours of tedious work, a user interface that makes a complex task intuitive, or a backend system that scales effortlessly to meet demand — seeing the positive outcomes of my work is what keeps me passionate about this field.\n\n> \"The best code is no code at all. Every new line of code you willingly bring into the world is code that has to be debugged, code that has to be read and understood, code that has to be supported.\" — Jeff Atwood\n\nThis quote resonates deeply with me. I strive to solve problems with the minimum amount of complexity necessary, always keeping in mind the long-term maintainability of the systems I build."
+    },
+    {
+      "visible": true,
+      "title": "Personal Interests & Hobbies",
+      "type": "text",
+      "contentFormat": "text",
+      "content": "When I'm not immersed in code, I have a diverse range of interests that help me maintain balance and bring fresh perspectives to my work. I'm an avid hiker and have explored trails throughout the Pacific Northwest, from the rugged coastline of Olympic National Park to the volcanic landscapes of Mount Rainier. The combination of physical challenge and natural beauty provides a perfect counterbalance to the mental intensity of software development. I'm also passionate about specialty coffee and have spent years learning about different brewing methods, from pour-over to espresso. There's something deeply satisfying about the precision and craft involved in making a perfect cup of coffee, skills that translate well to software engineering. Reading is another constant in my life, particularly science fiction and books on technology and business. Some of my favorites include works by Isaac Asimov, Neal Stephenson, and Andy Weir, as well as technical books like 'Designing Data-Intensive Applications' by Martin Kleppmann. I play chess regularly online and in local tournaments, enjoying the strategic thinking and pattern recognition that the game requires. I've found that the analytical skills developed through chess directly apply to system design and debugging. Recently, I've been learning Japanese and practicing calligraphy, which has been a rewarding way to engage a completely different part of my brain. I'm also an amateur photographer, particularly interested in landscape and street photography, which has taught me a lot about composition and attention to detail."
+    },
+    {
+      "visible": true,
+      "title": "Conference Talks & Publications",
+      "type": "timeline",
+      "pagination": "expand",
+      "items": [
+        {
+          "title": "Building Scalable Microservices: Lessons from Serving 50 Million Users",
+          "description": "**Keynote presentation** at DevConf 2023 discussing microservices architecture patterns, distributed system challenges, and practical strategies for scaling applications to handle massive user bases. The talk covered topics including service mesh implementation, distributed tracing, and handling partial failures gracefully. Attended by over 2,000 developers with a 4.9/5 rating.",
+          "date": "2023-10",
+          "tags": ["Keynote", "Architecture", "Microservices", "DevConf"],
+          "link": {
+            "label": "Watch Recording",
+            "url": "https://youtube.com/watch?v=example1"
+          }
+        },
+        {
+          "title": "The Future of AI in Software Development",
+          "description": "Panel discussion at AI Summit exploring how artificial intelligence is transforming software development workflows, from code generation to automated testing and intelligent debugging.",
+          "date": "2023-06",
+          "tags": ["Panel", "AI", "Future of Tech"],
+          "link": {
+            "label": "Read Summary",
+            "url": "https://blog.example.com/ai-summit"
+          }
+        },
+        {
+          "title": "Modern Frontend Architecture: A Deep Dive",
+          "description": "Full-day workshop at ReactConf covering state management patterns, performance optimization techniques, testing strategies, and accessibility best practices for large-scale React applications.",
+          "date": "2022-11",
+          "tags": ["Workshop", "React", "Frontend"]
+        },
+        {
+          "title": "From Monolith to Microservices: A Migration Story",
+          "description": "Blog series documenting our journey migrating a 10-year-old monolithic application to a modern microservices architecture. Featured on Hacker News front page with 500+ comments.",
+          "date": "2022-05",
+          "link": {
+            "label": "Read Article",
+            "url": "https://medium.com/@alexjohnson/monolith-to-microservices"
+          }
+        },
+        {
+          "title": "Kubernetes at Scale: Lessons Learned",
+          "description": "Technical talk at KubeCon about operating Kubernetes clusters at scale, covering topics like multi-tenancy, resource optimization, and incident management.",
+          "date": "2022-03",
+          "tags": ["Conference", "Kubernetes", "DevOps"],
+          "link": {
+            "label": "Slides",
+            "url": "https://speakerdeck.com/alexjohnson/kubernetes-at-scale"
+          }
+        },
+        {
+          "title": "The Art of Code Review",
+          "date": "2021-09"
+        },
+        {
+          "title": "Building Developer Tools That Developers Love",
+          "description": "Exploring the principles of developer experience and how to create tools that are intuitive, powerful, and delightful to use.",
+          "date": "2021-04",
+          "tags": ["DX", "Tools"]
+        },
+        {
+          "title": "Introduction to GraphQL",
+          "description": "Beginner-friendly workshop introducing GraphQL concepts, benefits over REST, and hands-on implementation with Apollo.",
+          "date": "2020-11",
+          "link": {
+            "label": "Tutorial",
+            "url": "https://graphql-workshop.example.com"
+          }
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Side Projects & Creative Outlets",
+      "type": "cards",
+      "columns": 2,
+      "pagination": "paginate",
+      "items": [
+        {
+          "title": "The Dev Podcast - Weekly Tech Discussions",
+          "description": "A weekly podcast discussing software engineering best practices, career growth strategies, industry trends, and interviews with leading developers and tech leaders. We've published over 150 episodes and built a community of 25,000+ regular listeners. Topics range from technical deep-dives on specific technologies to broader discussions about work-life balance and career transitions in tech.",
+          "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=400&h=300&fit=crop",
+          "tags": ["Podcast", "Tech", "Career", "Interviews"],
+          "link": {
+            "label": "Listen Now",
+            "url": "https://podcast.example.com"
+          }
+        },
+        {
+          "title": "Coding YouTube Channel",
+          "description": "Educational content covering web development, system design, coding interviews, and career advice. Tutorials range from beginner-friendly introductions to advanced architectural patterns.",
+          "image": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=400&h=300&fit=crop",
+          "tags": ["YouTube", "Education"],
+          "link": {
+            "label": "Subscribe",
+            "url": "https://youtube.com/@alexjohnson"
+          }
+        },
+        {
+          "title": "Weekly Tech Newsletter",
+          "description": "Curated weekly newsletter with the best articles, tools, and resources for developers.",
+          "image": "https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?w=400&h=300&fit=crop",
+          "tags": ["Newsletter"],
+          "link": {
+            "label": "Subscribe",
+            "url": "https://newsletter.example.com"
+          }
+        },
+        {
+          "title": "Open Source CLI Tools",
+          "description": "Collection of productivity CLI tools for developers available on npm and homebrew.",
+          "tags": ["CLI", "Productivity", "npm", "Open Source"],
+          "link": {
+            "label": "View on GitHub",
+            "url": "https://github.com/alexjohnson/cli-tools"
+          }
+        },
+        {
+          "title": "Photography Portfolio",
+          "description": "Landscape and street photography from my travels.",
+          "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop"
+        },
+        {
+          "title": "Chess Analysis Blog",
+          "description": "Analysis of famous chess games and modern tournament coverage.",
+          "tags": ["Chess", "Analysis"]
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Media Appearances & Features",
+      "type": "cards",
+      "columns": 3,
+      "items": [
+        {
+          "title": "TechCrunch Interview",
+          "description": "Featured interview discussing the future of cloud computing.",
+          "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=300&fit=crop",
+          "link": {
+            "label": "Read Article",
+            "url": "https://techcrunch.com/interview/alexjohnson"
+          }
+        },
+        {
+          "title": "Wired Magazine Feature",
+          "description": "Profile piece on building developer tools.",
+          "image": "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=400&h=300&fit=crop",
+          "tags": ["Magazine", "Profile"]
+        },
+        {
+          "title": "Podcast Guest: Software Daily",
+          "description": "Deep dive into microservices architecture.",
+          "tags": ["Podcast", "Guest"],
+          "link": {
+            "label": "Listen",
+            "url": "https://softwareengineeringdaily.com/alexjohnson"
+          }
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Awards, Honors & Recognition",
+      "type": "list",
+      "pagination": "expand",
+      "items": [
+        {
+          "title": "GitHub Star 2023",
+          "description": "Recognized by GitHub for significant contributions to **open source** projects, joining an exclusive community of developers who have made exceptional contributions to the global developer community. This recognition is awarded to fewer than 100 developers worldwide each year."
+        },
+        {
+          "title": "Best Technical Talk Award - DevConf 2023",
+          "description": "Awarded for the keynote presentation on microservices architecture, receiving the highest audience rating in the conference's 10-year history.",
+          "link": {
+            "label": "Watch Recording",
+            "url": "https://youtube.com/watch?v=example"
+          }
+        },
+        {
+          "title": "Employee of the Year - TechCorp Global",
+          "description": "Recognized for exceptional technical leadership, mentoring contributions, and delivering critical platform improvements that increased company revenue by 40%."
+        },
+        {
+          "title": "First Place - AI Accessibility Hackathon 2022",
+          "description": "Won first place for building an AI-powered accessibility tool that helps visually impaired users navigate websites more effectively.",
+          "link": {
+            "label": "Project Demo",
+            "url": "https://accessibility-ai.example.com"
+          }
+        },
+        {
+          "title": "Top 100 Developers to Follow",
+          "description": "Featured in TechBlog's annual list of the most influential developers in the industry."
+        },
+        {
+          "title": "40 Under 40 in Tech",
+          "description": "Named to the prestigious 40 Under 40 list recognizing emerging leaders in technology.",
+          "link": {
+            "label": "Read Feature",
+            "url": "https://techpublication.com/40-under-40"
+          }
+        },
+        {
+          "description": "Stanford Computer Science Department Teaching Award for exceptional contributions as a teaching assistant."
+        },
+        {
+          "title": "Google Developer Expert",
+          "link": {
+            "label": "Profile",
+            "url": "https://developers.google.com/community/experts/alexjohnson"
+          }
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Photo Gallery - Professional & Personal",
+      "type": "gallery",
+      "columns": 4,
+      "pagination": "paginate",
+      "items": [
+        {
+          "title": "Keynote at DevConf 2023",
+          "description": "Presenting to an audience of 2,000+ developers on microservices architecture and lessons learned from scaling to 50 million users.",
+          "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop"
+        },
+        {
+          "title": "Team Hackathon Victory",
+          "description": "Celebrating our first-place win at the AI Accessibility Hackathon.",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop"
+        },
+        {
+          "title": "Home Office Setup",
+          "image": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&h=300&fit=crop"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=300&fit=crop"
+        },
+        {
+          "title": "Conference Badge Collection",
+          "description": "Badges from various tech conferences over the years.",
+          "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop"
+        },
+        {
+          "title": "Remote Work Life",
+          "image": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=400&h=300&fit=crop"
+        },
+        {
+          "title": "Mount Rainier Hike",
+          "description": "One of my favorite hiking spots in the Pacific Northwest.",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&h=300&fit=crop"
+        },
+        {
+          "title": "Coffee Setup",
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop"
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Gallery - Single Column Layout",
+      "type": "gallery",
+      "columns": 1,
+      "items": [
+        {
+          "title": "Panoramic View - Grand Canyon",
+          "description": "A breathtaking panoramic view captured during a hiking trip to the Grand Canyon. This image showcases the vast expanse and layered rock formations that make this natural wonder so awe-inspiring.",
+          "image": "https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=1200&h=400&fit=crop"
+        },
+        {
+          "title": "City Skyline at Sunset",
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Mentorship & Teaching",
+      "type": "cards",
+      "columns": 4,
+      "items": [
+        {
+          "title": "1:1 Mentoring",
+          "description": "Providing personalized guidance to aspiring developers.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&h=200&fit=crop",
+          "tags": ["Mentoring"],
+          "link": {
+            "label": "Apply",
+            "url": "https://mentorship.example.com"
+          }
+        },
+        {
+          "title": "University Guest Lectures",
+          "description": "Regular guest lecturer at Stanford and Berkeley.",
+          "tags": ["Teaching", "University"]
+        },
+        {
+          "title": "Bootcamp Instructor",
+          "description": "Part-time instructor at coding bootcamps.",
+          "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=300&h=200&fit=crop"
+        },
+        {
+          "title": "Open Office Hours",
+          "description": "Weekly open sessions for career advice.",
+          "link": {
+            "label": "Book Time",
+            "url": "https://calendly.com/alexjohnson"
+          }
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Professional Values & Principles",
+      "type": "list",
+      "pagination": "paginate",
+      "itemsPerPage": 3,
+      "items": [
+        {
+          "title": "Continuous Learning",
+          "description": "Technology evolves rapidly, and I believe in **dedicating time every day** to learning new concepts, tools, and techniques. Whether it's reading technical papers, taking online courses, or experimenting with new frameworks, continuous learning is fundamental to staying relevant and effective as an engineer."
+        },
+        {
+          "title": "Code Quality & Craftsmanship",
+          "description": "I treat code as a craft. Clean, well-tested, and well-documented code is not just a nice-to-have—it's essential for building systems that can be maintained and evolved over time. I follow practices like TDD, code review, and continuous refactoring to ensure quality."
+        },
+        {
+          "title": "Collaboration & Communication",
+          "description": "The best software is built by teams that communicate effectively. I prioritize clear documentation, thoughtful code reviews, and open discussions about technical decisions. Great engineers are also great communicators.",
+          "link": {
+            "label": "Read My Blog Post on This",
+            "url": "https://blog.example.com/collaboration-in-engineering"
+          }
+        },
+        {
+          "title": "User-Centric Design",
+          "description": "Every line of code should ultimately serve the user. I advocate for understanding user needs deeply and validating assumptions through user research, A/B testing, and iterative development."
+        },
+        {
+          "title": "Work-Life Balance"
+        },
+        {
+          "description": "Sustainable pace leads to sustainable results. I believe in working smart, not just hard, and maintaining boundaries that allow for rest, creativity, and personal growth."
+        },
+        {
+          "title": "Giving Back",
+          "description": "The tech community has given me so much, and I feel a responsibility to give back through open source contributions, mentoring, and knowledge sharing.",
+          "link": {
+            "label": "Mentorship Program",
+            "url": "https://mentorship.example.com"
+          }
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Currently Learning",
+      "type": "cards",
+      "columns": 1,
+      "items": [
+        {
+          "title": "Rust for Systems Programming",
+          "description": "Deep diving into Rust's ownership model, async programming with Tokio, and building high-performance systems. Currently working through the Rustlings exercises and building a distributed key-value store as a learning project. The memory safety guarantees and zero-cost abstractions make Rust an exciting language for building reliable infrastructure.",
+          "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=300&fit=crop",
+          "tags": ["Rust", "Systems Programming", "Learning"],
+          "link": {
+            "label": "My Rust Projects",
+            "url": "https://github.com/alexjohnson?tab=repositories&q=rust"
+          }
+        }
+      ]
+    }
+  ],
+
+  "sectionOrder": [
+    "projects",
+    "experience",
+    "education",
+    "skills",
+    "certifications",
+    "customSections",
+    "contact"
+  ]
+}

@@ -1,14 +1,18 @@
-import { appState } from '@/context/validate';
-import { useDynamicFavicon } from '@/hooks/useDynamicFavicon';
-import log from '@/utils/logger';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+
+import { appState } from '@/context/validate';
+import { useAppState } from '@/hooks/useAppState';
+import { useDocumentTitle } from '@/hooks/useDocumentTitle';
+import { useDynamicFavicon } from '@/hooks/useDynamicFavicon';
+import log from '@/utils/logger';
 
 import { ThemeSelector } from '../ThemeSelector';
 
 const { copyright } = appState;
 const currentYear = new Date().getFullYear();
 const appVersion = __APP_VERSION__;
+const isPreview = import.meta.env.MODE !== 'production';
 
 /**
  * Main layout wrapper component.
@@ -57,25 +61,37 @@ export function Layout({ children }) {
   // Set dynamic favicon based on theme color
   useDynamicFavicon(primaryColor);
 
-  const mainClasses = [
-    'min-h-screen',
-    'bg-[var(--color-bg)] text-[var(--color-text)]',
-    'transition-colors duration-300',
-  ].join(' ');
+  // Set dynamic document title based on profile
+  const { profile } = useAppState();
+  useDocumentTitle(profile);
 
-  const copyrightClasses = [
-    'fixed bottom-4 left-1/2 -translate-x-1/2',
-    'text-xs text-[var(--color-text)] opacity-40',
-  ].join(' ');
+  const mainClasses = 'flex min-h-screen flex-col bg-[var(--color-bg)] text-[var(--color-text)]';
 
   return (
-    <>
+    <div className={mainClasses}>
       <ThemeSelector />
-      <main className={mainClasses}>{children}</main>
-      <div className={copyrightClasses}>
-        © {currentYear} {copyright.name} · v{appVersion}
-      </div>
-    </>
+      <main className="flex-1">{children}</main>
+      <footer className="fixed inset-x-0 bottom-0 z-20">
+        <div className="bg-[var(--color-bg)] py-4 text-center text-xs transition-colors duration-300">
+          <span className="opacity-25">
+            © {currentYear} {copyright.prefix ? `${copyright.prefix} ` : ''}
+            {copyright.name}
+            {copyright.suffix ? ` ${copyright.suffix}` : ''} · v{appVersion}
+          </span>
+        </div>
+        {isPreview && (
+          <div
+            className="py-2 text-center text-xs"
+            style={{
+              backgroundColor: 'var(--color-primary)',
+              color: 'var(--color-bg)',
+            }}
+          >
+            Test Environment - Data is simulated
+          </div>
+        )}
+      </footer>
+    </div>
   );
 }
 

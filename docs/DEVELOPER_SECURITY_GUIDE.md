@@ -7,26 +7,21 @@ Security is a shared responsibility. This guide outlines best practices to help 
 ## 🔑 Security Best Practices
 
 1. **Use Strong Passwords**
-
    - Use a password manager to generate and store complex passwords.
    - Avoid reusing passwords across different accounts.
 
 2. **Enable Multi-Factor Authentication (MFA)**
-
    - Add an extra layer of security to your accounts by enabling MFA wherever possible.
 
 3. **Secure Your Devices**
-
    - Keep your operating system and software up to date.
    - Use antivirus software and a firewall to protect against threats.
 
 4. **Protect Your Code**
-
    - Avoid committing sensitive information (e.g., API keys, credentials) to version control.
    - Use `.env` files for environment variables and add them to `.gitignore`.
 
 5. **Be Cautious with Dependencies**
-
    - Regularly update dependencies to patch known vulnerabilities.
    - Use tools like [npm audit](https://docs.npmjs.com/cli/v7/commands/npm-audit) or [Snyk](https://snyk.io/) to scan for security issues.
 

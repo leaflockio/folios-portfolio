@@ -5,6 +5,8 @@ import { profileSchema } from './schema/profile';
 
 const copyrightSchema = z.object({
   name: z.string().min(1, 'Copyright name is required'),
+  prefix: z.string().optional().default('©'),
+  suffix: z.string().optional().default(''),
   url: z.string().url().optional(),
 });
 

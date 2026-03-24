@@ -41,7 +41,7 @@ export function ThemeSelector() {
   );
 
   return (
-    <div className="fixed right-4 top-4 z-50">
+    <div className="fixed right-2 top-2 z-50 md:right-4 md:top-4">
       <Dropdown
         ariaLabel="Available themes"
         menuClassName={menuClasses}
