@@ -1,6 +1,6 @@
 # 🧪 Testing Guide
 
-This document provides guidelines for writing and running tests in the **datadriven-portfolio** project.
+This document provides guidelines for writing and running tests in the **folios-portfolio** project.
 
 > 📝 Note: Testing is optional for now and will be introduced gradually as the project evolves.
 
@@ -94,4 +94,4 @@ Remember that linting (with ESLint) catches syntax and style issues, but tests v
 
 ## 📬 Need Help?
 
-For questions or help writing tests, feel free to [open an issue](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues).
+For questions or help writing tests, feel free to [open an issue](https://github.com/leaflockio/folios-portfolio/issues).

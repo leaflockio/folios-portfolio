@@ -15,7 +15,7 @@ All portfolio content lives in a `profile.json` file. You can host it:
 The URL must be **publicly accessible** and return valid JSON. Set the path in your `.env` file:
 
 ```env
-DDP_PROFILE_PATH=/data/profile.json
+FP_PROFILE_PATH=/data/profile.json
 ```
 
 ---
@@ -261,4 +261,4 @@ If no icon is specified, a default layers icon is used.
 
 ## Need Help?
 
-If you run into issues, [open an issue](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues).
+If you run into issues, [open an issue](https://github.com/leaflockio/folios-portfolio/issues).

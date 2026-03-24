@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: datadriven-portfolio
+    container_name: folios-portfolio
     ports:
       - '5173:5173'
       - '4173:4173'

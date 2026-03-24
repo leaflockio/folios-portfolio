@@ -93,13 +93,13 @@ jobs:
       - name: Build
         run: npm run build -- --mode qa
         env:
-          DDP_FIRST_NAME: ${{ secrets.DDP_FIRST_NAME }}
-          DDP_LAST_NAME: ${{ secrets.DDP_LAST_NAME }}
-          DDP_PROFILE_PATH: ${{ secrets.DDP_PROFILE_PATH }}
-          DDP_EMAIL: ${{ secrets.DDP_EMAIL }}
-          DDP_PHONE_COUNTRY_CODE: ${{ secrets.DDP_PHONE_COUNTRY_CODE }}
-          DDP_PHONE_NUMBER: ${{ secrets.DDP_PHONE_NUMBER }}
-          DDP_SHOW_CONTACT_ON_ERROR: ${{ secrets.DDP_SHOW_CONTACT_ON_ERROR }}
+          FP_FIRST_NAME: ${{ secrets.FP_FIRST_NAME }}
+          FP_LAST_NAME: ${{ secrets.FP_LAST_NAME }}
+          FP_PROFILE_PATH: ${{ secrets.FP_PROFILE_PATH }}
+          FP_EMAIL: ${{ secrets.FP_EMAIL }}
+          FP_PHONE_COUNTRY_CODE: ${{ secrets.FP_PHONE_COUNTRY_CODE }}
+          FP_PHONE_NUMBER: ${{ secrets.FP_PHONE_NUMBER }}
+          FP_SHOW_CONTACT_ON_ERROR: ${{ secrets.FP_SHOW_CONTACT_ON_ERROR }}
 
       - name: Deploy to Netlify (QA)
         uses: nwtgck/actions-netlify@v3

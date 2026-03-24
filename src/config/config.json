@@ -1,6 +1,6 @@
 {
   "logger": {
-    "tag": "DDP",
+    "tag": "FP",
     "level": {
       "development": "debug",
       "production": "silent"
