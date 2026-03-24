@@ -506,7 +506,7 @@ In the example above, GitHub and LinkedIn get their brand icons. "My Blog" does 
 The profile is validated at runtime when the app loads. If validation fails:
 
 1. The app renders the error page instead of the portfolio
-2. If `DDP_SHOW_CONTACT_ON_ERROR` is `true`, contact info from env variables is shown on the error page
+2. If `FP_SHOW_CONTACT_ON_ERROR` is `true`, contact info from env variables is shown on the error page
 
 **Development:** Detailed validation errors are logged to the browser console (`debug` level) so you can see exactly which fields failed and why.
 

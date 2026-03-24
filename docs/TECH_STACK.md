@@ -1,6 +1,6 @@
 # 🧰 Tech Stack
 
-This document outlines the technologies used in the **datadriven-portfolio** project, along with justifications and their roles within the project. The goal is to maintain a clean, scalable, and developer-friendly architecture that is easy to adopt and extend.
+This document outlines the technologies used in the **folios-portfolio** project, along with justifications and their roles within the project. The goal is to maintain a clean, scalable, and developer-friendly architecture that is easy to adopt and extend.
 
 ---
 
@@ -130,4 +130,4 @@ This tech stack has been chosen to strike a balance between:
 - 🧪 Maintainability
 - 💻 Developer happiness
 
-Every tool contributes directly to performance, reliability, or customization — which are core goals of the `datadriven-portfolio`.
+Every tool contributes directly to performance, reliability, or customization — which are core goals of the `folios-portfolio`.
