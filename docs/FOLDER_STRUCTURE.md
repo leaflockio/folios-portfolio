@@ -1,13 +1,13 @@
 # 🗂️ Folder Structure
 
-This document describes the folder layout of the **datadriven-portfolio** project to help developers quickly understand the organization and purpose of each directory.
+This document describes the folder layout of the **folios-portfolio** project to help developers quickly understand the organization and purpose of each directory.
 
 ---
 
 ## 📁 Project Root
 
 ```
-datadriven-portfolio/
+folios-portfolio/
 ├── public/                 # Static files (e.g., favicon, vite.svg)
 ├── src/                    # Source code for the React application
 ├── scripts/                # Custom Husky pre-commit and pre-push scripts

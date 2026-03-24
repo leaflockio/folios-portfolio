@@ -1,6 +1,6 @@
 # 🎨 Style Guide
 
-This document outlines the **code style**, **design principles**, and **UX guidelines** used in the `datadriven-portfolio` project. Following this guide helps maintain consistency and readability across the codebase and UI.
+This document outlines the **code style**, **design principles**, and **UX guidelines** used in the `folios-portfolio` project. Following this guide helps maintain consistency and readability across the codebase and UI.
 
 ---
 
