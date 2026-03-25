@@ -4,7 +4,7 @@ on:
     branches: [main]
 jobs:
   release:
-    uses: leaflockio/core-actions/.github/workflows/tpl-release.yml@v1
+    uses: leaflockio/core-actions/.github/workflows/tpl-release.yml@v1.2.0
     secrets:
       APP_ID: ${{ secrets.LOCKET_CI_APP_ID }}
       APP_PRIVATE_KEY: ${{ secrets.LOCKET_CI_PRIVATE_KEY }}
@@ -30,7 +30,7 @@ jobs:
           FP_PHONE_COUNTRY_CODE: ${{ secrets.FP_PHONE_COUNTRY_CODE }}
           FP_PHONE_NUMBER: ${{ secrets.FP_PHONE_NUMBER }}
           FP_SHOW_CONTACT_ON_ERROR: ${{ secrets.FP_SHOW_CONTACT_ON_ERROR }}
-      - uses: leaflockio/core-actions/actions/deploy/netlify@v1
+      - uses: leaflockio/core-actions/actions/deploy/netlify@v1.2.0
         with:
           auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           site-id: ${{ secrets.NETLIFY_PROD_SITE_ID }}
@@ -39,7 +39,7 @@ jobs:
   back-merge:
     needs: release
     if: needs.release.outputs.new_release_published == 'true'
-    uses: leaflockio/core-actions/.github/workflows/tpl-back-merge.yml@v1
+    uses: leaflockio/core-actions/.github/workflows/tpl-back-merge.yml@v1.2.0
     with:
       strategy: force-sync
     secrets:

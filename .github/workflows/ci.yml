@@ -4,10 +4,10 @@ on:
     branches: [pre-main, main]
 jobs:
   quality:
-    uses: leaflockio/core-actions/.github/workflows/tpl-common-ci.yml@v1
+    uses: leaflockio/core-actions/.github/workflows/tpl-common-ci.yml@v1.2.0
     secrets:
       GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
   node:
-    uses: leaflockio/core-actions/.github/workflows/tpl-node-ci.yml@v1
+    uses: leaflockio/core-actions/.github/workflows/tpl-node-ci.yml@v1.2.0
   branch-policy:
-    uses: leaflockio/core-actions/.github/workflows/tpl-branch-policy.yml@v1
+    uses: leaflockio/core-actions/.github/workflows/tpl-branch-policy.yml@v1.2.0
