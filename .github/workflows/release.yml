@@ -32,6 +32,7 @@ jobs:
           FP_SHOW_CONTACT_ON_ERROR: ${{ secrets.FP_SHOW_CONTACT_ON_ERROR }}
       - uses: leaflockio/core-actions/actions/deploy/netlify@v1.2.0
         with:
+          enabled: 'false'
           auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           site-id: ${{ secrets.NETLIFY_PROD_SITE_ID }}
           environment: Production
