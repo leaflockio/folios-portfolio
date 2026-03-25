@@ -1,0 +1,8 @@
+rc: .lefthookrc
+
+remotes:
+  - git_url: git@github.com:leaflockio/core-actions.git
+    ref: v1.1.5
+    configs:
+      - lefthook/common.yml
+      - lefthook/node.yml
