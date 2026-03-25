@@ -1,7 +1,7 @@
-name: Release
+name: Pre-release
 on:
   push:
-    branches: [main]
+    branches: [pre-main]
 jobs:
   release:
     uses: leaflockio/core-actions/.github/workflows/tpl-release.yml@v1
@@ -9,19 +9,19 @@ jobs:
       APP_ID: ${{ secrets.LOCKET_CI_APP_ID }}
       APP_PRIVATE_KEY: ${{ secrets.LOCKET_CI_PRIVATE_KEY }}
 
-  deploy:
+  deploy-qa:
     needs: release
     runs-on: ubuntu-latest
-    environment: production
+    environment: qa
     steps:
       - uses: actions/checkout@v4
-        with: { ref: main, fetch-depth: 0 }
-      - run: git pull origin main
+        with: { ref: pre-main, fetch-depth: 0 }
+      - run: git pull origin pre-main
       - uses: actions/setup-node@v4
         with: { node-version: '22' }
       - run: npm ci
       - name: Build
-        run: npm run build
+        run: npm run build -- --mode qa
         env:
           FP_FIRST_NAME: ${{ secrets.FP_FIRST_NAME }}
           FP_LAST_NAME: ${{ secrets.FP_LAST_NAME }}
@@ -33,15 +33,5 @@ jobs:
       - uses: leaflockio/core-actions/actions/deploy/netlify@v1
         with:
           auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          site-id: ${{ secrets.NETLIFY_PROD_SITE_ID }}
-          environment: Production
-
-  back-merge:
-    needs: release
-    if: needs.release.outputs.new_release_published == 'true'
-    uses: leaflockio/core-actions/.github/workflows/tpl-back-merge.yml@v1
-    with:
-      strategy: force-sync
-    secrets:
-      APP_ID: ${{ secrets.LOCKET_CI_APP_ID }}
-      APP_PRIVATE_KEY: ${{ secrets.LOCKET_CI_PRIVATE_KEY }}
+          site-id: ${{ secrets.NETLIFY_QA_SITE_ID }}
+          environment: QA
