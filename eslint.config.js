@@ -1,8 +1,10 @@
+// Copyright 2026 Leaflock
+// This project is open source. See LICENSE for terms.
+
 import js from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import prettierConfig from 'eslint-config-prettier';
-import jest from 'eslint-plugin-jest';
 import jsdoc from 'eslint-plugin-jsdoc';
 import perfectionist from 'eslint-plugin-perfectionist';
 import react from 'eslint-plugin-react';
@@ -19,7 +21,7 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.jest,
+        ...globals.vitest,
         __APP_VERSION__: 'readonly',
       },
       parser: tsParser,
@@ -31,7 +33,6 @@ export default [
     },
     plugins: {
       '@typescript-eslint': tseslint,
-      jest,
       jsdoc,
       perfectionist,
       react,
@@ -47,7 +48,6 @@ export default [
       ...security.configs.recommended.rules,
       ...tailwindcss.configs.recommended.rules,
       ...perfectionist.configs['recommended-alphabetical'].rules,
-      ...jest.configs.recommended.rules,
       ...prettierConfig.rules,
       ...tseslint.configs.recommended.rules,
       '@typescript-eslint/naming-convention': [

@@ -12,22 +12,12 @@
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --format=stylish",
-    "postinstall": "sudo chmod +x scripts/*.sh || chmod +x scripts/*.sh",
-    "prepare": "husky",
     "preview": "vite preview --host",
     "spell": "cspell lint . --no-progress --color --show-suggestions",
-    "test": "jest --passWithNoTests",
-    "test:watch": "jest --watch",
+    "test": "vitest run --passWithNoTests",
+    "test:coverage": "vitest run --passWithNoTests --coverage",
+    "test:watch": "vitest",
     "verify": "npm run check && npm run test && npm run spell"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "**/*.{json,md,css}": [
-      "prettier --write"
-    ]
   },
   "dependencies": {
     "loglevel": "^1.9.2",
@@ -37,22 +27,17 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.24.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^8.29.1",
     "@typescript-eslint/parser": "^8.29.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^3.1.1",
     "autoprefixer": "^10.4.21",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
     "cspell": "^8.18.1",
     "eslint": "^9.24.0",
     "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-jsdoc": "^50.6.9",
     "eslint-plugin-perfectionist": "^4.11.0",
     "eslint-plugin-react": "^7.37.5",
@@ -61,16 +46,12 @@
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "globals": "^16.0.0",
-    "husky": "^9.1.7",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^15.5.1",
+    "jsdom": "^26.0.0",
     "markdown-link-check": "^3.13.7",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
-    "semantic-release": "^21.1.2",
     "tailwindcss": "^3.4.17",
-    "vite": "^6.2.6"
+    "vite": "^6.2.6",
+    "vitest": "^3.1.1"
   }
 }
