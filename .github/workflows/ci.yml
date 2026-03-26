@@ -4,19 +4,19 @@ on:
     branches: [pre-main, main]
 jobs:
   quality:
-    uses: leaflockio/core-actions/.github/workflows/tpl-common-ci.yml@v1.2.0
+    uses: leaflockio/core-actions/.github/workflows/tpl-common-ci.yml@v1
     with:
-      core-actions-ref: v1.2.0
+      core-actions-ref: v1
     secrets:
       APP_ID: ${{ secrets.LOCKET_CI_APP_ID }}
       APP_PRIVATE_KEY: ${{ secrets.LOCKET_CI_PRIVATE_KEY }}
       GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
   node:
-    uses: leaflockio/core-actions/.github/workflows/tpl-node-ci.yml@v1.2.0
+    uses: leaflockio/core-actions/.github/workflows/tpl-node-ci.yml@v1
     with:
-      core-actions-ref: v1.2.0
+      core-actions-ref: v1
     secrets:
       APP_ID: ${{ secrets.LOCKET_CI_APP_ID }}
       APP_PRIVATE_KEY: ${{ secrets.LOCKET_CI_PRIVATE_KEY }}
   branch-policy:
-    uses: leaflockio/core-actions/.github/workflows/tpl-branch-policy.yml@v1.2.0
+    uses: leaflockio/core-actions/.github/workflows/tpl-branch-policy.yml@v1

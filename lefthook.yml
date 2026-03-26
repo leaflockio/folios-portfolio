@@ -2,7 +2,7 @@ rc: .lefthookrc
 
 remotes:
   - git_url: git@github.com:leaflockio/core-actions.git
-    ref: v1.2.0
+    ref: v1
     configs:
       - lefthook/common.yml
       - lefthook/node.yml
