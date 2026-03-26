@@ -1,0 +1,6 @@
+# Resolve hook scripts from lefthook's remote cache.
+# Lefthook clones remotes to .git/info/lefthook-remotes/<name>-<ref>/
+REMOTE_DIR="$(find .git/info/lefthook-remotes -maxdepth 1 -type d -name 'core-actions*' 2>/dev/null | sort -V | tail -1)"
+if [ -n "$REMOTE_DIR" ] && [ -d "$REMOTE_DIR/scripts" ]; then
+  export HOOKS_SCRIPTS="$REMOTE_DIR/scripts"
+fi
