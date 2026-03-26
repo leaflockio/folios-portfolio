@@ -1,0 +1,19 @@
+name: PR Title
+
+on:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+    branches: [pre-main, main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  pr-title:
+    uses: leaflockio/core-actions/.github/workflows/tpl-pr-title.yml@v1
+    with:
+      core-actions-ref: v1
+    secrets:
+      APP_ID: ${{ secrets.LOCKET_CI_APP_ID }}
+      APP_PRIVATE_KEY: ${{ secrets.LOCKET_CI_PRIVATE_KEY }}
