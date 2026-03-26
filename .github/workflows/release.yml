@@ -2,6 +2,8 @@ name: Release
 on:
   push:
     branches: [main]
+permissions:
+  contents: read
 jobs:
   release:
     uses: leaflockio/core-actions/.github/workflows/tpl-release.yml@v1

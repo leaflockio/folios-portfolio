@@ -2,6 +2,9 @@ name: CI
 on:
   pull_request:
     branches: [pre-main, main]
+permissions:
+  contents: read
+  pull-requests: read
 jobs:
   quality:
     uses: leaflockio/core-actions/.github/workflows/tpl-common-ci.yml@v1
