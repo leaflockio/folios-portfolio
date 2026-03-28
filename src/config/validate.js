@@ -1,3 +1,6 @@
+// Copyright 2026 Leaflock
+// This project is open source. See LICENSE for terms.
+
 import rawConfig from './config.json';
 import { configSchema } from './schema/index';
 

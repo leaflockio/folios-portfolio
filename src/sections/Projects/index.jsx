@@ -1,3 +1,6 @@
+// Copyright 2026 Leaflock
+// This project is open source. See LICENSE for terms.
+
 import PropTypes from 'prop-types';
 import { useEffect, useMemo, useState } from 'react';
 
