@@ -1,3 +1,6 @@
+// Copyright 2026 Leaflock
+// This project is open source. See LICENSE for terms.
+
 import log from 'loglevel';
 
 import { config } from '@/config/validate';
