@@ -1,11 +1,5 @@
 {
-  "branches": [
-    "main",
-    {
-      "name": "pre-main",
-      "prerelease": "beta"
-    }
-  ],
+  "branches": ["main", { "name": "pre-main", "prerelease": "beta" }],
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
@@ -56,12 +50,18 @@
       }
     ],
     [
-      "@semantic-release/git",
+      "./.git/modules/core-actions/src/plugins/verified-commit.js",
       {
         "assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
-    "@semantic-release/github"
+    [
+      "@semantic-release/github",
+      {
+        "successComment": "<%= issue.pull_request ? '🏷️ Released in [v' + nextRelease.version + '](' + (releases.filter(r => r.url).map(r => r.url)[0] || '') + ')' : false %>",
+        "failComment": false
+      }
+    ]
   ]
 }

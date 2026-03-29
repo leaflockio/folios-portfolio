@@ -1,3 +1,15 @@
+## [1.0.0-beta.6](https://github.com/leaflockio/folios-portfolio/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2026-03-29)
+
+### Bug Fixes
+
+* **config:** correct logger tag minimum length validation ([#37](https://github.com/leaflockio/folios-portfolio/issues/37)) ([5e4f5fe](https://github.com/leaflockio/folios-portfolio/commit/5e4f5fe2b15948a861e8b4041edf844f0d5cec77))
+
+## [1.0.0-beta.6](https://github.com/leaflockio/folios-portfolio/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2026-03-28)
+
+### Bug Fixes
+
+* **config:** correct logger tag minimum length validation ([#37](https://github.com/leaflockio/folios-portfolio/issues/37)) ([7e547a1](https://github.com/leaflockio/folios-portfolio/commit/7e547a107e50e750380f4a29bf76dbbe9bfaabe0))
+
 ## [1.0.0-beta.5](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2026-02-12)
 
 ### Features

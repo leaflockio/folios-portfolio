@@ -1,11 +1,11 @@
-# 🧠 datadriven-portfolio
+# 🧠 folios-portfolio
 
 **Your portfolio, powered by JSON. Zero code. Total flexibility.**
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
-[![Version](https://img.shields.io/github/package-json/v/LeafLock-Security-Solutions/datadriven-portfolio)](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio)
-[![License](https://img.shields.io/github/license/LeafLock-Security-Solutions/datadriven-portfolio)](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/blob/main/LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/LeafLock-Security-Solutions/datadriven-portfolio)](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/commits/main)
+[![Version](https://img.shields.io/github/package-json/v/leaflockio/folios-portfolio)](https://github.com/leaflockio/folios-portfolio)
+[![License](https://img.shields.io/github/license/leaflockio/folios-portfolio)](https://github.com/leaflockio/folios-portfolio/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/leaflockio/folios-portfolio)](https://github.com/leaflockio/folios-portfolio/commits/main)
 
 ![Lint](https://img.shields.io/badge/lint-passing-brightgreen?logo=eslint)
 ![Prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4?logo=prettier)
@@ -13,20 +13,20 @@
 ![MD Links](https://img.shields.io/badge/markdown-links--checked-yellow)
 ![Commit Signatures](https://img.shields.io/badge/commits-signed-orange?logo=git)
 
-[![CI](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/actions/workflows/ci.yml)
-[![Build](https://img.shields.io/github/actions/workflow/status/LeafLock-Security-Solutions/datadriven-portfolio/ci.yml?branch=main)](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/actions)
+[![CI](https://github.com/leaflockio/folios-portfolio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/leaflockio/folios-portfolio/actions/workflows/ci.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/leaflockio/folios-portfolio/ci.yml?branch=main)](https://github.com/leaflockio/folios-portfolio/actions)
 ![Tests](https://img.shields.io/badge/tests-setup-green?logo=jest)
-[![Code Coverage](https://img.shields.io/codecov/c/github/LeafLock-Security-Solutions/datadriven-portfolio)](https://codecov.io/gh/LeafLock-Security-Solutions/datadriven-portfolio)
+[![Code Coverage](https://img.shields.io/codecov/c/github/leaflockio/folios-portfolio)](https://codecov.io/gh/leaflockio/folios-portfolio)
 ![Security](https://img.shields.io/badge/security-monitored-orange)
 
-[![Repo Size](https://img.shields.io/github/repo-size/LeafLock-Security-Solutions/datadriven-portfolio)](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio)
-[![Open Issues](https://img.shields.io/github/issues/LeafLock-Security-Solutions/datadriven-portfolio)](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues)
+[![Repo Size](https://img.shields.io/github/repo-size/leaflockio/folios-portfolio)](https://github.com/leaflockio/folios-portfolio)
+[![Open Issues](https://img.shields.io/github/issues/leaflockio/folios-portfolio)](https://github.com/leaflockio/folios-portfolio/issues)
 
 ---
 
 ## 📌 Overview
 
-`datadriven-portfolio` is a customizable, **data-driven personal portfolio** built with React. It was originally designed as a personal portfolio, but is being developed as a **reusable template** for anyone to showcase their work — **without writing a single line of code**.
+`folios-portfolio` is a customizable, **data-driven personal portfolio** built with React. It was originally designed as a personal portfolio, but is being developed as a **reusable template** for anyone to showcase their work — **without writing a single line of code**.
 
 This project lets you **modify all content via a simple JSON file**, making it easy for developers and non-developers alike to personalize their portfolio in minutes.
 
@@ -81,7 +81,7 @@ Together, let’s build with care — for ourselves, our users, and our digital 
 ## 📬 Need Help?
 
 If you encounter any issues or have questions, feel free to open an issue here:  
-🔗 [https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio/issues)
+🔗 [https://github.com/leaflockio/folios-portfolio/issues](https://github.com/leaflockio/folios-portfolio/issues)
 
 ---
 

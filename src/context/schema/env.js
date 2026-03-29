@@ -1,3 +1,6 @@
+// Copyright 2026 Leaflock
+// This project is open source. See LICENSE for terms.
+
 import { z } from 'zod';
 
 /**
@@ -46,14 +49,14 @@ function isInternalHost(hostname) {
 
 const profilePathSchema = z
   .string()
-  .min(1, 'DDP_PROFILE_PATH is required')
+  .min(1, 'FP_PROFILE_PATH is required')
   .refine(
     val =>
       (val.startsWith('/') || val.startsWith('http://') || val.startsWith('https://')) &&
       !val.startsWith('file://'),
     {
       message: [
-        'Invalid DDP_PROFILE_PATH. Use one of the following:',
+        'Invalid FP_PROFILE_PATH. Use one of the following:',
         '• A path starting with `/`, e.g. `/data/profile.json`',
         '  (must be placed inside the `public/` directory of this project)',
         '• A full URL like `https://example.com/profile.json`',
@@ -64,7 +67,7 @@ const profilePathSchema = z
     },
   )
   .refine(val => val.endsWith('.json'), {
-    message: 'DDP_PROFILE_PATH must point to a `.json` file.',
+    message: 'FP_PROFILE_PATH must point to a `.json` file.',
   })
   .refine(
     val => {
@@ -83,7 +86,7 @@ const profilePathSchema = z
     },
     {
       message: [
-        'DDP_PROFILE_PATH cannot point to internal/private network addresses.',
+        'FP_PROFILE_PATH cannot point to internal/private network addresses.',
         'Blocked: localhost, 127.0.0.1, 10.x.x.x, 172.16-31.x.x, 192.168.x.x,',
         'cloud metadata endpoints (169.254.169.254).',
       ].join('\n'),
@@ -99,8 +102,8 @@ const phoneSchema = z
 
 export const envConfigSchema = z.object({
   email: z.string().email().optional(),
-  firstName: z.string().min(1, 'DDP_FIRST_NAME is required'),
-  lastName: z.string().min(1, 'DDP_LAST_NAME is required'),
+  firstName: z.string().min(1, 'FP_FIRST_NAME is required'),
+  lastName: z.string().min(1, 'FP_LAST_NAME is required'),
   phone: phoneSchema,
   profilePath: profilePathSchema,
   showContactOnError: z.boolean().optional().default(false),

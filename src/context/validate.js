@@ -1,3 +1,6 @@
+// Copyright 2026 Leaflock
+// This project is open source. See LICENSE for terms.
+
 import log from '@/utils/logger';
 
 import { stateSchema } from './schema';
@@ -18,20 +21,20 @@ log.debug('[State] state.json loaded and validated.');
 
 export const appState = stateResult.data;
 
-// Validate DDP_* env variables at module load time (fails build if invalid)
+// Validate FP_* env variables at module load time (fails build if invalid)
 const rawEnvConfig = {
-  email: import.meta.env.DDP_EMAIL || undefined,
-  firstName: import.meta.env.DDP_FIRST_NAME || '',
-  lastName: import.meta.env.DDP_LAST_NAME || '',
+  email: import.meta.env.FP_EMAIL || undefined,
+  firstName: import.meta.env.FP_FIRST_NAME || '',
+  lastName: import.meta.env.FP_LAST_NAME || '',
   phone:
-    import.meta.env.DDP_PHONE_COUNTRY_CODE && import.meta.env.DDP_PHONE_NUMBER
+    import.meta.env.FP_PHONE_COUNTRY_CODE && import.meta.env.FP_PHONE_NUMBER
       ? {
-          countryCode: import.meta.env.DDP_PHONE_COUNTRY_CODE,
-          number: import.meta.env.DDP_PHONE_NUMBER,
+          countryCode: import.meta.env.FP_PHONE_COUNTRY_CODE,
+          number: import.meta.env.FP_PHONE_NUMBER,
         }
       : undefined,
-  profilePath: import.meta.env.DDP_PROFILE_PATH || '',
-  showContactOnError: import.meta.env.DDP_SHOW_CONTACT_ON_ERROR === 'true',
+  profilePath: import.meta.env.FP_PROFILE_PATH || '',
+  showContactOnError: import.meta.env.FP_SHOW_CONTACT_ON_ERROR === 'true',
 };
 
 const envResult = envConfigSchema.safeParse(rawEnvConfig);
@@ -39,7 +42,7 @@ const envResult = envConfigSchema.safeParse(rawEnvConfig);
 if (!envResult.success) {
   const formatted = JSON.stringify(envResult.error.format(), null, 2);
   log.error('[EnvConfig] Validation failed:\n', formatted);
-  throw new Error(`[EnvConfig] Missing or invalid DDP_* environment variables:\n${formatted}`);
+  throw new Error(`[EnvConfig] Missing or invalid FP_* environment variables:\n${formatted}`);
 }
 
 log.debug('[EnvConfig] Environment config loaded and validated.');

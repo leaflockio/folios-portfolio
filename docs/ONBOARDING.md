@@ -1,6 +1,6 @@
 # 🧑‍💻 Developer Onboarding Tasks
 
-Welcome to the **datadriven-portfolio** project! This guide is designed to help new contributors—especially those who are still early in their journey—get started with the project smoothly.
+Welcome to the **folios-portfolio** project! This guide is designed to help new contributors—especially those who are still early in their journey—get started with the project smoothly.
 
 ---
 
@@ -41,7 +41,7 @@ We use [Sigstore Gitsign](./COMMIT_SIGNING_GUIDE.md) for commit signing. Please 
 ### 2.1 Fork the Repository
 
 Go to the official repo:  
-👉 [https://github.com/LeafLock-Security-Solutions/datadriven-portfolio](https://github.com/LeafLock-Security-Solutions/datadriven-portfolio)  
+👉 [https://github.com/leaflockio/folios-portfolio](https://github.com/leaflockio/folios-portfolio)  
 Click on the **Fork** button (top right) to create your own copy.
 
 ### 2.2 Clone Your Fork Using SSH
@@ -50,8 +50,8 @@ Click on the **Fork** button (top right) to create your own copy.
 
 ```bash
 # Example command (replace with your username)
-git clone git@github.com:<your-username>/datadriven-portfolio.git
-cd datadriven-portfolio
+git clone git@github.com:<your-username>/folios-portfolio.git
+cd folios-portfolio
 ```
 
 ---
